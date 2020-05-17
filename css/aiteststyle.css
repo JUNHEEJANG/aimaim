@@ -1,26 +1,37 @@
 body {
-    font-family: 'Jua', sans-serif;
+    font-family: 'Gothic A1', sans-serif;
     background-color: #ffffff;
     box-sizing: border-box;
-    color: #35465d;
+    color: black;
   }
   
-   @font-face { 
-	   font-family: 'Recipekorea'; 
-	   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); 
-	   font-weight: normal; 
-	   font-style: normal; 
+@font-face { 
+   font-family:'Recipekorea'; 
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); 
+   font-weight: normal; 
+   font-style: normal; 
 } 
   
 .juafont{
 	font-family: 'Jua', sans-serif;
 }
+
 .recipekorea{
 	font-family: 'Recipekorea'; 
-	   font-weight: normal; 
-	   font-style: normal; 
+	font-weight: normal; 
+	font-style: normal;
+	color: black;
 }
-  
+
+
+.site-section {
+  padding: 2.5em 0; }
+  @media (min-width: 768px) {
+    .site-section {
+      padding: 5em 0; } }
+  .site-section.site-section-sm {
+    padding: 4em 0; }
+
   .file-upload {
       padding: 15% 3%;
       margin: 0 auto;
@@ -569,7 +580,11 @@ body {
   }
   
   
-  
   element.style {
       margin-top: 20px;
   }
+
+.contents-button{
+	margin-bottom: 40px;
+	padding-top: 13px
+}

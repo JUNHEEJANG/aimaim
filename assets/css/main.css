@@ -2724,7 +2724,7 @@ input, select, textarea {
 			}
 
 				body:not(.is-touch) .tiles article:hover > .image-main:before {
-					background-color: #333333;
+					/*background-color: #333333;*/
 					opacity: 0.45;
 				}
 
@@ -2733,7 +2733,7 @@ input, select, textarea {
 				}
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
-					background-color: #333333;
+					/*background-color: #333333;*/
 					opacity: 0.45;
 				}
 
@@ -2812,12 +2812,12 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			.tiles {
-				margin: 0;
+				margin: -1.25em 0 0 -1.25em;
 			}
 
 				.tiles article {
-					width: 100%;
-					margin: 1.25em 0 0 0;
+					width: calc(50% - 1.25em);
+					margin: 1.25em 0 0 1.25em;
 				}
 
 		}

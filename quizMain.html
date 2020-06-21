@@ -3,7 +3,7 @@
 	<head>
 		<title>투플+</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" cgiontent="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -42,12 +42,24 @@
 
 				<!-- Main -->
 					<div id="main">
-						<div class="inner">
-								
+						<div class="inner align-center">
+							<h1>퀴즈 메인</h1>
+									<div class="box alt">
+										<div class="row gtr-uniform">											
+											<div class="col-12">
+												<span class="image fit"><img id="img" src="images/quizMainImg.png" alt="" /></span>
+												<ul class="actions fit">
+													<li><a id="btn1" class="button fit" onclick="location.href='quizResult.html'">결과화면</a></li>
+												</ul>
+											</div>			
+										</div>
+									</div>
+								</section>
+							
 							
 						</div>
 					</div>
-
+ 
 				<!-- Footer -->
 					<footer id="footer">
 						<div class="inner align-center">						
@@ -62,11 +74,18 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			function toggleImg1(){document.getElementById("img").src = "./images/pic02.jpg";}
+			function toggleImg2(){document.getElementById("img").src = "./images/pic03.jpg";}
+			function toggleImg3(){document.getElementById("img").src = "./images/pic04.jpg";}
+
+		</script>
 
 	</body>
 </html>

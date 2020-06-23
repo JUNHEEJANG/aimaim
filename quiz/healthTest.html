@@ -1,24 +1,29 @@
 <!DOCTYPE HTML>
+
 <html>
 	<head>
 		<title>투플+</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" cgiontent="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
-        <style>
-            .quiz {
-            width: 80%;
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+		<style>
+			h2{
+				margin: 0em 0em 0.4em 0em;
+			}
+			
+			.quiz {
+            *width: 80%;
             margin: auto;
             display: flex;
             flex-direction: column;
-            padding: 4em 2em 4em;
+            padding: 0em 0.3em 0em 0.3em;
             }
 
             .quizName {
-            font-size:1.5em;
+            font-size:1.4em;
             text-align: center;
-            margin: 0 auto 1.2em;
+            margin: 0em 0em 1em 0em;
             }
 
             .choice-flexbox {
@@ -28,25 +33,14 @@
             }
 
             .options {
-            width: 60%;
-            font-size: 1.1em;
+            width: 80%;
+            font-size: 1em;
             text-align: center;
             color: white;
             background-color: #FE2E64;
             margin: 0.2em;
             border-radius: 8px;
             padding: 0.5em;
-            }
-            
-            .progress::-webkit-progress-bar {
-            width: 100%;
-            padding-top: 2em;
-            margin-top: 2em;
-            background-color: #FE2E64;
-            }
-
-            progress::-webkit-progress-value {
-            background-color: #FE2E64;
             }
 
             .progress {
@@ -79,12 +73,8 @@
             .refresh:focus {
             outline: none;
             }
-
- 
-
-    </style>
-    </head>
-    
+		</style>
+	</head>
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -112,8 +102,8 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.html">메인</a></li>
-							<li><a href="board.html">게시판</a></li>
+							<li><a href="../index.html">메인</a></li>
+							<li><a href="../board.html">게시판</a></li>
 							<li></li>
 						</ul>
 					</nav>
@@ -121,171 +111,179 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-
-                            <!--progress bar -->
-							<div id="wrap">
-                                <div class='quiz' id="quiz-area">
-                                <div class='quizName' id="quizName"></div>
-
-                                <div class='choice-flexbox'>
-                                <div class="options" id="option0"></div>
-                                <div class="options" id="option1"></div>
-                                <div class="options" id="option2"></div>
-                                <div class="options" id="option3"></div>
-                            </div>
-
-                            <!--progress bar -->
-                            <div class="progress">
-                                <div><progress id="progress" max="100" value="0"></progress></div>
-                            </div>
-                  
-                    </div>
-                 </div>
-						
+							<header></header>				
 							
-						</div>
-					</div>
+							<!-- title Quiz -->
+							<article class="align-center">
+								<div id='wrap'>
+									
+									<!-- quiz -->
+									<div class='quiz' id="quiz-area">
 
+										<div class='quizName' id="quizName"></div>
+
+										<div class='choice-flexbox'>
+											<div class="options" id="option0"></div>
+											<div class="options" id="option1"></div>
+											<div class="options" id="option2"></div>
+											<div class="options" id="option3"></div>
+										</div>
+									</div>
+
+									<!-- progress bar -->
+									<div class="progress">
+										<div><progress id="progress" max="100" value="0"></progress></div>
+									</div>
+									
+								</div>
+							</article>
+
+
+																				
+						</div> <!--end of inner-->
+					</div> <!--end of main-->
+				
+				
 			</div>
+				
 
 		<!-- Scripts -->
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/browser.min.js"></script>
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
-            <script src="../assets/js/main.js"></script>
-            
-      <script>
+			<script src="../assets/js/main.js"></script>
+		
+			<script>
 
-      // Controller (Quiz 객체)
-      function Quiz(questionList) {
-        this.score = 0;  
-        this.questionList = questionList; // 이부분에 퀴즈가 리스트로 입력
-        this.questionNo = 0;
+			  // Controller (Quiz 객체)
+			  function Quiz(questionList) {
+				this.score = 0;  
+				this.questionList = questionList; // 이부분에 퀴즈가 리스트로 입력
+				this.questionNo = 0;
 
-        // (+ 여기에 정답에 대한 변수들을 다양화 해서 사용할 수 있음)
-        
-
-
-      };
-
-      Quiz.prototype.getCurrentQuestion = function() {
-        return this.questionList[this.questionNo];
-      };
-
-      Quiz.prototype.isEnded = function() {
-        return this.questionNo == this.questionList.length;
-      };
-
-      Quiz.prototype.evaluateAnswer = function(answer) {
-        if (this.getCurrentQuestion().checkAnswer(answer)) {
-          this.score++; // 정답일 경우 score가 증가
+				// (+ 여기에 정답에 대한 변수들을 다양화 해서 사용할 수 있음)
 
 
-        };
-        this.questionNo++; // 대답을 하게되면 qustionNo가 증가
-      }
+
+			  };
+
+			  Quiz.prototype.getCurrentQuestion = function() {
+				return this.questionList[this.questionNo];
+			  };
+
+			  Quiz.prototype.isEnded = function() {
+				return this.questionNo == this.questionList.length;
+			  };
+
+			  Quiz.prototype.evaluateAnswer = function(answer) {
+				if (this.getCurrentQuestion().checkAnswer(answer)) {
+				  this.score++; // 정답일 경우 score가 증가
 
 
-      // View
-      function quizInit() {
-        if (quiz.isEnded()) {
-          showScores();
-
-        } else {
-          var element = document.getElementById('quizName');
-          element.innerHTML = quiz.getCurrentQuestion().quizName;
-
-          for (i = 0; i < quiz.getCurrentQuestion().quizList.length; i++) {
-            var element = document.getElementById('option' + i);
-            element.innerHTML = quiz.getCurrentQuestion().quizList[i];
-
-            // 클릭한 내용 확인하는 부분
-            checkAnswer('option' + i, quiz.getCurrentQuestion().quizList[i]); // checkAnswer를 통해 각 버튼에 onclick을 추가, option i와 퀴즈 answer를 evaluateAnswer에게 전달
-            recordProgress();
-          };
-        }
-      };
-
-      function checkAnswer(htmlId, answer) {
-        var element = document.getElementById(htmlId);
-        element.onclick = function() {
-          quiz.evaluateAnswer(answer); // 여기에서 score, questionNo 증가 후 다음 퀴즈로 넘어가게 됨
-
-          quizInit();
-        };
-      };
+				};
+				this.questionNo++; // 대답을 하게되면 qustionNo가 증가
+			  }
 
 
-      function recordProgress() {
-        var element = document.getElementById('progress');
-        element.setAttribute('value', quiz.questionNo);
-      }
+			  // View
+			  function quizInit() {
+				if (quiz.isEnded()) {
+				  showScores();
 
-      function showScores() {
-        var scoreString = "<div><h1>결과</h1>";
-        scoreString += "<h3>You scored " + quiz.score + " out of " + quiz.questionList.length + "</h3>"
-        scoreString += "<div id='refresh' class='refresh'>다시하기</div><div id='' class=''>다른퀴즈</div></div>"
-	  
-		  
-        var element = document.getElementById('quiz-area');
-        element.innerHTML = scoreString;
+				} else {
+				  var element = document.getElementById('quizName');
+				  element.innerHTML = quiz.getCurrentQuestion().quizName;
 
-        var reTake = document.getElementById('refresh');
-        reTake.onclick = function() {
-          refresh()
-        }
-      };
+				  for (i = 0; i < quiz.getCurrentQuestion().quizList.length; i++) {
+					var element = document.getElementById('option' + i);
+					element.innerHTML = quiz.getCurrentQuestion().quizList[i];
 
-      function setProgressBar() {
-        var element = document.getElementById('progress');
-        element.setAttribute('max', quiz.questionList.length);
-      };
+					// 클릭한 내용 확인하는 부분
+					checkAnswer('option' + i, quiz.getCurrentQuestion().quizList[i]); // checkAnswer를 통해 각 버튼에 onclick을 추가, option i와 퀴즈 answer를 evaluateAnswer에게 전달
+					recordProgress();
+				  };
+				}
+			  };
 
-      function refresh() {
-        var renewHTML = '<div class="quiz" id="quiz-area"><div class="quizName" id="quizName"></div><div class="choice-flexbox"><div class="options" id="option0"></div><div class="options" id="option1"></div><div class="options" id="option2"></div><div class="options" id="option3"></div></div>	<div class="progress"><div><progress id="progress" max="100" value="0"></progress></div></div></div>'
-        var element = document.getElementById('wrap');
-        element.innerHTML = renewHTML
-        quiz.score = 0;
-        quiz.questionNo = 0;
+			  function checkAnswer(htmlId, answer) {
+				var element = document.getElementById(htmlId);
+				element.onclick = function() {
+				  quiz.evaluateAnswer(answer); // 여기에서 score, questionNo 증가 후 다음 퀴즈로 넘어가게 됨
 
-        quizInit();
-        setProgressBar();
-      }
-      var questions = [
-        new Question("<h2 style='color:#FE2E64'>Q1</h2>당신의 키는?", ["160~170cm", "170~175cm", "175~180cm", "180 이상"]),
-        new Question("<h2 style='color:#FE2E64'>Q2</h2>몸무게는 몇인가요?", ["65kg 이하", "65~75kg", "75~90kg", "90kg 이상"]),
-        new Question("<h2 style='color:#FE2E64'>Q3</h2>일주일에 헬스장을 몇회 가시나요?", ["등록만 해놨습니다.", "1~2회", "3~4회", "5회 이상"]),
-        new Question("<h2 style='color:#FE2E64'>Q4</h2>벤치프레스 중량은?", ["60kg 미만", "60~80kg", "80~100kg", "100kg 이상"]),
-        new Question("<h2 style='color:#FE2E64'>Q5</h2>스쿼트 중량은?", ["80kg 미만", "80~130kg", "130~170kg", "170kg 이상"]),
-        new Question("<h2 style='color:#FE2E64'>Q6</h2>데드리프트 중량은?", ["90kg 미만", "90~140kg", "140~190kg", "190kg 이상"]),
-        new Question("<h2 style='color:#FE2E64'>Q7</h2>어떤 운동을 좋아하나요?", ["사람들과 함께 어울리는 운동", "사람들과 함께 하지만 가끔 혼자", "혼자하는 운동", "그냥 혼자가 좋다"]),
-        new Question("<h2 style='color:#FE2E64'>Q8</h2>하루 식사는 어떻게 하나요?", ["챙겨 먹는게 귀찮다", "먹고싶은대로 먹는다", "나름 식단 관리 한다", "철저한 계획으로 식단관리"]),
-        new Question("<h2 style='color:#FE2E64'>Q9</h2>헬스하는 날인데 여자친구가 갑자기 보자고 했다", ["당연히 여자친구 우선! 당장 보러간다", "세트수 반 줄이고 여자친구 보러간다", "미안하다고 하고 운동을 한다", "헬스장 데이터 하자고 얘기한다"]),
-        new Question("<h2 style='color:#FE2E64'>Q10</h2>후인하강의 의미를 안다", ["후인하강 해야 제대로 된 운동이지", "잘 알지만 하기는 어렵다", "들어는 본 것 같다", "후인하강??"]),
-        new Question("<h2 style='color:#FE2E64'>Q11</h2>어떤 운동 스타일을 선호하나요", ["스트랭스 운동", "보디빌딩", "크로스 핏", "맨몸 운동"]),
-      ]
-
-7
-      // Model
-      function Question(quizName, quizList) {
-        this.quizName = quizName;
-        this.quizList = quizList;
-      }
-
-      Question.prototype.checkAnswer = function(choice) {
-        return (choice === this.answer);
-      }
+				  quizInit();
+				};
+			  };
 
 
-      // main
-      var quiz = new Quiz(questions);
+			  function recordProgress() {
+				var element = document.getElementById('progress');
+				element.setAttribute('value', quiz.questionNo);
+			  }
 
-      quizInit();
-      setProgressBar();
-                  
-      </script>
+			  function showScores() {
+				var scoreString = "<div class='row aln-center'><h1>결과</h1>";
+				scoreString += "<h3>You scored " + quiz.score + " out of " + quiz.questionList.length + "</h3>"
+				scoreString += "<div id='refresh' class='refresh'>다시하기</div><div id='' class='btn'>다른퀴즈</div></div>"
 
+
+				var element = document.getElementById('quiz-area');
+				element.innerHTML = scoreString;
+
+				var reTake = document.getElementById('refresh');
+				reTake.onclick = function() {
+				  refresh()
+				}
+			  };
+
+			  function setProgressBar() {
+				var element = document.getElementById('progress');
+				element.setAttribute('max', quiz.questionList.length);
+			  };
+
+			  function refresh() {
+				var renewHTML = '<div class="quiz" id="quiz-area"><div class="quizName" id="quizName"></div><div class="choice-flexbox"><div class="options" id="option0"></div><div class="options" id="option1"></div><div class="options" id="option2"></div><div class="options" id="option3"></div></div>	<div class="progress"><div><progress id="progress" max="100" value="0"></progress></div></div></div>'
+				var element = document.getElementById('wrap');
+				element.innerHTML = renewHTML
+				quiz.score = 0;
+				quiz.questionNo = 0;
+
+				quizInit();
+				setProgressBar();
+			  }
+			  var questions = [
+				new Question("<h2 style='color:#FE2E64'>Q1</h2>당신의 키는?", ["160~170cm", "170~175cm", "175~180cm", "180 이상"]),
+				new Question("<h2 style='color:#FE2E64'>Q2</h2>몸무게는 몇인가요?", ["65kg 이하", "65~75kg", "75~90kg", "90kg 이상"]),
+				new Question("<h2 style='color:#FE2E64'>Q3</h2>일주일에 헬스장 가는 횟수는?", ["등록만 해놨습니다.", "1~2회", "3~4회", "5회 이상"]),
+				new Question("<h2 style='color:#FE2E64'>Q4</h2>벤치프레스 중량은?", ["60kg 미만", "60~80kg", "80~100kg", "100kg 이상"]),
+				new Question("<h2 style='color:#FE2E64'>Q5</h2>스쿼트 중량은?", ["80kg 미만", "80~130kg", "130~170kg", "170kg 이상"]),
+				new Question("<h2 style='color:#FE2E64'>Q6</h2>데드리프트 중량은?", ["90kg 미만", "90~140kg", "140~190kg", "190kg 이상"]),
+				new Question("<h2 style='color:#FE2E64'>Q7</h2>어떤 운동을 좋아하나요?", ["사람들과 함께 어울리는 운동", "사람들과 함께 하지만 가끔 혼자", "혼자하는 운동", "그냥 혼자가 좋다"]),
+				new Question("<h2 style='color:#FE2E64'>Q8</h2>하루 식사는 어떻게 하나요?", ["챙겨 먹는게 귀찮다", "먹고싶은대로 먹는다", "나름 식단 관리 한다", "철저한 계획으로 식단관리"]),
+				new Question("<h2 style='color:#FE2E64'>Q9</h2>헬스하는 날인데 여자친구가 갑자기 보자고 했다", ["여자친구 우선, 당장 보러간다", "타협, 세트수를 반 줄인다", "유도, 헬스장 데이트 하자", "불허, 나에겐 운동이다"]),
+				new Question("<h2 style='color:#FE2E64'>Q10</h2>후인하강의 의미를 안다", ["후인하강 완벽 이해", "잘 알지만 하기는 어렵다", "들어는 본 것 같다", "후인하강??"]),
+				new Question("<h2 style='color:#FE2E64'>Q11</h2>어떤 운동 스타일을 선호하나요", ["스트랭스 운동", "보디빌딩", "크로스 핏", "맨몸 운동"]),
+			  ]
+
+		7
+			  // Model
+			  function Question(quizName, quizList) {
+				this.quizName = quizName;
+				this.quizList = quizList;
+			  }
+
+			  Question.prototype.checkAnswer = function(choice) {
+				return (choice === this.answer);
+			  }
+
+
+			  // main
+			  var quiz = new Quiz(questions);
+
+			  quizInit();
+			  setProgressBar();
+
+			</script>		
 
 	</body>
 </html>

@@ -13,7 +13,7 @@
 			}
 			
 			.quiz {
-            *width: 80%;
+            width: 80%;
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -34,7 +34,7 @@
 
             .options {
             width: 80%;
-            font-size: 1em;
+            font-size: 1.3em;
             text-align: center;
             color: white;
             background-color: #FE2E64;
@@ -73,6 +73,34 @@
             .refresh:focus {
             outline: none;
             }
+			
+			.goQuiz{
+			font-size: 1.2em;
+            color: white;
+            background-color: #FE2E64;
+            margin: 0.2em;
+            border-radius: 8px;
+            margin-top: 1em;
+            padding: 0.5em;
+            width: 150px;
+            text-align: center;
+			}
+			
+			.goQuiz:hover{
+			transform: scale(1.02);
+            cursor: pointer;	
+			}
+
+			.goquiz:focus {
+            outline: none;
+            }
+			
+			#header{
+				padding-top : 20px;
+				margin-bottom : 50px;
+			}
+			
+			
 		</style>
 	</head>
 	<body class="is-preload">
@@ -81,19 +109,12 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="inner">
+						<div class="inner align-center">
 
 							<!-- Logo -->
-								<a href="../index.html" class="logo">
-									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">투플+</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+							<a href="../index.html" class="logo">
+								<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">투플+</span>
+							</a>
 
 						</div>
 					</header>
@@ -114,7 +135,7 @@
 							<header></header>				
 							
 							<!-- title Quiz -->
-							<article class="align-center">
+							<div class="align-center">
 								<div id='wrap'>
 									
 									<!-- quiz -->
@@ -136,7 +157,7 @@
 									</div>
 									
 								</div>
-							</article>
+							</div>
 
 
 																				
@@ -224,8 +245,8 @@
 			  function showScores() {
 				var scoreString = "<div class='row aln-center'><h1>결과</h1>";
 				scoreString += "<h3>You scored " + quiz.score + " out of " + quiz.questionList.length + "</h3>"
-				scoreString += "<div id='refresh' class='refresh'>다시하기</div><div id='' class='btn'>다른퀴즈</div></div>"
-
+				scoreString += "<div id='refresh' class='refresh'>다시하기</div>"
+				scoreString += "<div id='goQuiz' class='goQuiz'>다른퀴즈</div>"
 
 				var element = document.getElementById('quiz-area');
 				element.innerHTML = scoreString;
@@ -233,6 +254,11 @@
 				var reTake = document.getElementById('refresh');
 				reTake.onclick = function() {
 				  refresh()
+				}
+				
+				var goQuiz = document.getElementById('goQuiz');
+				goQuiz.onclick = function() {
+				  location.href = "../index.html"
 				}
 			  };
 
@@ -251,21 +277,21 @@
 				quizInit();
 				setProgressBar();
 			  }
+				
 			  var questions = [
 				new Question("<h2 style='color:#FE2E64'>Q1</h2>당신의 키는?", ["160~170cm", "170~175cm", "175~180cm", "180 이상"]),
 				new Question("<h2 style='color:#FE2E64'>Q2</h2>몸무게는 몇인가요?", ["65kg 이하", "65~75kg", "75~90kg", "90kg 이상"]),
 				new Question("<h2 style='color:#FE2E64'>Q3</h2>일주일에 헬스장 가는 횟수는?", ["등록만 해놨습니다.", "1~2회", "3~4회", "5회 이상"]),
 				new Question("<h2 style='color:#FE2E64'>Q4</h2>벤치프레스 중량은?", ["60kg 미만", "60~80kg", "80~100kg", "100kg 이상"]),
 				new Question("<h2 style='color:#FE2E64'>Q5</h2>스쿼트 중량은?", ["80kg 미만", "80~130kg", "130~170kg", "170kg 이상"]),
-				new Question("<h2 style='color:#FE2E64'>Q6</h2>데드리프트 중량은?", ["90kg 미만", "90~140kg", "140~190kg", "190kg 이상"]),
+				/*new Question("<h2 style='color:#FE2E64'>Q6</h2>데드리프트 중량은?", ["90kg 미만", "90~140kg", "140~190kg", "190kg 이상"]),
 				new Question("<h2 style='color:#FE2E64'>Q7</h2>어떤 운동을 좋아하나요?", ["사람들과 함께 어울리는 운동", "사람들과 함께 하지만 가끔 혼자", "혼자하는 운동", "그냥 혼자가 좋다"]),
 				new Question("<h2 style='color:#FE2E64'>Q8</h2>하루 식사는 어떻게 하나요?", ["챙겨 먹는게 귀찮다", "먹고싶은대로 먹는다", "나름 식단 관리 한다", "철저한 계획으로 식단관리"]),
 				new Question("<h2 style='color:#FE2E64'>Q9</h2>헬스하는 날인데 여자친구가 갑자기 보자고 했다", ["여자친구 우선, 당장 보러간다", "타협, 세트수를 반 줄인다", "유도, 헬스장 데이트 하자", "불허, 나에겐 운동이다"]),
 				new Question("<h2 style='color:#FE2E64'>Q10</h2>후인하강의 의미를 안다", ["후인하강 완벽 이해", "잘 알지만 하기는 어렵다", "들어는 본 것 같다", "후인하강??"]),
-				new Question("<h2 style='color:#FE2E64'>Q11</h2>어떤 운동 스타일을 선호하나요", ["스트랭스 운동", "보디빌딩", "크로스 핏", "맨몸 운동"]),
+				new Question("<h2 style='color:#FE2E64'>Q11</h2>어떤 운동 스타일을 선호하나요", ["스트랭스 운동", "보디빌딩", "크로스 핏", "맨몸 운동"])*/
 			  ]
 
-		7
 			  // Model
 			  function Question(quizName, quizList) {
 				this.quizName = quizName;

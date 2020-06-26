@@ -192,10 +192,11 @@
 					element.innerHTML = quiz.getCurrentQuestion().quizList[i];
 
 					// 클릭한 내용 확인하는 부분
-					checkAnswer('option' + i, quiz.getCurrentQuestion().quizList[i]); // checkAnswer를 통해 각 버튼에 onclick을 추가, option i와 퀴즈 answer를 evaluateAnswer에게 전달
+					checkAnswer('option' + i, quiz.getCurrentQuestion().quizScore[i]); // checkAnswer를 통해 각 버튼에 onclick을 추가, option i와 퀴즈 answer를 evaluateAnswer에게 전달
 					
 					  
 					recordProgress();
+					
 				  };
 				}
 			  };
@@ -205,8 +206,13 @@
 				  
 				var element = document.getElementById(htmlId);
 				element.onclick = function() {
-				  quiz.evaluateAnswer(answer); // 여기에서 score, questionNo 증가 후 다음 퀴즈로 넘어가게 됨
-
+					
+				  // 여기에서 score, questionNo 증가 후 다음 퀴즈로 넘어가게 됨 (answer 은 클릭한 번호)
+					
+					
+				  quiz.evaluateAnswer(answer); 
+				  console.log("answer : " + answer);
+					
 				  quizInit();
 				};
 			  };
@@ -301,7 +307,8 @@
 			  // var quiz = new Quiz(questions);
 			  
 			  function Quiz(questionData) {
-				this.score = 0;  
+				this.score = 0;
+				
 				this.questionNo = 0;
 				this.questionAnswer = 0;
 				this.questionData = questionData; // 이부분에 퀴즈가 리스트로 입력됨
@@ -328,13 +335,13 @@
 			  };
 				
 				
-			  // 현재 퀴즈 번호가, 퀴즈 최대 길이와 일치하면 true를 반환
+			  // 현재 퀴즈 번호가, 퀴즈 최대 길이와 일치하면 true를 반환, 현재 퀴즈 번호가 최대가 아니면 false 반환
 			  Quiz.prototype.isEnded = function() {
 				return this.questionNo == this.questionData.length;
 			  };
 
 		      
-			  // 퀴즈 정답을 계산
+			  // 퀴즈 정답을 계산하는 로직
 			  Quiz.prototype.evaluateAnswer = function(answer) {
 				
 				// 퀴즈 정답 계산하는 메인 로직 부분
@@ -356,7 +363,7 @@
 
 			  
 			  // main
-			  var quiz = new Quiz(questions); // quiz 객체를 만드는 부분, var question에 저장된 데이터가, 
+			  var quiz = new Quiz(questions); // quiz 객체를 만드는 부분, var question에 저장된 데이터가
 
 			  quizInit();
 			  setProgressBar();

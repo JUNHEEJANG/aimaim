@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>투플+</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		
+		<!-- Twoppl Style -->		
+		<link rel="stylesheet" href="../assets/css/main.css" />
+	
+		
+		<!-- Styles -->
+		<link href="../assets/css/app.css" rel="stylesheet">
+		<link href="../assets/css/mbti.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+		
+
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner align-center">
+
+							<!-- Logo -->
+								<a href="../index.html" class="logo">
+									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">투플+</span>
+								</a>
+						</div>
+					</header>
+
+				<!-- Main -->
+					
+				
+				<div class="mbti-container">
+
+					<div class="mbti-question">Q1. 아침이다! 눈 떴는데 지각 각인 나는?</div>
+					<div class="mbti-answer a1">땀 삐질, 바로 회사에 연락함.</div>
+					<div class="mbti-answer a2">이 정도는 애교, 일단 그냥 출근.</div>
+				
+					<div class="pagi">
+				
+				<div class="page">
+					1/12
+				</div>
+					
+					
+				<div class="pb">
+					<div class="progress-inner"></div>
+        		</div>
+							
+			</div>
+				
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/browser.min.js"></script>
+			<script src="../assets/js/breakpoints.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<script src="../assets/js/main.js"></script>
+		
+			<script>
+				let progressBar = $(".progress-inner");
+				progressBar.css("width", `${100/12}%`);
+
+					let questions = [
+					{"q1": "아침이다! 눈 떴는데 지각 각인 나는?", "a1": "땀 삐질, 바로 회사에 연락함.", "a2": "이 정도는 애교, 일단 그냥 출근.", "a1_mbti": "I", "a2_mbti": "E"},
+					{"q1": "출근길 저 멀리 따라오는 동기를 보았을 때 나는?", "a1": "더 늦을 것 같으니 일단 먼저 출발.", "a2": "이미 늦었으니 기다렸다 같이 출발.", "a1_mbti": "T", "a2_mbti": "F"},
+					{"q1": "컴퓨터를 켰다, 내 컴퓨터 바탕화면 상태는?", "a1": "정리됨, 폴더별로 깔끔쓰", "a2": "자유분방, 모든 파일 집합소", "a1_mbti": "J", "a2_mbti": "P"},
+					{"q1": "점심 메뉴 선정할 때 나는?", "a1": "그냥 주위 의견 따름", "a2": "내가 먹고 싶은 거로", "a1_mbti": "I", "a2_mbti": "E"},
+					{"q1": "근무 중 졸릴 때 나는?", "a1": "나가서 스트레칭", "a2": "자리에서 커피로 이겨냄", "a1_mbti": "E", "a2_mbti": "I"},
+					{"q1": "내 업무보고 스타일은?", "a1": "검토 검토 검토 완벽추구", "a2": "뒤도 안돌아보고 즉시 보고!", "a1_mbti": "J", "a2_mbti": "P"},
+					{"q1": "힘든 일이 생겼을 때 나는?", "a1": "위로받는 게 좋다", "a2": "위로보단 현실적인 조언이 좋다", "a1_mbti": "F", "a2_mbti": "T"},
+					{"q1": "갑작스러운 회식이 생긴 나는?", "a1": "사회생활 해야하니 참석! ㅇㅇ감", "a2": "잔업이 남아서! ㄴㄴ 안감", "a1_mbti": "F", "a2_mbti": "T"},
+					{"q1": "퇴근 10분 전 업무가 생긴 나는?", "a1": "오래 안 걸리니 빨리하고 퇴근?", "a2": "급한 거 아니면 칼퇴!", "a1_mbti": "J", "a2_mbti": "P"},
+					{"q1": "하루 종일 스트레스 받은 당신. 친구에게 카톡 한 나는?", "a1": "주말에 소주 한 잔?", "a2": "이따 저녁에 소주 한 잔?", "a1_mbti": "N", "a2_mbti": "S"},
+					{"q1": "이직/취직하게 된다면 어디?", "a1": "이번년도 인센 빵빵한 회사", "a2": "잠재 가능성 빵빵한 회사", "a1_mbti": "S", "a2_mbti": "N"},
+					{"q1": "회식 중 더 싫은 것은?", "a1": "술 강요하는 꼰대 상사", "a2": "술 먹어서 힘들어질 내일", "a1_mbti": "S", "a2_mbti": "N"},
+				];
+
+				let result = {};
+				let questionProgress = 1;
+
+				$(".mbti-answer").on("click", function() {
+					let q = questions[questionProgress-1];
+					if ($(this).hasClass("a1")) {
+						if (q["a1_mbti"] in result) {
+							result[q["a1_mbti"]] += 1;
+						} else {
+							result[q["a1_mbti"]] = 1;
+						}
+					} else {
+						if (q["a2_mbti"] in result) {
+							result[q["a2_mbti"]] += 1;
+						} else {
+							result[q["a2_mbti"]] = 1;
+						}
+					}
+
+					questionProgress += 1;
+					q = questions[questionProgress-1];
+
+					if (questionProgress === 13) {
+
+						function filterItems(arr) {
+							return Object.keys(arr).filter(el => arr[el] >= 2);
+						}
+
+						let tmp = [
+							"IE",
+							"SN",
+							"TF",
+							"JP"
+						];
+						let mbti = filterItems(result).join("");
+						let newMbti = [];
+						for (let i = 0; i < mbti.length; i++) {
+							for (let k = 0 ; k < tmp.length; k++) {
+								if (mbti[i] === tmp[k][0] || mbti[i] === tmp[k][1]) {
+									newMbti[k] = mbti[i];
+									break;
+								}
+							}
+						}
+						mbti = newMbti.join("");
+						location.href = `/mbti/${mbti}`;
+
+						return;
+					}
+
+					$(".mbti-step").text(`${questionProgress}/12`);
+					progressBar.css("width", `${100/12*questionProgress}%`);
+					$(".page").text(`${questionProgress}/12`);
+
+					$(".mbti-question").text(`Q${questionProgress}. ${q["q1"]}`);
+					$(".a1").text(`${q["a1"]}`);
+					$(".a2").text(`${q["a2"]}`);
+				});
+			</script>
+
+	</body>
+</html>

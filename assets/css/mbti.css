@@ -1,0 +1,456 @@
+@font-face {
+    font-family: BMEULJIRO;
+    src: url(/fonts/BMEULJIRO.otf?0cbe8592cfbea7b46b421e124af8d278) format("opentype");
+  }
+  
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (min-width: 500px) {
+    .mbti-start {
+      border: 3px solid #000 !important;
+      border-radius: 10px !important;
+    }
+  
+    .mbti-start-wrapper {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+  
+  body {
+    font-family: "BMEULJIRO" !important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .mbti-start {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4e9d6;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .mbti-start .mbti-logo {
+    margin-top: 30px;
+  }
+  
+  .mbti-start .start-title {
+    margin-top: 82px;
+    font-size: 34px;
+    color: #000;
+    line-height: 1.38;
+    text-align: center;
+  }
+  
+  .mbti-start .start-title red {
+    color: #ed2510;
+  }
+  
+  .mbti-start .start-subtitle {
+    margin-top: 13px;
+    font-family: "Yeon Sung", cursive;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .mbti-start .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 270px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #000;
+    font-size: 19px;
+    margin-bottom: 16px;
+  }
+  
+  .mbti-start .btn small {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  
+  .mbti-start .btn-red {
+    background-color: #ed2510;
+  }
+  
+  .mbti-start .main-bg {
+    margin-top: 15px;
+  }
+  
+  .mbti-container {
+    display: flex;
+    margin: 0 auto;
+    padding: 30px;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .mbti-container .pagi {
+    width: 100%;
+    max-width: 314px;
+    margin-top: 35px;
+  }
+  
+  .mbti-container .page {
+    font-size: 16px;
+    color: #969696;
+    text-align: right;
+    font-weight: 500;
+  }
+  
+  .mbti-container .pb {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #eee;
+    border-radius: 7px;
+    height: 7px;
+    margin-top: 12px;
+  }
+  
+  .mbti-container .progress-inner {
+    width: 8.3%;
+    height: inherit;
+    border-radius: 5px;
+    background-color: #ed2510;
+    transition: width 0.2s ease-out 0s;
+  }
+  
+  .mbti-container .mbti-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 73px;
+    height: 38px;
+    border-radius: 19px;
+    background-color: #ed2510;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  .mbti-container .mbti-question {
+    margin-top: 60px;
+    margin-bottom: 28px;
+    font-size: 25px;
+  }
+  
+  .mbti-container .mbti-answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 314px;
+    padding: 30px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif !important;
+  }
+  
+  .bottom-logo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+  }
+  
+  .mbti-result-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 466px;
+  }
+  
+  .mbti-result-container .mbti-result img {
+    width: 100%;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-subtitle {
+    margin-top: 42px;
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-title {
+    margin-top: 14px;
+    font-size: 27px;
+    text-align: center;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-detail {
+    margin-top: 25px;
+    font-size: 14px;
+    padding: 0 30px;
+    line-height: 2;
+    letter-spacing: 0.5px;
+    font-family: "Noto Sans KR", sans-serif !important;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-banner {
+    margin-top: 30px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-match-wrapper {
+    margin: 50px 20px 0 20px;
+    padding: 10px;
+    background-color: #E0D2ED;
+    border-radius: 19px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-match-wrapper .mbti-result-match {
+    border: 1px dashed #C199E0;
+    text-align: center;
+    border-radius: 13px;
+    padding: 20px 30px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-match-wrapper .mbti-result-match .mbti-result-match-title {
+    font-size: 17px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-match-wrapper .mbti-result-match .mbti-result-match-mbti {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-worst-match-wrapper {
+    margin: 12px 20px 0 20px;
+    padding: 10px;
+    background-color: #FAECE3;
+    border-radius: 19px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-worst-match-wrapper .mbti-result-worst-match {
+    border: 1px dashed #AD856B;
+    text-align: center;
+    border-radius: 13px;
+    padding: 20px 30px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-worst-match-wrapper .mbti-result-worst-match .mbti-result-match-title {
+    font-size: 17px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-worst-match-wrapper .mbti-result-worst-match .mbti-result-match-mbti {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-feature-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+    font-size: 17px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-features {
+    margin-top: 10px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-family: "Noto Sans KR", sans-serif !important;
+    -webkit-padding-start: 50px;
+            padding-inline-start: 50px;
+    -webkit-padding-end: 30px;
+            padding-inline-end: 30px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-features li {
+    margin-bottom: 10px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-features li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 17px;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share {
+    display: inline-flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    align-items: center;
+    width: 280px;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .sns-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 27px;
+    cursor: pointer;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .sns-logo img {
+    height: 21px;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .kakao {
+    background-color: #FAE300;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .link {
+    background-color: #2B2B2B;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .fb {
+    background-color: #3b5998;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .twitter {
+    background-color: #00acee;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .sns-logo-desc {
+    font-family: "Yeon Sung", cursive !important;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 466px;
+    background-color: #1E1E1E;
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 40px;
+  }
+  
+  .footer .footer-title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.8;
+  }
+  
+  .footer .footer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    height: 48px;
+    border-radius: 24px;
+    width: 263px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif !important;
+  }
+  
+  .footer .red {
+    background-color: #ed2510;
+  }
+  
+  .footer .gray {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer .footer-logo {
+    margin-top: 30px;
+  }
+  
+  .footer .footer-logo .footer-desc {
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.1);
+    font-family: "Noto Sans KR", sans-serif !important;
+  }
+  
+  .mbti-promotion {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 440px;
+    cursor: pointer;
+  }
+  
+  .mbti-promotion .mbti-promotion-img {
+    width: 100%;
+    max-width: 440px;
+  }
+  
+  .footer-btns {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    align-items: center;
+    height: 73px;
+  }
+  
+  .footer-btns .footer-btn {
+    font-family: "Noto Sans KR", sans-serif !important;
+    width: 50%;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #e4e4e4;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .footer-btns .footer-btn red {
+    color: #ed2510;
+  }
+  
+  .footer-btns .footer-btn:last-child {
+    border: none;
+  }
+  
+  .modal-content {
+    background-color: #fff !important;
+  }
+  
+  .modal-content pre {
+    padding: 10px;
+    white-space: pre-wrap;
+  }
+  
+  .modal-content pre img {
+    border: 1px solid #000;
+  }
+  

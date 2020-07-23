@@ -16,12 +16,8 @@
 		<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 		
 		<style>
-			#header{
-				padding-top: 20px;
-			}
-			.inner{
-				height: 10px;
-			}
+			#header{padding-top: 20px;}
+			.inner{height: 10px;}
 		</style>
 
 	</head>
@@ -47,15 +43,15 @@
 				<div class="mbti-container">
 
 					<div class="mbti-question">Q1. 당신의 키는?</div>
-					<div class="mbti-answer a1">170cm 미만</div>
-					<div class="mbti-answer a2">170~176cm</div>
-					<div class="mbti-answer a3">177~183cm</div>
-					<div class="mbti-answer a4">184cm 이상</div>
+					<div class="mbti-answer a1">~168cm</div>
+					<div class="mbti-answer a2">169~173cm</div>
+					<div class="mbti-answer a3">174~177cm</div>
+					<div class="mbti-answer a4">178cm~</div>
 				
 					<div class="pagi">
 				
 				<div class="page">
-					1/16
+					1/15
 				</div>
 					
 					
@@ -79,35 +75,34 @@
 		
 			<script>
 				let progressBar = $(".progress-inner");
-				progressBar.css("width", `${100/16}%`);
+				progressBar.css("width", `${100/15}%`);
 
 					let questions = [
 					{"q1": "당신의 키는?", 
-					 "a1": "170cm 미만", "a2": "170~176cm", "a3": "177~183cm", "a4" : "184cm 이상",
+					 "a1": "~168cm", "a2": "169~173cm", "a3": "174~177cm", "a4" : "178cm~",
 					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
 						
 					{"q1": "당신의 몸무게는?", 
-					 "a1": "60kg 이하", "a2": "60~75kg", "a3": "75~90kg", "a4" : "90kg 이상",
+					 "a1": "~55kg", "a2": "56~72kg", "a3": "73~86kg", "a4" : "87kg~",
+					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
+
+
+					{"q1": "벤치프레스 1회 최대 무게는?", 
+					 "a1": "~40kg", "a2": "40~60kg", "a3": "60~100kg", "a4" : "100kg~",
 					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
 						
-					{"q1": "당신의 벤치프레스 1회 최대 무게는?", 
-					 "a1": "60kg 미만", "a2": "60~80kg", "a3": "80~100kg", "a4" : "100kg 이상",
+					{"q1": "데드리프트 1회 최대 무게는?", 
+					 "a1": "~60kg", "a2": "60~90kg", "a3": "90~130kg", "a4" : "130kg~",
 					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
 						
-					{"q1": "당신의 데드리프트 1회 최대 무게는?", 
-					 "a1": "90kg 미만", "a2": "90~139kg", "a3": "140~189kg", "a4" : "190kg 이상",
+					{"q1": "스쿼트 1회 최대 무게는?", 
+					 "a1": "~60kg", "a2": "60~90kg", "a3": "90~130kg", "a4" : "130kg~",
 					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
 						
-					{"q1": "당신의 스쿼트 1회 최대 무게는?", 
-					 "a1": "80kg 미만", "a2": "80~129kg", "a3": "130~169kg", "a4" : "170kg 이상",
-					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
-						
-					{"q1": "당신의 턱걸이 횟수는?",
-					 "a1": "0회", "a2": "1~3회", "a3": "4~9회", "a4" : "10회 이상",
-					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
+
 							
 					{"q1": "일주일에 헬스장 가는 횟수는?", 
-					 "a1": "주 0~2회", "a2": "주 3회 이상", 
+					 "a1": "주 0~3회", "a2": "주 4회 이상", 
 					 "a1_mbti": "N", "a2_mbti": "E"},
 						
 					{"q1": "집에 있는 홈트레이닝 기구는 주로", 
@@ -154,7 +149,7 @@
 				$(".mbti-answer").on("click", function() {
 					let q = questions[questionProgress-1];
 					
-					if (questionProgress <= 5 ){
+					if (questionProgress <= 4 ){
 												
 						if ($(this).hasClass("a1")) {
 							if (q["a1_mbti"] in result) { 
@@ -196,8 +191,8 @@
 						q = questions[questionProgress-1];
 
 						//$(".mbti-step").text(`${questionProgress}/12`);
-						progressBar.css("width", `${100/16*questionProgress}%`);
-						$(".page").text(`${questionProgress}/16`);
+						progressBar.css("width", `${100/15*questionProgress}%`);
+						$(".page").text(`${questionProgress}/15`);
 
 						$(".mbti-question").text(`Q${questionProgress}. ${q["q1"]}`);
 						$(".a1").text(`${q["a1"]}`);
@@ -206,7 +201,7 @@
 						$(".a4").text(`${q["a4"]}`);	
 						
 						
-					} else if (questionProgress > 5 && questionProgress <=15) {
+					} else if (questionProgress > 4 && questionProgress <=14) {
 
 						$(".a3").css("display", "none");
 						$(".a4").css("display", "none");
@@ -231,8 +226,8 @@
 						q = questions[questionProgress-1];
 
 						//$(".mbti-step").text(`${questionProgress}/12`);
-						progressBar.css("width", `${100/16*questionProgress}%`);
-						$(".page").text(`${questionProgress}/16`);
+						progressBar.css("width", `${100/15*questionProgress}%`);
+						$(".page").text(`${questionProgress}/15`);
 
 						$(".mbti-question").text(`Q${questionProgress}. ${q["q1"]}`);
 						$(".a1").text(`${q["a1"]}`);

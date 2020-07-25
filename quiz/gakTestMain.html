@@ -77,27 +77,27 @@
 				let progressBar = $(".progress-inner");
 				progressBar.css("width", `${100/15}%`);
 
-					let questions = [
+				let questions = [
 					{"q1": "당신의 키는?", 
 					 "a1": "~168cm", "a2": "169~173cm", "a3": "174~177cm", "a4" : "178cm~",
 					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
 						
 					{"q1": "당신의 몸무게는?", 
 					 "a1": "~55kg", "a2": "56~72kg", "a3": "73~86kg", "a4" : "87kg~",
-					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
+					 "aw1": "S", "aw2": "N", "aw3": "N", "aw4": "F"},
 
 
 					{"q1": "벤치프레스 1회 최대 무게는?", 
 					 "a1": "~40kg", "a2": "40~60kg", "a3": "60~100kg", "a4" : "100kg~",
-					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
+					 "aw1": 30, "aw2": 50, "aw3": 80, "aw4": 120},
 						
 					{"q1": "데드리프트 1회 최대 무게는?", 
 					 "a1": "~60kg", "a2": "60~90kg", "a3": "90~130kg", "a4" : "130kg~",
-					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
+					 "aw1": 40, "aw2": 75, "aw3": 110, "aw4": 150},
 						
 					{"q1": "스쿼트 1회 최대 무게는?", 
 					 "a1": "~60kg", "a2": "60~90kg", "a3": "90~130kg", "a4" : "130kg~",
-					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
+					 "aw1": 40, "aw2": 75, "aw3": 110, "aw4": 150},
 						
 
 							
@@ -106,105 +106,201 @@
 					 "a1_mbti": "N", "a2_mbti": "E"},
 						
 					{"q1": "집에 있는 홈트레이닝 기구는 주로", 
-					 "a1": "줄넘기, 악력기, 훌라우프", "a2": "아령, 턱걸이, 바벨, 푸쉬업바", 
-					 "a1_mbti": "F", "a2_mbti": "T"},
+					 "a1": "아령, 턱걸이, 바벨, 푸쉬업바", "a2": "줄넘기, 악력기, 훌라우프", 
+					 "a1_mbti": "E", "a2_mbti": "N"},
 						
 					{"q1": "야 오랜만인데 한잔하자!", 
 					 "a1": "그래 오늘 한잔 꺽자", "a2": "꺼져라 내친구는 아령이다", 
-					 "a1_mbti": "J", "a2_mbti": "P"},
+					 "a1_mbti": "N", "a2_mbti": "E"},
 						
 					{"q1": "오빠.. 미안한데 오늘 운동 안가면 안될까?", 
-					 "a1": "그래~ 운동이야 다음에 하면 돼, 보자!", "a2": "남자가 쇠질하러 가는데 어디, 헤어지자!", 
-					 "a1_mbti": "N", "a2_mbti": "S"},
+					 "a1": "남자가 쇠질하러 가는데 어디", "a2": "그래~ 운동이야 다음에 하면 돼", 
+					 "a1_mbti": "E", "a2_mbti": "N"},
 						
 					{"q1": "아놀드가 우리 헬스장 트레이너로 왔는데 회당 15만원이다", 
 					 "a1": "너무 비싸다", "a2": "인생 기회다", 
-					 "a1_mbti": "S", "a2_mbti": "N"},
+					 "a1_mbti": "N", "a2_mbti": "E"},	
+						
+					
 						
 					{"q1": "후인하강을 안다", 
 					 "a1": "안다", "a2": "모른다", 
-					 "a1_mbti": "S", "a2_mbti": "N"},
+					 "a1_mbti": "C", "a2_mbti": "S"},
 						
 					{"q1": "지금 냉동실을 열어봐라. 닭가슴살이", 
-					 "a1": "있다", "a2": "없다", 
-					 "a1_mbti": "S", "a2_mbti": "N"},
+					 "a1": "없다", "a2": "있다", 
+					 "a1_mbti": "S", "a2_mbti": "C"},
 						
 					{"q1": "박재범 몸 6개월이면 만든다", 
-					 "a1": "맞다", "a2": "아니다", 
-					 "a1_mbti": "S", "a2_mbti": "N"},
+					 "a1": "아니다", "a2": "맞다", 
+					 "a1_mbti": "S", "a2_mbti": "C"},
 						
 					{"q1": "구독하고 있는 운동 유튜버가 있다", 
 					 "a1": "있다", "a2": "없다", 
-					 "a1_mbti": "S", "a2_mbti": "N"},
+					 "a1_mbti": "C", "a2_mbti": "S"},
 						
 					{"q1": "어깨 근육은 크게 몇부분으로 되어있나?", 
-					 "a1": "3부분", "a2": "5부분", 
-					 "a1_mbti": "S", "a2_mbti": "N"},						
+					 "a1": "5부분", "a2": "3부분", 
+					 "a1_mbti": "S", "a2_mbti": "C"},						
 				];
 
+				let height;
+				let weight = {};
+				let muscle = 0;
 				let result = {};
 				let questionProgress = 1;
+
+				
+				function get_result(){
+					
+					let newMuscle;
+					let bmi;
+					let character;
+					
+					// ESNC 계산
+					function filterItems(arr) { // 배열내 값이 3 이상인 것 만 필터링하는 함수
+						return Object.keys(arr).filter(el => arr[el] >= 3);
+					}
+					let mbti = filterItems(result).join("");
+					let newMbti;
+
+					// 문제 섞여도 효과있는 코드, 현재는 쓸모 x
+					if(mbti == "EC" || mbti == "CE" ){ newMbti = "EC"; }
+					else if(mbti == "ES" || mbti == "SE" ){ newMbti = "ES"; }
+					else if(mbti == "NC" || mbti == "CN" ){ newMbti = "NC"; }
+					else if(mbti == "NS" || mbti == "SN" ){ newMbti = "NS"; }
+					
+					// muscle 3대 합 계산
+					console.log("muscle : " + muscle);
+					if(muscle < 170){ newMuscle = "A"; }
+					else if(170 <= muscle && muscle < 260){	newMuscle = "B"; }
+					else if(260 <= muscle && muscle < 360){	newMuscle = "C"; }
+					else{ newMuscle = "D"; }
+					console.log("newMuscle : " + newMuscle);
+							 
+
+					// BMI 계산 weight, muscle 로 계산
+					console.log("weight : " + weight);
+					if(weight == "skinny"){
+						switch( newMuscle ){
+							case 'A': 
+								bmi = "M";
+							case 'B': 
+								bmi = "L";
+							case 'C': 
+								bmi = "H";
+							case 'D': 
+								bmi = "H";
+							break;
+						}
+						
+					}else if(weight == "normal"){
+						switch( newMuscle ){
+							case 'A': 
+								bmi = "M";
+							case 'B':
+								bmi = "L";
+							case 'C': 
+								bmi = "L";
+							case 'D': 
+								bmi = "H";
+							break;
+						}
+					}else{
+						switch( newMuscle ){
+							case 'A': 
+								bmi = "P";
+							case 'B': 
+								bmi = "P";
+							case 'C': 
+								bmi = "L";
+							case 'D': 
+								bmi = "H";
+							break;
+						}
+					}
+						
+						
+					console.log("BMI : "  + bmi);
+					
+					
+					
+					
+					//mbti = newMbti.join("");
+						//location.href = `/mbti/${mbti}`;
+
+						return;
+				}
+				
+				
+				function shape_progress( ){
+					//console.log(questionProgress);
+
+					questionProgress += 1;
+					if(questionProgress == 16){
+						get_result();
+						return;
+					}
+					
+					q = questions[questionProgress-1];
+					progressBar.css("width", `${100/15*questionProgress}%`);
+					$(".page").text(`${questionProgress}/15`);
+
+					$(".mbti-question").text(`Q${questionProgress}. ${q["q1"]}`);					
+					$(".a1").text(`${q["a1"]}`);
+					$(".a2").text(`${q["a2"]}`);
+					$(".a3").text(`${q["a3"]}`);	
+					$(".a4").text(`${q["a4"]}`);	
+
+					if(questionProgress >= 6){
+						$(".a3").css("display", "none");
+						$(".a4").css("display", "none");
+					}
+						
+					
+				}
 				
 
 				$(".mbti-answer").on("click", function() {
-					let q = questions[questionProgress-1];
+					let q = questions[questionProgress-1];				
 					
-					if (questionProgress <= 4 ){
-												
-						if ($(this).hasClass("a1")) {
-							if (q["a1_mbti"] in result) { 
-								result[q["a1_mbti"]] += 1;
-							} else {
-								result[q["a1_mbti"]] = 1; 
-							}
+					if (questionProgress == 1 ){ // 키
+						shape_progress( );
+						
+					} else if (questionProgress == 2){ // 무게
+						
+						if ($(this).hasClass("a1")){ 
+							weight = "skinny"; 
+						} 
+						else if ($(this).hasClass("a4")){ 
+							weight = "fat"; 
+						}
+						else { 
+							weight = "normal"; 
+						}
+						console.log("weight : " + weight);
+						shape_progress( );
+						
+					} else if(3 <= questionProgress && questionProgress < 6){ // 벤치 & 데드 & 스쿼트
+						
+						if ($(this).hasClass("a1")){ 
+							muscle += q["aw1"];
 							
 						} else if ($(this).hasClass("a2")){ 
-
-							if (q["a2_mbti"] in result) { 
-								result[q["a2_mbti"]] += 1;
-							} else {
-								result[q["a2_mbti"]] = 1; 
-							}
-						
+							muscle += q["aw2"];
+							
 						} else if ($(this).hasClass("a3")){
-								   
-							if (q["a1_mbti"] in result) { 
-								result[q["a1_mbti"]] += 1;
-							} else {
-								result[q["a1_mbti"]] = 1; 
-							}
-
-								   
-								   
-						} else if ($(this).hasClass("a4")){
-					
-							if (q["a1_mbti"] in result) { 
-								result[q["a1_mbti"]] += 1;
-							} else {
-								result[q["a1_mbti"]] = 1; 
-							}
-
+							muscle += q["aw3"];
+							
+						} else{
+							muscle += q["aw4"];
 							
 						}
-				
-						questionProgress += 1;
-						q = questions[questionProgress-1];
-
-						//$(".mbti-step").text(`${questionProgress}/12`);
-						progressBar.css("width", `${100/15*questionProgress}%`);
-						$(".page").text(`${questionProgress}/15`);
-
-						$(".mbti-question").text(`Q${questionProgress}. ${q["q1"]}`);
-						$(".a1").text(`${q["a1"]}`);
-						$(".a2").text(`${q["a2"]}`);
-						$(".a3").text(`${q["a3"]}`);	
-						$(".a4").text(`${q["a4"]}`);	
 						
-						
-					} else if (questionProgress > 4 && questionProgress <=14) {
-
-						$(".a3").css("display", "none");
-						$(".a4").css("display", "none");
+						console.log("muscle : " + muscle);
+						shape_progress( );
+							  
+					} else if(6 <= questionProgress && questionProgress <= 15) { // 유형 
 						
 						if ($(this).hasClass("a1")) 
 						{
@@ -214,70 +310,17 @@
 								result[q["a1_mbti"]] = 1; 
 							}
 						} else { 
-
 							if (q["a2_mbti"] in result) { 
 								result[q["a2_mbti"]] += 1;
 							} else {
 								result[q["a2_mbti"]] = 1; 
 							}
 						}	
-						
-						questionProgress += 1;
-						q = questions[questionProgress-1];
-
-						//$(".mbti-step").text(`${questionProgress}/12`);
-						progressBar.css("width", `${100/15*questionProgress}%`);
-						$(".page").text(`${questionProgress}/15`);
-
-						$(".mbti-question").text(`Q${questionProgress}. ${q["q1"]}`);
-						$(".a1").text(`${q["a1"]}`);
-						$(".a2").text(`${q["a2"]}`);	
-
-							
-					
-						
-					} else{ 
-						
-						console.log("in if 13 : " + questionProgress);
-
-						console.log("result : ");
 						console.log(result);
+						shape_progress( );
 						
-						// 배열 값이 2 이상인 것 만 필터링하는 함수
-						function filterItems(arr) {
-							return Object.keys(arr).filter(el => arr[el] >= 2);
-						}
-
-						let tmp = [
-							"IE",
-							"SN",
-							"TF",
-							"JP"
-						];
-						
-						let mbti = filterItems(result).join("");
-						
-						// MBTI 순서대로 정렬
-						let newMbti = [];
-						for (let i = 0; i < mbti.length; i++) {
-							for (let k = 0 ; k < tmp.length; k++) {
-								if (mbti[i] === tmp[k][0] || mbti[i] === tmp[k][1]) {
-									newMbti[k] = mbti[i];
-									break;
-								}
-							}
-						}
-						
-						mbti = newMbti.join("");
-						//location.href = `/mbti/${mbti}`;
-						
-						
-
-						return;
-
 					}
 					
-				
 
 					
 				});

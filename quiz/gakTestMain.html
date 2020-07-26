@@ -32,7 +32,7 @@
 
 							<!-- Logo -->
 								<a href="../index.html" class="logo">
-									<span class="symbol"><img src="../images/logo.svg" alt="" /></span><span class="title">투플+</span>
+									<span><img src="../images/logo_250.png" alt="" style="width: 100px"/></span>
 								</a>
 						</div>
 					</header>
@@ -41,15 +41,12 @@
 					
 				
 				<div class="mbti-container">
-
 					<div class="mbti-question">Q1. 당신의 키는?</div>
 					<div class="mbti-answer a1">~168cm</div>
 					<div class="mbti-answer a2">169~173cm</div>
 					<div class="mbti-answer a3">174~177cm</div>
 					<div class="mbti-answer a4">178cm~</div>
-				
 					<div class="pagi">
-				
 				<div class="page">
 					1/15
 				</div>
@@ -157,7 +154,6 @@
 					let bmi;
 					let character;
 					
-					
 					// mbti 계산
 					function filterItems(arr) { // 배열내 값이 3 이상인 것 만 필터링하는 함수
 						return Object.keys(arr).filter(el => arr[el] >= 3);
@@ -165,7 +161,6 @@
 					let mbti = filterItems(result).join("");
 					let newMbti;
 
-					
 					if(mbti == "EC" || mbti == "CE" ){ newMbti = "EC"; }
 					else if(mbti == "ES" || mbti == "SE" ){ newMbti = "ES"; }
 					else if(mbti == "NC" || mbti == "CN" ){ newMbti = "NC"; }

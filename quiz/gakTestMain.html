@@ -157,79 +157,65 @@
 					let bmi;
 					let character;
 					
-					// ESNC 계산
+					
+					// mbti 계산
 					function filterItems(arr) { // 배열내 값이 3 이상인 것 만 필터링하는 함수
 						return Object.keys(arr).filter(el => arr[el] >= 3);
 					}
 					let mbti = filterItems(result).join("");
 					let newMbti;
 
-					// 문제 섞여도 효과있는 코드, 현재는 쓸모 x
+					
 					if(mbti == "EC" || mbti == "CE" ){ newMbti = "EC"; }
 					else if(mbti == "ES" || mbti == "SE" ){ newMbti = "ES"; }
 					else if(mbti == "NC" || mbti == "CN" ){ newMbti = "NC"; }
 					else if(mbti == "NS" || mbti == "SN" ){ newMbti = "NS"; }
+					console.log("mbti : " + mbti)
 					
-					// muscle 3대 합 계산
+					// BMI 계산 weight, muscle 로 계산
 					console.log("muscle : " + muscle);
 					if(muscle < 170){ newMuscle = "A"; }
 					else if(170 <= muscle && muscle < 260){	newMuscle = "B"; }
 					else if(260 <= muscle && muscle < 360){	newMuscle = "C"; }
 					else{ newMuscle = "D"; }
 					console.log("newMuscle : " + newMuscle);
-							 
-
-					// BMI 계산 weight, muscle 로 계산
+					
+					
 					console.log("weight : " + weight);
 					if(weight == "skinny"){
 						switch( newMuscle ){
-							case 'A': 
-								bmi = "M";
-							case 'B': 
-								bmi = "L";
-							case 'C': 
-								bmi = "H";
-							case 'D': 
-								bmi = "H";
-							break;
+							case 'A': bmi = 'M'; break;
+							case 'B': bmi = 'L'; break;
+							case 'C': bmi = 'H'; break;
+							case 'D': bmi = 'H'; break;
 						}
 						
 					}else if(weight == "normal"){
 						switch( newMuscle ){
-							case 'A': 
-								bmi = "M";
-							case 'B':
-								bmi = "L";
-							case 'C': 
-								bmi = "L";
-							case 'D': 
-								bmi = "H";
-							break;
+							case 'A': bmi = 'M'; break;
+							case 'B': bmi = 'L'; break;
+							case 'C': bmi = 'L'; break;
+							case 'D': bmi = 'H'; break;
 						}
 					}else{
 						switch( newMuscle ){
-							case 'A': 
-								bmi = "P";
-							case 'B': 
-								bmi = "P";
-							case 'C': 
-								bmi = "L";
-							case 'D': 
-								bmi = "H";
-							break;
+							case 'A': bmi = 'P'; break;
+							case 'B': bmi = 'P'; break;
+							case 'C': bmi = 'L'; break;
+							case 'D': bmi = 'H'; break;
 						}
 					}
 						
-						
-					console.log("BMI : "  + bmi);
+					console.log("after bmi : "  + bmi);
 					
+					// 최종 케릭터 결정
+					character = bmi+mbti;
+					console.log("fianl character : " + character);
 					
-					
-					
-					//mbti = newMbti.join("");
-						//location.href = `/mbti/${mbti}`;
+					//location.href = `/mbti/${character}`;
+					location.href = `/aimaim/quiz/gakTestResult.html`;
 
-						return;
+					return;
 				}
 				
 				

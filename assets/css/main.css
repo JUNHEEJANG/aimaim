@@ -1,5 +1,10 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
+@font-face { 
+	font-family: 'BMJUA'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff')format('woff'); 
+	font-weight: normal; font-style: normal; 
+}
 
 /*
 	Phantom by HTML5 UP
@@ -79,6 +84,7 @@ input, select, textarea {
 	}
 
 	body {
+		font-family: "BMJUA" !important;
 		-ms-overflow-style: scrollbar;
 	}
 
@@ -3175,7 +3181,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 0 0 0 0 ;
-		background-color: #f6f6f6;
+		background-color: white;
 	}
 
 		#footer > .inner {

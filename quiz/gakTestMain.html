@@ -26,40 +26,37 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner align-center">
-
-							<!-- Logo -->
-								<a href="../index.html" class="logo">
-									<span><img src="../images/logo_250.png" alt="" style="width: 100px"/></span>
-								</a>
-						</div>
-					</header>
-
 				<!-- Main -->
-					
-				
 				<div class="mbti-container">
-					<div class="mbti-question">Q1. 당신의 키는?</div>
+					<div class="mbti-questionNo">Q1.</div>
+					<div class="mbti-question">당신의 키는?</div>
 					<div class="mbti-answer a1">~168cm</div>
 					<div class="mbti-answer a2">169~173cm</div>
 					<div class="mbti-answer a3">174~177cm</div>
 					<div class="mbti-answer a4">178cm~</div>
+					
 					<div class="pagi">
-				<div class="page">
-					1/15
+					<div class="page">
+						1/15
+					</div>
+					
+					<div class="pb">
+						<div class="progress-inner"></div>
+					</div>
+					
+					<div class="inner align-center">
+
+					<!-- Logo -->
+					<a href="../index.html" class="logo">
+						<span><img src="../images/logo_250.png" alt="" style="width: 60px; padding-top: 30px"/></span>
+					</a>
 				</div>
-					
-					
-				<div class="pb">
-					<div class="progress-inner"></div>
-        		</div>
-							
 			</div>
 									
 			
-			</div>
+				</div>
+				
+
 		</div>
 				
 
@@ -227,7 +224,8 @@
 					progressBar.css("width", `${100/15*questionProgress}%`);
 					$(".page").text(`${questionProgress}/15`);
 
-					$(".mbti-question").text(`Q${questionProgress}.${q["q1"]}`);					
+					$(".mbti-questionNo").text(`Q${questionProgress}.`);
+					$(".mbti-question").text(`${q["q1"]}`);					
 					$(".a1").text(`${q["a1"]}`);
 					$(".a2").text(`${q["a2"]}`);
 					$(".a3").text(`${q["a3"]}`);	

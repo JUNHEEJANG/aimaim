@@ -51,7 +51,7 @@
   }
   
   .mbti-start .start-title {
-    margin-top: 0px;
+    margin-top: 50px;
     font-size: 45px;
     color: #000;
     line-height: 1.38;
@@ -66,7 +66,7 @@
     margin-top: 13px;
     /*font-family: "Yeon Sung", cursive;*/
     font-size: 18px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
   
   .mbti-start .btn {
@@ -206,17 +206,18 @@
     margin-top: 42px;
     font-size: 17px;
     text-align: center;
+	color: #A4A4A4;
   }
   
   .mbti-result-container .mbti-result .mbti-result-title {
     margin-top: 14px;
-    font-size: 27px;
+    font-size: 30px;
     text-align: center;
   }
   
   .mbti-result-container .mbti-result .mbti-result-detail {
     margin-top: 25px;
-    font-size: 14px;
+    font-size: 16px;
     padding: 0 30px;
     line-height: 2;
     letter-spacing: 0.5px;

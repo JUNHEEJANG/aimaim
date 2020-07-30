@@ -14,7 +14,7 @@
 		<link href="../../assets/css/mbti.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 
-		<meta http-equiv="refresh" content="3; url=result.html">
+		<!--meta http-equiv="refresh" content="3; url=result.html"-->
 		
 	</head>
 	<body class="is-preload">
@@ -38,7 +38,7 @@
 						<div class="mbti-result-container">
 							
 							<div class="mbti-result">
-								<img src="img/loading.gif" style="margin-top: 140px; width: 300px"/>
+								<img src="img/loading.gif" style="margin-top: 170px; width: 250px"/>
 								<div class="mbti-result-title">스타일 분석 중</div>
 							</div>
 							
@@ -50,11 +50,21 @@
 				
 
 		<!-- Scripts -->
-		<script src="../assets/js/jquery.min.js"></script>
-		<script src="../assets/js/browser.min.js"></script>
-		<script src="../assets/js/breakpoints.min.js"></script>
-		<script src="../assets/js/util.js"></script>
-		<script src="../assets/js/main.js"></script>
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script>
+			let character;
+			let temp;
+			
+			temp = location.href.split("?");			
+			character = temp[1];
+			
+			//console.log(character);
+			setTimeout(function(){
+				location.href = `${character}.html`;
+			},3000);
+			
+		
+		</script>
 
 	</body>
 </html>

@@ -30,6 +30,7 @@
 				<div class="mbti-container">
 					<div class="mbti-questionNo">Q1.</div>
 					<div class="mbti-question">당신의 키는?</div>
+					<!--div class="mbti-question2">당신의 키는?</div-->
 					<div class="mbti-answer a1">~168cm</div>
 					<div class="mbti-answer a2">169~173cm</div>
 					<div class="mbti-answer a3">174~177cm</div>
@@ -204,8 +205,9 @@
 					character = bmi+mbti;
 					console.log("fianl character : " + character);
 					
-					//location.href = `/mbti/${character}`;
-					location.href = `loading.html`;
+					
+					location.href = 'loading.html?'+character;
+
 
 					return;
 				}
@@ -225,7 +227,8 @@
 					$(".page").text(`${questionProgress}/15`);
 
 					$(".mbti-questionNo").text(`Q${questionProgress}.`);
-					$(".mbti-question").text(`${q["q1"]}`);					
+					$(".mbti-question").text(`${q["q1"]}`);
+					//$(".mbti-question2").text(`${q["q2"]}`);
 					$(".a1").text(`${q["a1"]}`);
 					$(".a2").text(`${q["a2"]}`);
 					$(".a3").text(`${q["a3"]}`);	

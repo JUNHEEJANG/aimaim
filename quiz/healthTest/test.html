@@ -28,6 +28,8 @@
 
 				<!-- Main -->
 				<div class="mbti-container">
+					
+					
 					<div class="mbti-questionNo">Q1.</div>
 					<div class="mbti-question">당신의 키는?</div>
 					<div class="mbti-question2"></div>
@@ -67,6 +69,11 @@
 			<script src="../../assets/js/breakpoints.min.js"></script>
 			<script src="../../assets/js/util.js"></script>
 			<script src="../../assets/js/main.js"></script>
+			<script>
+				$('.mbti-container').css('display', 'none');
+				$('.mbti-container').fadeIn(600);	
+			</script>
+							
 		
 			<script>
 				let progressBar = $(".progress-inner");
@@ -108,21 +115,21 @@
 					 "a1": "그래 오늘 한잔 꺽자", "a2": "꺼져라 내친구는 아령이다", 
 					 "a1_mbti": "N", "a2_mbti": "E"},
 						
+					{"q1": "아놀드가 헬스장에 왔다", "q2": "PT가 회당 15만원이다",
+					 "a1": "15만원은 너무 비싸다", "a2": "인생 근성장 기회다", 
+					 "a1_mbti": "N", "a2_mbti": "E"},	
+					
 					{"q1": "오빠.. 미안한데", "q2": "오늘 운동 안가면 안될까?",
 					 "a1": "남자가 쇠질하러 가는데 어디", "a2": "그래~ 운동이야 다음에 하면 돼", 
 					 "a1_mbti": "E", "a2_mbti": "N"},
 						
-					{"q1": "헬스장 트레이너가 아놀드다", "q2": "하지만 PT 회당 15만원이다..",
-					 "a1": "너무 비싸다", "a2": "인생 기회다", 
-					 "a1_mbti": "N", "a2_mbti": "E"},	
-						
 					
 						
-					{"q1": "회원님 등운동 하실때는", "q2": "후인하강부터 하셔야죠",
-					 "a1": "아 맞다~ 후인하강", "a2": "응?.. 후인하강?", 
+					{"q1": "회원님? 등운동 하실때는", "q2": "후인하강부터 하셔야죠",
+					 "a1": "아 맞아~ 후인하강!", "a2": "응?.. 후인하강?", 
 					 "a1_mbti": "C", "a2_mbti": "S"},
 						
-					{"q1": "지금 집 냉동실을 열어봐라", "q2": "닭가슴살이",
+					{"q1": "지금 집 냉장고를 열어봐라", "q2": "냉동실에 닭가슴살이",
 					 "a1": "없다", "a2": "있다", 
 					 "a1_mbti": "S", "a2_mbti": "C"},
 						

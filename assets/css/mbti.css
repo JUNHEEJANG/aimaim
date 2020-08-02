@@ -207,11 +207,13 @@
   }
   
   .mbti-result-container .mbti-result img {
-    width: 100%;
+    width: 250px;
+	display: block; 
+	margin: 0px auto;
   }
   
   .mbti-result-container .mbti-result .mbti-result-subtitle {
-    margin-top: 42px;
+    margin-top: 36px;
     font-size: 17px;
     text-align: center;
 	color: #A4A4A4;
@@ -219,19 +221,30 @@
   
   .mbti-result-container .mbti-result .mbti-result-title {
     margin-top: 14px;
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
+  }
+
+  .mbti-result-container .mbti-result .mbti-result-detail-tag {
+    margin-top: 25px;
+    font-size: 14px;
+    padding: 0 30px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    font-family: "Noto Sans KR", sans-serif !important;
+	font-weight: bold;
   }
   
   .mbti-result-container .mbti-result .mbti-result-detail {
-    margin-top: 25px;
-    font-size: 13px;
+    margin-top: 5px;
+    font-size: 14px;
     padding: 0 30px;
-    line-height: 2;
-    letter-spacing: 0.5px;
+    line-height: 1.5;
+    letter-spacing: 0px;
     font-family: "Noto Sans KR", sans-serif !important;
   }
-  
+
+
   .mbti-result-container .mbti-result .mbti-banner {
     margin-top: 30px;
     width: 100%;
@@ -293,7 +306,7 @@
   
   .mbti-result-container .mbti-result .mbti-result-features {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 13.5px;
     letter-spacing: 0.5px;
     font-family: "Noto Sans KR", sans-serif !important;
     -webkit-padding-start: 50px;
@@ -303,7 +316,7 @@
   }
   
   .mbti-result-container .mbti-result .mbti-result-features li {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
   }
   
   .mbti-result-container .mbti-result .mbti-result-features li:last-child {
@@ -364,7 +377,7 @@
   }
   
   .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .sns-logo-desc {
-    font-family: "Yeon Sung", cursive !important;
+    font-family: "Noto Sans KR", cursive !important;
     margin-top: 10px;
     font-size: 15px;
   }

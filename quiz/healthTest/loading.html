@@ -38,8 +38,8 @@
 						<div class="mbti-result-container">
 							
 							<div class="mbti-result">
-								<img src="img/loading.gif" style="margin-top: 170px; width: 250px"/>
-								<div class="mbti-result-title">스타일 분석 중</div>
+								<img src="img/loading.gif" style="margin-top: 170px; width: 240px"/>
+								<div class="mbti-result-title" style="margin-top: 30px;">스타일 분석 중</div>
 							</div>
 							
 						</div>
@@ -57,8 +57,7 @@
 			
 			temp = location.href.split("?");			
 			character = temp[1];
-			
-			//console.log(character);
+		
 			setTimeout(function(){
 				location.href = `${character}.html`;
 			},3000);

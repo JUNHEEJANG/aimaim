@@ -2328,6 +2328,11 @@ input, select, textarea {
 			display: block;
 		}
 
+		.quiz-img {
+			margin-bottom : 20px;
+			width : 400px;
+		}
+
 		.image.left, .image.right {
 			max-width: 40%;
 		}

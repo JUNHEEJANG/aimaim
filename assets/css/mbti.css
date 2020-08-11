@@ -2,7 +2,11 @@
 	font-family: 'BMJUA'; 
 	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff')format('woff'); 
 	font-weight: normal; font-style: normal; 
+	
+	font-family: 'NanumSquare', sans-serif !important;
+	src: url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 }
+            
   
   html {
     width: 100%;
@@ -108,7 +112,7 @@
   .mbti-container .pagi {
     width: 100%;
     max-width: 314px;
-    margin-top: 60px;
+    margin-top: 50px;
   }
   
   .mbti-container .page {
@@ -150,23 +154,27 @@
   }
 
   .mbti-container .mbti-questionNo {
-    margin-top: 50px;
-    margin-bottom: 28px;
+    margin-top: 40px;
+    margin-bottom: 22px;
     font-size: 33px;
 	color: #FE2E64;
   }
   
   .mbti-container .mbti-question {
+	font-family: 'nanumsquare';
+	font-weight : bold;
     margin-top: 0px;
     margin-bottom: 5px;
-    font-size: 30px;
+    font-size: 25px;
 	text-align: center;
 	float: left;
   }
   .mbti-container .mbti-question2 {
+	font-family: 'nanumsquare';
+	font-weight : bold;
     margin-top: 0px;
     margin-bottom: 28px;
-    font-size: 30px;
+    font-size: 25px;
 	text-align: center;
 	float: left;
   }
@@ -179,8 +187,8 @@
     max-width: 314px;
     padding-left: 30px;
 	padding-right: 30px;
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 16px;
+	padding-bottom: 16px;
     background-color: #F7F5F5;
     border-radius: 15px;
     color: #000000;

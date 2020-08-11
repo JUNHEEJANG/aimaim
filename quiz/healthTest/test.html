@@ -14,9 +14,11 @@
 		<!-- sns share img -->
 		<meta property="og:image" content="" />
 
+		
 		<!-- 파비콘 --> 
 		<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+		
 		
 		<!-- Twoppl Style -->		
 		<link rel="stylesheet" href="../../assets/css/main.css" />
@@ -27,7 +29,6 @@
 		<link href="../../assets/css/mbti.css" rel="stylesheet">
 		
 		
-
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174229344-1"></script>
 		<script>
@@ -56,32 +57,25 @@
 					<div class="mbti-answer a5" style="display:none"></div>
 					
 					<div class="pagi">
-					<div class="page">
-						1/15
+						<div class="page">
+							1/15
+						</div>		
+						<div class="pb">
+							<div class="progress-inner"></div>
+						</div>
 					</div>
-					
-					<div class="pb">
-						<div class="progress-inner"></div>
-					</div>
-					
-					<div class="inner align-center">
 
-				</div>
-			</div>
-									
-			
 				</div>
 				
-
-		</div>
+			</div>
 				
 
 		<!-- Scripts -->
 			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/browser.min.js"></script>
-			<script src="../../assets/js/breakpoints.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
+			<!--script src="../../assets/js/browser.min.js"></script-->
+			<!--script src="../../assets/js/breakpoints.min.js"></script-->
+			<!--script src="../../assets/js/util.js"></script-->
+			<!--script src="../../assets/js/main.js"></script-->
 			<script>
 				$('.mbti-container').css('display', 'none');
 				$('.mbti-container').fadeIn(600);	
@@ -173,7 +167,7 @@
 					let character;
 					
 					// mbti 계산
-					function filterItems(arr) { // 배열내 값이 3 이상인 것 만 필터링하는 함수
+					function filterItems(arr) { // 배열내 값이 3 이상인 것 만 필터링
 						return Object.keys(arr).filter(el => arr[el] >= 3);
 					}
 					let mbti = filterItems(result).join("");
@@ -183,18 +177,18 @@
 					else if(mbti == "ES" || mbti == "SE" ){ newMbti = "ES"; }
 					else if(mbti == "NC" || mbti == "CN" ){ newMbti = "NC"; }
 					else if(mbti == "NS" || mbti == "SN" ){ newMbti = "NS"; }
-					console.log("mbti : " + mbti)
+					//console.log("mbti : " + mbti)
 					
 					// BMI 계산 weight, muscle 로 계산
-					console.log("muscle : " + muscle);
+					//console.log("muscle : " + muscle);
 					if(muscle < 170){ newMuscle = "A"; }
 					else if(170 <= muscle && muscle < 260){	newMuscle = "B"; }
 					else if(260 <= muscle && muscle < 360){	newMuscle = "C"; }
 					else{ newMuscle = "D"; }
-					console.log("newMuscle : " + newMuscle);
+					//console.log("newMuscle : " + newMuscle);
 					
 					
-					console.log("weight : " + weight);
+					//console.log("weight : " + weight);
 					if(weight == "skinny"){
 						switch( newMuscle ){
 							case 'A': bmi = 'M'; break;
@@ -219,11 +213,11 @@
 						}
 					}
 						
-					console.log("after bmi : "  + bmi);
+					//console.log("after bmi : "  + bmi);
 					
 					// 최종 케릭터 결정
 					character = bmi+mbti;
-					console.log("fianl character : " + character);
+					//console.log("fianl character : " + character);
 					
 					
 					location.href = 'loading.html?'+character;
@@ -286,7 +280,7 @@
 						else { 
 							weight = "normal"; 
 						}
-						console.log("weight : " + weight);
+						//console.log("weight : " + weight);
 						shape_progress( );
 						
 					} else if(3 <= questionProgress && questionProgress < 6){ // 벤치 & 데드 & 스쿼트
@@ -307,7 +301,7 @@
 							muscle += q["aw5"];
 						}
 						
-						console.log("muscle : " + muscle);
+						//console.log("muscle : " + muscle);
 						shape_progress( );
 							  
 					} else if(6 <= questionProgress && questionProgress <= 15) { // 유형 
@@ -326,13 +320,10 @@
 								result[q["a2_mbti"]] = 1; 
 							}
 						}	
-						console.log(result);
-						shape_progress( );
-						
+						//console.log(result);
+						shape_progress( );						
 					}
-					
-
-					
+							
 				});
 			</script>
 				

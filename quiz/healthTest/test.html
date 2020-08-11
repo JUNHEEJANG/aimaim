@@ -78,7 +78,17 @@
 			<!--script src="../../assets/js/main.js"></script-->
 			<script>
 				$('.mbti-container').css('display', 'none');
-				$('.mbti-container').fadeIn(600);	
+				$('.mbti-container').fadeIn(600);
+				
+				$('.mbti-answer').mouseover(function(){
+					$(this).css("background", "#FE2E64");
+					$(this).css("color", "white");
+				});
+				
+				$('.mbti-answer').mouseleave(function(){
+					$(this).css("background","#F7F5F5")
+					$(this).css("color", "black");
+				});
 			</script>
 							
 		

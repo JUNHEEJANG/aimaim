@@ -2330,8 +2330,14 @@ input, select, textarea {
 
 		.quiz-img {
 			margin-bottom : 20px;
-			width : 400px;
+			width : 380px;
 		}
+
+			@media only screen and (max-width:400px){
+				.quiz-img {
+					width:100%
+				}
+			}
 
 		.image.left, .image.right {
 			max-width: 40%;

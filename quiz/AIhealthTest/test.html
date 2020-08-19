@@ -1,0 +1,416 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>헬창 유형 테스트 | 투쁠</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="title" content="헬창 유형 테스트 | 투쁠">
+		<meta name="subject" content="회원님? 인바디 한번 하고 가실게요">
+		<meta name="keywords" content="AI 헬창 테스트, AI로 보는 내 모습">
+		<meta name="author" content="투쁠">
+		<meta name="description" content="인공지능 몸 테스트를 통해 나의 헬스 캐릭터를 알아보세요!">
+		
+		<!-- sns share img -->
+		<meta property="og:image" content="" />
+
+		<!-- 파비콘 --> 
+		<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+		
+		<!-- Styles -->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link href="../../assets/css/app.css" rel="stylesheet">
+		<link href="../../assets/css/mbti.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		
+		
+		<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		
+		
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174229344-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-174229344-1');
+		</script>
+
+
+	</head>
+	<body class="is-preload">
+		
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" style="padding-top: 10px">
+					<div class="inner align-center" style="height: 70px">
+						<!-- Logo -->
+							<a href="" class="logo">
+								<span><img src="../../images/logo_eng.png" alt="" style="width: 100px"/></span>
+							</a>
+						</div>
+				</header>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">					
+							<div class="mbti-start-wrapper">
+								<div class="mbti-start">
+									
+									<div class="start-title"># 헬창 테스트</div>
+									<div class="start-subtitle">몸 사진으로 보는 인공지능 헬창 테스트</div>
+									
+									<div class="start-subtitle">성별을 선택하세요</div>
+
+										<section class="d-flex justify-content-center">
+											<p class="d-flex align-items-center pr-3">남자</p> 
+											<div>
+												<input type="checkbox" id="gender">
+												<label for="gender">
+													<span class="knob">
+														<i></i>
+													</span>
+												</label>
+											</div>
+										   <p class="d-flex align-items-center pl-3">여자</p>
+										</section>
+									
+								<!---------------- 사진 올리는 부분 ---------------------->
+							<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+							<div class="mt-3 container file-upload">
+								<div class="image-upload-wrap">
+									<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+									<div class="drag-text">
+										<img src="img/upload.svg" class="mt-5 pt-5 upload" alt="upload-image">
+										<h3 class="mb-5 pb-5 pt-4  upload-text">사진을 올려놓거나 <br> 눌러서 업로드</h3>
+										<h5>전신 사진을 올리면 더 정확하게 측정 됩니다. <br>(사진은 저장되지 않아요!)</h5>
+									</div>
+								</div>
+
+								<div class="file-upload-content">
+									<img class="file-upload-image" id="body-image" src="#" alt="your image" />
+
+									<div id="loading" class="animated bounce">
+										<div class="spinner-border" role="status">
+											<span class="sr-only">Loading...</span>
+										</div>
+										<p class="text-center">AI가 당신의 체형을 분석중입니다.</p>
+									</div>
+
+									<p class="result-message"></p>
+
+									<!-- 라벨 콘테이너 -->
+									<div id="label-container" class="d-flex flex-column justify-content-around"></div>
+									<div id="label-container" style="clear: both;margin-top:24px;">
+										<span>▼ 테스트를 친구에게 공유해 보세요! ▼</span>
+									</div>
+
+									<div class="pt-3 image-title-wrap" style="margin-top:10px;">
+										<button type="button p-2" class="try-again-btn" onclick="gaReload()">
+											<span class="try-again-text">다른 사진으로 재시도</span>
+										</button>
+									</div>
+
+								</div>
+
+							</div>
+
+									
+					
+								</div>
+							</div>												
+						</div> <!--end of inner-->
+					</div> <!--end of main-->
+			</div>
+				
+		<!-- Scripts -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		 <script>
+        function gaReload() {
+            gtag('event', '다른 사진으로 재시도', {
+                'event_category': '다른 사진으로 재시도'
+            });
+            window.location.reload();
+        }
+        function gaReload1() {
+            gtag('event', '다른 사진으로 재시도 1차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+        }
+        function gaReload2() {
+            gtag('event', '다른 사진으로 재시도 2차', {
+                'event_category': '다른 사진으로 재시도'
+            });
+            window.location.reload();
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+	<!--텐서플로우 라이브러리 호출-->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+	
+    <script>
+		/*HTML을 통해 이미지를 가져오는 부분*/
+        function readURL(input) {
+			console.log("업로드 된 이미지 가져오기");
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+				
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
+                    $('#loading').show();
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
+                    $('.image-title').html(input.files[0].name);
+                };
+                reader.readAsDataURL(input.files[0]);
+                
+				
+				/*텐서플로우 init and preidct 진행*/
+				init().then(function() {
+                    console.log("AI 시작(init) 및 예측(predict) 시작");
+                    predict();
+                    $('#loading').hide();
+                });
+            } else {
+                removeUpload();
+            }
+        }
+		
+        function removeUpload() {
+			console.log("이미지 업로드 후 화면 전환");
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
+        });
+    </script>
+	
+	<!--google teachable machine 수행 부분 -->
+    <script type="text/javascript">
+        /* 남자 여자 모델을 각각 학습 시켜주고 urlMale, urlFemale에 할당 */
+		
+		let URL;
+        const urlMale = "https://teachablemachine.withgoogle.com/models/QtGQoNTEx/";
+        const urlFemale = "https://teachablemachine.withgoogle.com/models/OjYSGKfke/";
+        let model, labelContainer, maxPredictions;
+		
+		/* gender 토글부분을 체크해서 남자면 URL을 남자 학습모델로, 여자면 URL을 여자 학습 모델로 변경 */
+		/* 남자 체크시 false 여자 체크시 true */
+		
+		async function init() {
+			console.log("init 실행!!");
+            if (document.getElementById("gender").checked) {
+                URL = urlFemale;
+				console.log("현재 체크된 성별 : " + document.getElementById("gender").checked);
+				console.log("여자 : " + urlFemale);
+            } else {
+                URL = urlMale;
+				console.log("현재 체크된 성별 : " + document.getElementById("gender").checked);
+				console.log("남자 : " + urlMale);
+            }
+			
+            const modelURL = URL + "model.json";
+            const metadataURL = URL + "metadata.json";
+            
+			model = await tmImage.load(modelURL, metadataURL);
+            maxPredictions = model.getTotalClasses();
+            
+			labelContainer = document.getElementById("label-container");
+            for (let i = 0; i < maxPredictions; i++) {
+				/*5번 div를 만들어서 d-flex 라는 클래스를 추가, 그리고 element라는 차일드 클래스 추가*/
+                var element = document.createElement("div")
+                element.classList.add("d-flex");
+                labelContainer.appendChild(element);
+            }
+			console.log("init 완료!!");
+        }
+		
+		
+        async function predict() {
+			console.log("predict 함수 실행!!");
+            var image = document.getElementById("body-image")
+            
+			// 사진에 대해 분류별 확률 값 받아오기
+			const prediction = await model.predict(image, false);
+			console.log("예측 값 받아오기 및 값별 확률 출력 \n");
+			for (var j = 0; j < maxPredictions; j++){
+				console.log(prediction[j].className + "확률 : " + prediction[j].probability + "\n");
+			}
+			
+			// 높은 확률 별로 소팅
+			prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+			console.log("선택된 가장 높은 확률은? : " + prediction[0].className);
+			
+			var resultTitle, resultExplain, resultCeleb;
+			
+            if (document.getElementById("gender").checked) {
+                gtag('event', '헬창 테스트 수행', {'event_category': '헬창 테스트 수행','event_label': '여자'});
+				console.log("여자테스트 switch");
+                
+				switch (prediction[0].className) {
+					case "w-pro":
+                        resultTitle = "당신은 헬스계의 신 프로선수"
+                        resultExplain = "어서오십시오.. 대선배님. 누추한 곳 방문해주셔서 감사합니다. 헬창의 레벨을 뛰어넘어 오랜시간 운을동 사랑하고 지속해온 당신은 상위 1% 내의 프로 선수이거나 준 프로선수."
+                        resultCeleb = "닮은 프로선수 선수: 지연우, 정유인, 장미란, 김혜영, 베카스완슨, "
+                        gtag('event', '여자 결과 여자 프로선수', {'event_category': '여자 결과'});
+                        break;
+                    case "w-hc":
+                        resultTitle = "당신은 헬스 고인물 헬창"
+                        resultExplain = "당신은 헬창입니다. 치열한 노력으로 만든 11자 복근과 팔근육. 운동 지식도 상당할 것 같군요. 왠만한 남자 헬린, 멸치들은 3대운동으로 맞붙자고 할 수 있을 정도. 운동에 관심을 많이 가지고 꾸준히 해온 모습이 멋집니다. 짝짝짝"
+                        resultCeleb = "헬창 연예인 : 이시영, 심으뜸, 유승옥, NS윤지, 에프터스쿨 가희 "
+                        gtag('event', '여자 결과 여자 헬창', {'event_category': '여자 결과'});
+                        break;f
+                    case "w-hl":
+                        resultTitle = "당신은 헬스에 갓 입문한 헬린"
+                        resultExplain = "당신은 헬스에 이제 갓 재미를 붙이신 헬린. 형형색색의 운동복을 사는것에 재미를 붙이시고 계시군요. 헬스장에 트레이너가 와서 무게좀 치라고하면 무거운 무게를 들면 ‘이러다 장미란 되는거 아니에요?’ 걱정할 수 있는데 그것은 편의점 알바생이 월급봉투 받고 ‘이러다 이건희 되는거 아냐?’ 하는것과 같습니다." 
+                        resultCeleb = "헬린 연예인 : 홍진영, 김사랑, 신민아, 전지현, 나나, 손담비, 클라라"
+                        gtag('event', '여자 결과 여자 헬린', {'event_category': '여자 결과'});
+                        break;
+                    case "w-sk":
+                        resultTitle = "당신은 밸런스가 좋은 슬림형"
+                        resultExplain = "당신은 슬림한 일반 체형입니다. 마른 체형이라 옷핏이 아주 잘 나오시겠군요. 전체적으로 신체 밸런스가 좋지만 약간의 근력운동도 필요할 것 같습니다. 필라테스, 요가 등 헬스를 대신할 운동도 많지만 근력 운동엔 헬스가 직방"
+                        resultCeleb = "슬림형 연예인 : 설현, 한채영, 신세경, 수지, 강소라, 손나은"
+                        gtag('event', '여자 결과 여자 마른몸', {'event_category': '여자 결과'});
+                        break;
+                    case "w-ow":
+                        resultTitle = "당신은 체중 관리가 필요한 과체중"
+                        resultExplain = "당신은 다소 과체중일 수 있습니다. 물만 마셔도 살찐다는 당신.. 진짜 물만 마셨나요? #내일부터 다이어트"
+                        resultCeleb = "과체중형 연예인 : 이국주, 김민경, 이영자"
+                        gtag('event', '여자 결과 여자 과체중', {'event_category': '여자 결과'});
+                        break;
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                        gtag('event', '여자 결과 알수없음', {'event_category': '여자 결과'});
+                }
+            } else { gtag('event', '헬창 테스트 수행', {'event_category': '헬창 테스트 수행','event_label': '남자'});
+				console.log("남자테스트 switch");
+                
+					switch (prediction[0].className) {
+                    case "m-pro":
+                        resultTitle = "당신은 헬스계의 신 프로선수"
+                        resultExplain = "어서오십시오.. 대선배님. 누추한 곳 방문해주셔서 감사합니다. 헬창의 레벨을 뛰어넘어 오랜시간 운을동 사랑하고 지속해온 당신은 상위 1% 내의 프로 선수이거나 준 프로선수."
+                        resultCeleb = "닮은 프로 선수 : 아놀드 슈워 제네거, 카이그린, 강경원, 김준호, 설기관, 김성환, "
+                        gtag('event', '남자 결과 남자 프로선수', {'event_category': '남자 결과'});
+                        break;
+                    case "m-hc":
+                        resultTitle = "당신은 헬스 고인물 헬창"
+                        resultExplain = "근손실 때문에 눈물도 흘리지 않는 당신.. 팀장님이 주는 술도 극약먹듯이 하는 당신..은 진정한 헬창. 친구가 대흉근과 광배근 밖에 없는 당신은 최고의 남편감이기도 합니다. 혹시 썸녀가 ‘오늘 뭐해?’ 라고 하면 ‘등이랑 삼두!’ 라고 하시진 않으시나요?" 
+                        resultCeleb = "헬창 연예인 : 김종국, 권상우, 비, 배용준, 장혁 <br> 헬창 유튜버 : 정봉길, 말왕, 뻘컵, 조제알통, 힘콩, 권혁, 흑자"
+                        gtag('event', '남자 결과 남자 헬창', {'event_category': '남자 결과'});
+                        break;
+                    case "m-hl":
+                        resultTitle = "당신은 헬스에 갓 입문한 헬린"
+                        resultExplain = "개인옷보다는 헬스장에서 주는옷에 익숙한 당신. 아직까진 헬스장의 근육돼지와 헬창들 눈치보며 운동할 시기군요. 아직 3대 300도 못치면서 언더아머를 입으려는 것은 아니겠죠? 언더아머 단속반이 떠서 옷 뺏길수도 있으니 조심하기 바랍니다."
+                        resultCeleb = "헬린형 연예인 : 헨리, 박보검, 서강준, 지코, 송민호, 피오"
+                        gtag('event', '남자 결과 남자 헬린', {'event_category': '남자 결과'});
+                        break;
+                    case "m-mc":
+                        resultTitle = "당신은 진한 육수가 우러져 나오는 멸치"
+                        resultExplain = "당신은 진한 육수가 우러져 나올 것 같은 멸치입니다. 튀어나온 뼈를 식스팩으로 착각하고 있지는 않나요. 여자는 본인보다 마른 남자를 좋아하지 않아요 ㅠㅠ. 살찌우기 힘드시겠지만 꾸준히 운동 하시다보면 언젠가 몸은 커지질 수 있습니다!"
+                        resultCeleb = "멸치형 연예인 : 한민관, 이윤석, 광희"
+                        gtag('event', '남자 결과 남자 멸치', {'event_category': '남자 결과'});
+                        break;
+                    case "m-ow":
+                        resultTitle = "당신은 체중 관리가 필요한 과체중"
+                        resultExplain = "벌크업 하다가 맛있는 것을 너무 많이 먹어 그냥 건강한 돼지가 되어버린 당신. 내가 살만 빼면 이거 다~ 근육으로 바뀔 거야 하시죠? 지방은 근육으로 전환되지 않습니다.. 점점 단추가 달린 바지보다 고무줄 바지를 찾고있진 않나요?"
+                        resultCeleb = "과체중형 연예인 : 김준현, 유민상, 문세윤"
+                        gtag('event', '남자 결과 남자 과체중', {'event_category': '남자 결과'});
+                        break;
+                    default:
+                        resultTitle = "알수없음"
+                        resultExplain = ""
+                        resultCeleb = ""
+                        gtag('event', '남자 결과 알수없음', {'event_category': '남자 결과'});
+                }
+            }
+			
+			console.log("switch 종료!!");
+			
+			//결과 내용 출력 부분
+            var title = "<div class='" + prediction[0].className + "-healchang-title'>" + resultTitle + "</div>"
+            var explain = "<div class='healchang-explain pt-2'>" + resultExplain + "</div>"
+			var celeb = "<div class='" + prediction[0].className + "-healchang-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
+			
+			$('.result-message').html(title + explain + celeb);
+            
+			//확률 바 결과 부분 출력 부분
+			var barWidth;
+			console.log("확률 바 결과 부분 출력!!");
+            for (let i = 0; i < maxPredictions; i++) {
+                if (prediction[i].probability.toFixed(2) > 0.1) {
+                    barWidth = Math.round(prediction[i].probability.toFixed(2) * 100) + "%";
+                } else if (prediction[i].probability.toFixed(2) >= 0.01) {
+                    barWidth = "4%"
+                } else {
+                    barWidth = "2%"
+                }
+                var labelTitle;
+				
+                switch (prediction[i].className) {
+                    case "m-pro": 
+						labelTitle = "프로선수" 
+						break;
+                    case "m-hc": 
+						labelTitle = "헬창" 
+						break;
+                    case "m-hl": 
+						labelTitle = "헬린" 
+						break;
+                    case "m-mc": 
+						labelTitle = "멸치" 
+						break;
+                    case "m-ow": 
+						labelTitle = "과체중" 
+						break;
+                    case "w-pro": 
+						labelTitle = "프로선수" 
+						break;
+                    case "w-hc": 
+						labelTitle = "헬창" 
+						break;
+                    case "w-hl": 
+						labelTitle = "헬린" 
+						break;
+                    case "w-sk": 
+						labelTitle = "슬림" 
+						break;
+                    case "w-ow": 
+						labelTitle = "과체중" 
+						break;
+                    default:
+                        labelTitle = "알수없음"
+                }
+				
+			
+                var label = "<div class='healchang-label d-flex align-items-center'>" + labelTitle + "</div>"    
+				var bar = "<div class='bar-container position-relative container'><div class='" + prediction[i].className + "-box'></div><div class='d-flex justify-content-center align-items-center " + prediction[i].className + "-bar' style='width: " + barWidth + "'><span class='d-block percent-text'>" + Math.round(prediction[i].probability.toFixed(2) * 100) + "%</span></div></div>"
+                labelContainer.childNodes[i].innerHTML = label + bar;
+            }
+        }
+    </script>
+	
+	
+	
+	
+
+	</body>
+</html>

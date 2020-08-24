@@ -164,28 +164,6 @@ body {
     }
 }
 
-
-.youtube-link {
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
-}
-
-.youtube-link:hover {
-    font-size: 1.5rem;
-    line-height: 1.71;
-    text-align: center;
-    color: #f73737;
-    text-decoration: underline;
-}
-
-.youtube-icon {
-    width: 30px;
-    height: 27.262px;
-}
-
 .upload {
     width: 20%;
 }
@@ -558,6 +536,7 @@ input:checked + label > .knob > i:before {
 element.style {
     margin-top: 20px;
 }
+
 
 
   .mbti-result-container .mbti-result .sns-share-title {

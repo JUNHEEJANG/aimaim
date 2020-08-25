@@ -1,11 +1,23 @@
+@font-face { 
+font-family: 'Recipekorea'; 
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); font-weight: normal; font-style: normal; 
+} 
+
+@font-face {
+font-family: 'BMJUA';
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+            
+
 body {
-  font-family: 'Jua', sans-serif;
+  font-family: 'BMJUA', sans-serif;
   background-color: #ffffff;
   box-sizing: border-box;
   color: #35465d;
 }
 
- @font-face { font-family: 'Recipekorea'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') format('woff'); font-weight: normal; font-style: normal; } 
 
 
 .file-upload {

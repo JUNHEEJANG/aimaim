@@ -26,7 +26,7 @@ body {
     border-radius: 10px;
     border: solid 1.5px #f6f7fa;
     background-color: #f6f7fa;
-	padding-top: 70px;
+	padding-top: 30px;
     padding-bottom: 70px;
 }
 .file-upload-btn {
@@ -114,8 +114,8 @@ body {
 
 .try-again-btn {
   border-radius: 40px;
-  border: solid 1.5px #35465d;
-  background-color: #35465d;
+  border: solid 1.7px #FE2E64;
+  background-color: #FE2E64;
 }
 
 .try-again-text {
@@ -563,7 +563,7 @@ element.style {
     margin-top: 25px;
     justify-content: space-between;
     align-items: center;
-    width: 220px;
+    width: 200px;
   }
   
   .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper {
@@ -578,8 +578,8 @@ element.style {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 54px;
-    height: 54px;
+    width: 50px;
+    height: 50px;
     border-radius: 27px;
     cursor: pointer;
   }

@@ -9,7 +9,7 @@
 		<meta name="subject" content="회원님? 인바디 한번 하고 가실게요">
 		<meta name="keywords" content="헬창 테스트, 인바디 테스트, 멸치 테스트, 운동 능력 테스트, 헬창 능력치 테스트, MBTI, MBTI 헬창 테스트">
 		<meta name="author" content="투쁠">
-		<meta name="description" content="헬창 능력치 테스트를 통해 나와 내 친구와 맞는 운동 캐릭터를 알아보세요!">
+		<meta name="description" content="헬스 능력치 테스트를 통해 나의 운동 캐릭터를 알아보세요!">
 		
 		<!-- sns share img -->
 		<meta property="og:title" content="여친은 근손실 헬창은 종합적 수행능력, 정신상태, 근질 모두 레전드입니다. 모든 헬스인의 로망인 당신. 이 테스트에 응해주셔서 영광입니다." />
@@ -112,32 +112,21 @@
 				
 		<!-- Scripts -->
 		<script src="../../assets/js/jquery.min.js"></script>
-
-		<script>
-			$('.result-img').css('display', 'none');
-			$('.result-img').fadeIn(500);
-			
-		</script>
-		
+		<script>$('.result-img').css('display', 'none'); $('.result-img').fadeIn(500);</script>
 		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 		<script>
-		function shareKatalk() {
-			gtag('event', 'click', {
-				'event_category' : 'share',
-				'event_label' : 'kakao'
-			});
-		}	
+		//Kakao
 		Kakao.init('0c0ae33b27e5a49c48cb8d6e7eab4ed6');
 		Kakao.Link.createDefaultButton({
 			container: '#kakao-share',
 			objectType: 'feed',
 			content: {
-				title: '수분조차 말라버린 건멸치 타입. 큰일입니다. 그렇지만 가장 몸이 빠르게 좋아질 가능성을 가진 타입이기도 합니다. 운동 당장 시작하시죠!',
-				imageUrl: "https://i.imgur.com/0fGKasw.png",
+				title: '여친은 근손실 헬창은 종합적 수행능력, 정신상태, 근질 모두 레전드입니다. 모든 헬스인의 로망인 당신. 이 테스트에 응해주셔서 영광입니다.',
+				imageUrl: "",
 				//description: "",
 				link: {
-					mobileWebUrl: 'https://www.twoppl.com/quiz/healthtest/mns',
-					webUrl: 'https://www.twoppl.com/quiz/healthtest/mns',
+					mobileWebUrl: 'https://www.twoppl.com/quiz/healthtest/hec',
+					webUrl: 'https://www.twoppl.com/quiz/healthtest/hec',
 				},
 			},
 			buttons: [
@@ -156,7 +145,14 @@
 				console.log(error);
 			}
 		});
-			
+		function shareKatalk() {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'kakao'
+			});
+		}	
+
+		// Facebook
 		function snsFB(url) {
 			gtag('event', 'click', {
 				'event_category' : 'share',
@@ -167,6 +163,7 @@
 			window.open('https://www.facebook.com/sharer/sharer.php?u='+thisURL,'facebook-share-dialog',"width=626, height=436")
 		}
 
+		// CopyURL
 		function copyURL() {
 			gtag('event', 'click', {
 				'event_category' : 'share',

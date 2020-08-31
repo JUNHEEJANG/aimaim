@@ -93,7 +93,7 @@
   }
   
   .mbti-start .btn-red {
-    background-color: #ed2510;
+    background-color: #FE2E64;
   }
   
   .mbti-start .main-bg {
@@ -355,7 +355,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 75px;
+    width: 25px;
   }
   
   .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .sns-logo {
@@ -377,7 +377,7 @@
   }
   
   .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .link {
-    background-color: #2B2B2B;
+    background-color: #343a40;
   }
   
   .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .fb {
@@ -412,6 +412,12 @@
     font-size: 20px;
     color: #fff;
     line-height: 1;
+  }
+
+  .footer-title .again-text-btn{
+    padding-top: 70px; 
+	color: #FE2E64; 
+	font-size: 21px
   }
   
   .footer .footer-btn {

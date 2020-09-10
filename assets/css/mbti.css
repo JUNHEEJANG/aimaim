@@ -66,12 +66,29 @@
   .mbti-start .start-title red {
     color: #ed2510;
   }
-  
+
   .mbti-start .start-subtitle {
     margin-top: 13px;
     /*font-family: "Yeon Sung", cursive;*/
     font-size: 18px;
     margin-bottom: 0px;
+  }
+
+  .mbti-start .start-snacktitle {
+    font-size: 23px;
+	margin-top: 0px;
+    margin-bottom: 0px;
+	text-align: left;
+	font-family: 'nanumsquare';
+	font-weight : bold;
+  }
+
+  .mbti-start .start-snacksubtitle {
+    margin-top: 30px;
+    font-size: 15px;
+    margin-bottom: 20px;
+	font-family: 'nanumsquare';
+	font-weight : bold;
   }
   
   .mbti-start .btn {
@@ -94,6 +111,18 @@
   
   .mbti-start .btn-red {
     background-color: #FE2E64;
+  }
+
+  .mbti-start .btn-snack {
+    background-color: #F7D358;
+	width: 200px;
+  }
+
+  .mbti-start .btn-snacks {
+    background-color: #F7D358;
+	width: 150px;
+    float: left;
+	margin-left: 13px;
   }
   
   .mbti-start .main-bg {

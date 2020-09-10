@@ -68,12 +68,12 @@
 									
 									<a style="padding-top: 40px"><div class="btn btn-snack">시작하기</div></a>
 									<div class="btns" style="width: 340px">
-										<div class="btn btn-snacks">1</div>
-										<div class="btn btn-snacks">2</div>
-										<div class="btn btn-snacks">3</div>
-										<div class="btn btn-snacks">4</div>
-										<div class="btn btn-snacks">5</div>
-										<div class="btn btn-snacks">6</div>
+										<div class="btn btn-snacks a1">1</div>
+										<div class="btn btn-snacks a2">2</div>
+										<div class="btn btn-snacks a3">3</div>
+										<div class="btn btn-snacks a4">4</div>
+										<div class="btn btn-snacks a5">5</div>
+										<div class="btn btn-snacks a6">6</div>
 									</div>
 					
 								</div>
@@ -91,6 +91,15 @@
 			$(".btn-snack").on("click", function() {
 				$(".btn-snack").css("display", "none");
 				$(".btns").css("display", "block");
+			});
+			
+			$(".btn-snacks").on("click", function() {
+				if      ($(this).hasClass("a1")){ alert("1"); }
+				else if ($(this).hasClass("a2")){ alert("2"); }
+				else if ($(this).hasClass("a3")){ alert("3"); }
+				else if ($(this).hasClass("a4")){ alert("4"); }
+				else if ($(this).hasClass("a5")){ alert("5"); }
+				else if ($(this).hasClass("a6")){ alert("6"); }
 			});
 		</script>
 

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>스넥 테스트 | 투쁠</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="title" content="스넥 테스트 | 투쁠">
+		<meta name="subject" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="투쁠">
+		<meta name="description" content="">
+		
+		<!-- sns share img -->
+		<meta property="og:title" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+
+		<!-- 파비콘 --> 
+		<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+		
+		
+		<!-- Styles -->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+		<link href="../../assets/css/app.css" rel="stylesheet">
+		<link href="../../assets/css/mbti.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+		
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header" style="padding-top: 10px">
+				<div class="inner align-center" style="height: 50px">
+					<!-- Logo -->
+					<a href="../../index.html" class="logo">
+						<span><img src="https://jerrymaster.speedgabia.com/logo_eng.png" alt="" style="width: 100px"/></span>
+					</a>
+				</div>
+			</header>
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<div style="display: flex; justify-content: center">
+						<div class="mbti-result-container">
+							
+							<div class="mbti-result">
+								<img src="https://jerrymaster.speedgabia.com/healthTest/basic/loading.gif" style="margin-top: 80px; width: 240px"/>
+								<div class="mbti-result-title" style="margin-top: 30px; font-size: 24px">결과 분석중...</div>
+							</div>
+							
+						</div>
+					</div>
+				</div> 
+			</div>
+	</div>
+
+		<!-- Scripts -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script>
+			let number;
+			let temp;
+			
+			temp = location.href.split("?");			
+			number = temp[1];
+		
+			setTimeout(function(){
+				location.href = `${number}.html`;
+			},3000);
+			
+		
+		</script>
+
+	</body>
+</html>

@@ -65,6 +65,7 @@
 									</div>
 									<div class="start-snacksubtitle">당신은 연인과 어떻게 손을 잡나요?</div>
 									<img src="quiz.png" width="360px" class="intro-img">
+									<img src="https://jerrymaster.speedgabia.com/healthTest/basic/loading.gif" style="margin-top: 80px; width: 300px" class="loading-img">
 									
 									<a style="padding-top: 40px"><div class="btn btn-snack">시작하기</div></a>
 									<div class="btns" style="width: 340px">
@@ -87,6 +88,7 @@
 		<!-- Scripts -->
 		<script src="../../assets/js/jquery.min.js"></script>
 		<script>
+			$(".loading-img").css("display", "none");
 			$(".btns").css("display", "none");
 			$(".btn-snack").on("click", function() {
 				$(".btn-snack").css("display", "none");
@@ -94,12 +96,23 @@
 			});
 			
 			$(".btn-snacks").on("click", function() {
-				if      ($(this).hasClass("a1")){ alert("1"); }
-				else if ($(this).hasClass("a2")){ alert("2"); }
-				else if ($(this).hasClass("a3")){ alert("3"); }
-				else if ($(this).hasClass("a4")){ alert("4"); }
-				else if ($(this).hasClass("a5")){ alert("5"); }
-				else if ($(this).hasClass("a6")){ alert("6"); }
+				let number;
+				
+				if      ($(this).hasClass("a1")){ number=1; }
+				else if ($(this).hasClass("a2")){ number=2; }
+				else if ($(this).hasClass("a3")){ number=3; }
+				else if ($(this).hasClass("a4")){ number=4; }
+				else if ($(this).hasClass("a5")){ number=5; }
+				else if ($(this).hasClass("a6")){ number=6; }
+				
+				$(".btns").css("display", "none");
+				$(".intro-img").css("display", "none");
+				$(".loading-img").css("display", "block");
+				
+				setTimeout(function(){
+					location.href = 'result.html?'+number;
+				},2400);	
+				
 			});
 		</script>
 

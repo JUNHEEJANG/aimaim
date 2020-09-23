@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>연애 유형 테스트 | 투쁠</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="title" content="연애 유형 테스트 | 투쁠">
+		<meta name="subject" content="내내 애인의 연애 스타일은 방목형일까 집착형일까?">
+		<meta name="keywords" content="연애 유형 테스트, 연애 테스트, 나의 연애 스타일, 애인과 함께 하는 테스트, 방목형-집착형 테스트">
+		<meta name="author" content="투쁠">
+		<meta name="description" content="연애 유형 테스트를 통해 나의 연애 스타일을 알아보세요! 애인에게 공유는 필수">
+		
+		<!-- sns share img -->
+		<meta property="og:title" content="[연애 유형 테스트] 내 애인의 연애 스타일은 방목형일까 집착형일까?" />
+		<meta property="og:url" content="https://www.twoppl.com/quiz/frbeTest/intro" />
+		<meta property="og:image" content="" />
+		
+		<!-- 파비콘 --> 
+		<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+		
+		
+		<!-- Twoppl Style -->		
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+	
+		
+		<!-- Styles -->
+		<link href="../../assets/css/mbti.css" rel="stylesheet">		
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174229344-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-174229344-1');
+		</script>
+		
+		<style>
+			@media only screen and (min-width:840px){
+				.mbti-answer:hover {
+					background: #FE2E64; 
+					color: white;
+				}
+			}
+
+		</style>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+				<div class="mbti-container" style="text-align:center">
+					
+					<div class="mbti-questionNo">Q1.</div>
+					<div class="mbti-question" style="width: 300px">질문 1</div>
+					<div class="mbti-question2"></div>
+					<div class="mbti-answer a1">답변1</div>
+					<div class="mbti-answer a2">답변2</div>
+
+					
+					<div class="pagi">
+						<div class="page">
+							1/16
+						</div>		
+						<div class="pb">
+							<div class="progress-inner"></div>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+				
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script>
+				$('.mbti-container').css('display', 'none');
+				$('.mbti-container').fadeIn(600);			
+			</script>
+			
+			<script>
+				let progressBar = $(".progress-inner");
+				progressBar.css("width", `${100/16}%`);
+
+				let questions = [
+					{"q1": "당신의 키는?", 
+					 "a1": "~168cm", "a2": "169~173cm", "a3": "174~177cm", "a4" : "178cm~",
+					 "aw1": "1", "aw2": "2", "aw3": "3", "aw4": "4"},
+						
+					{"q1": "당신의 몸무게는?", 
+					 "a1": "~55kg", "a2": "56~72kg", "a3": "73~86kg", "a4" : "87kg~",
+					 "aw1": "S", "aw2": "N", "aw3": "N", "aw4": "F"},
+
+					{"q1": "벤치프레스 최대 무게는?", 
+					 "a1" : "잘 모르겠다", "a2": "~40kg", "a3": "40~60kg", "a4": "60~100kg", "a5" : "100kg~",
+					 "aw1": 50, "aw2": 30, "aw3": 50, "aw4": 80, "aw5": 120},
+							
+					{"q1": "데드리프트 최대 무게는?", 
+					 "a1" : "잘 모르겠다", "a2": "~60kg", "a3": "60~90kg", "a4": "90~130kg", "a5" : "130kg~", 
+					 "aw1": 75, "aw2": 40, "aw3": 75, "aw4": 110, "aw5": 150},
+						
+					{"q1": "스쿼트 최대 무게는?", 
+					 "a1" : "잘 모르겠다", "a2": "~60kg", "a3": "60~90kg", "a4": "90~130kg", "a5" : "130kg~", 
+					 "aw1": 75, "aw2": 40, "aw3": 75, "aw4": 110, "aw5": 150},
+						
+					{"q1": "둘 중에", "q2": "하나만 가질 수 있다면?",
+					 "a1": "단단한 모근", "a2": "탄탄한 복근", 
+					 "a1_mbti": "K", "a2_mbti": "K"},
+					
+					{"q1": "코로나로 헬스장을 못간다", "q2": "당신이 더 걱정되는것은?",
+					 "a1": "회비", "a2": "근손실", 
+					 "a1_mbti": "N", "a2_mbti": "E"},	
+		
+					{"q1": "일주일에 헬스장", "q2": "가는 횟수는?",
+					 "a1": "주 0~3회", "a2": "주 4회 이상", 
+					 "a1_mbti": "N", "a2_mbti": "E"},
+					
+					{"q1": "헬스 vs 여친", "q2": "당신의 선택은?",
+					 "a1": "헬스!", "a2": "여친!", 
+					 "a1_mbti": "E", "a2_mbti": "N"},
+						
+					{"q1": "집에 있는", "q2": "홈트레이닝 기구는 주로",
+					 "a1": "아령, 턱걸이, 바벨, 푸쉬업바", "a2": "줄넘기, 훌라우프 또는 없다", 
+					 "a1_mbti": "E", "a2_mbti": "N"},
+						
+					{"q1": "오늘 가슴 조지는 날인데", "q2": "술 마시자고 카톡이 왔다",
+					 "a1": "마신다", "a2": "읽씹", 
+					 "a1_mbti": "N", "a2_mbti": "E"},
+
+					{"q1": "둘 중", "q2": "더 끌리는 것은?",
+					 "a1": "헬스 머신과 함께하는 득근득근 벤치프레스", "a2": "헬스 여신과 함께하는 두근두근 벤치데이트", 
+					 "a1_mbti": "K", "a2_mbti": "K"},
+					
+					{"q1": "헬린이가 근육 크기를", "q2": "키우기 위해서는",
+					 "a1": "고중량 저반복", "a2": "저중량 고반복", 
+					 "a1_mbti": "C", "a2_mbti": "S"},
+					
+					{"q1": "지금 집 냉동실을", "q2": "열어봐라 닭가슴살이",
+					 "a1": "없다", "a2": "있다", 
+					 "a1_mbti": "S", "a2_mbti": "C"},
+					
+					{"q1": "나의 어깨 근육은", "q2": "몇부분으로 되어있을까?",
+					 "a1": "5부분", "a2": "3부분", 
+					 "a1_mbti": "S", "a2_mbti": "C"},
+					
+					{"q1": "당신은", "q2": "후인하강을",
+					 "a1": "안다", "a2": "모른다", 
+					 "a1_mbti": "C", "a2_mbti": "S"},
+
+					
+				];
+
+				let height;
+				let weight = {};
+				let muscle = 0;
+				let result = {};
+				let questionProgress = 1;
+
+				
+				function get_result(){
+					
+					let newMuscle;
+					let bmi;
+					let character;
+					
+					// mbti 계산
+					function filterItems(arr) { // 배열내 값이 3 이상인 것 만 필터링
+						return Object.keys(arr).filter(el => arr[el] >= 3);
+					}
+					let mbti = filterItems(result).join("");
+					let newMbti;
+
+					if(mbti == "EC" || mbti == "CE" ){ newMbti = "EC"; }
+					else if(mbti == "ES" || mbti == "SE" ){ newMbti = "ES"; }
+					else if(mbti == "NC" || mbti == "CN" ){ newMbti = "NC"; }
+					else if(mbti == "NS" || mbti == "SN" ){ newMbti = "NS"; }
+					//console.log("mbti : " + mbti)
+					
+					// BMI 계산 weight, muscle 로 계산
+					//console.log("muscle : " + muscle);
+					if(muscle < 150){ newMuscle = "A"; }
+					else if(150 <= muscle && muscle < 260){	newMuscle = "B"; }
+					else if(260 <= muscle && muscle < 360){	newMuscle = "C"; }
+					else{ newMuscle = "D"; }
+					//console.log("newMuscle : " + newMuscle);
+					
+					
+					//console.log("weight : " + weight);
+					if(weight == "skinny"){
+						switch( newMuscle ){
+							case 'A': bmi = 'M'; break;
+							case 'B': bmi = 'L'; break;
+							case 'C': bmi = 'H'; break;
+							case 'D': bmi = 'H'; break;
+						}
+						
+					}else if(weight == "normal"){
+						switch( newMuscle ){
+							case 'A': bmi = 'M'; break;
+							case 'B': bmi = 'L'; break;
+							case 'C': bmi = 'L'; break;
+							case 'D': bmi = 'H'; break;
+						}
+					}else{
+						switch( newMuscle ){
+							case 'A': bmi = 'P'; break;
+							case 'B': bmi = 'P'; break;
+							case 'C': bmi = 'L'; break;
+							case 'D': bmi = 'H'; break;
+						}
+					}
+						
+					//console.log("after bmi : "  + bmi);
+					
+					// 최종 케릭터 결정
+					character = bmi+mbti;
+					//console.log("fianl character : " + character);
+					
+					
+					location.href = 'loading.html?'+character;
+
+
+					return;
+				}
+				
+				
+				function shape_progress( ){
+					//console.log(questionProgress);
+
+					questionProgress += 1;
+					if(questionProgress == 17){
+						get_result();
+						return;
+					}
+					
+					q = questions[questionProgress-1];
+					progressBar.css("width", `${100/16*questionProgress}%`);
+					$(".page").text(`${questionProgress}/16`);
+
+					$(".mbti-questionNo").text(`Q${questionProgress}.`);
+					$(".mbti-question").text(`${q["q1"]}`);
+					$(".a1").text(`${q["a1"]}`);
+					$(".a2").text(`${q["a2"]}`);
+					$(".a3").text(`${q["a3"]}`);	
+					$(".a4").text(`${q["a4"]}`);
+					
+					if(questionProgress >= 3 && questionProgress < 6){
+						$(".a5").css("display", "block");
+						$(".a5").text(`${q["a5"]}`);
+					}
+
+					if(questionProgress >= 6){
+						$(".mbti-question2").text(`${q["q2"]}`);
+						$(".a3").css("display", "none");
+						$(".a4").css("display", "none");
+						$(".a5").css("display", "none");
+					}
+						
+					
+				}
+				
+
+				$(".mbti-answer").on("click", function() {
+					let q = questions[questionProgress-1];				
+					
+					if (questionProgress == 1 ){ // 키
+						shape_progress( );
+						
+					} else if (questionProgress == 2){ // 무게
+						
+						if ($(this).hasClass("a1")){ 
+							weight = "skinny"; 
+						} 
+						else if ($(this).hasClass("a4")){ 
+							weight = "fat"; 
+						}
+						else { 
+							weight = "normal"; 
+						}
+						//console.log("weight : " + weight);
+						shape_progress( );
+						
+					} else if(3 <= questionProgress && questionProgress < 6){ // 벤치 & 데드 & 스쿼트
+						
+						if ($(this).hasClass("a1")){ 
+							muscle += q["aw1"];
+							
+						} else if ($(this).hasClass("a2")){ 
+							muscle += q["aw2"];
+							
+						} else if ($(this).hasClass("a3")){
+							muscle += q["aw3"];
+							
+						} else if ($(this).hasClass("a4")){
+							muscle += q["aw4"];
+							
+						} else{
+							muscle += q["aw5"];
+						}
+						
+						//console.log("muscle : " + muscle);
+						shape_progress( );
+							  
+					} else if(6 <= questionProgress && questionProgress <= 16) { // 유형 
+						
+						if ($(this).hasClass("a1")) 
+						{
+							if (q["a1_mbti"] in result) { 
+								result[q["a1_mbti"]] += 1;
+							} else {
+								result[q["a1_mbti"]] = 1; 
+							}
+						} else { 
+							if (q["a2_mbti"] in result) { 
+								result[q["a2_mbti"]] += 1;
+							} else {
+								result[q["a2_mbti"]] = 1; 
+							}
+						}	
+						//console.log(result);
+						shape_progress( );						
+					}
+							
+				});
+			</script>
+
+
+	</body>
+</html>

@@ -165,17 +165,18 @@
 					num = result["B"] - result["F"];
 					console.log(num);
 					
-					if     ( 12<=num&&num<= 16){alert("집착Lv3");} //집착Lv3
-					else if( 7 <=num&&num<= 11){alert("집착Lv2");}//집착Lv2
-					else if( 3 <=num&&num<= 6){alert("집착Lv1");}//집착Lv1
-					else if(-2 <=num&&num<= 2){alert("균형");}//균형
-					else if(-6 <=num&&num<=-3){alert("방목Lv1");}//방목Lv1
-					else if(-11<=num&&num<=-7){alert("방목Lv2");}//방목Lv2
-					else if(-16<=num&&num<=-12){alert("방목Lv3");}//방목Lv3
+					if     ( 12<=num&&num<= 16){character="BE3";} //집착Lv3
+					else if( 7 <=num&&num<= 11){character="BE2";}//집착Lv2
+					else if( 3 <=num&&num<= 6){character="BE1";}//집착Lv1
+					else if(-2 <=num&&num<= 2){character="BF0";}//균형
+					else if(-6 <=num&&num<=-3){character="FR1";}//방목Lv1
+					else if(-11<=num&&num<=-7){character="FR2";}//방목Lv2
+					else if(-16<=num&&num<=-12){character="FR3";}//방목Lv3
 					
 					// 최종 계산
 					//character = mbti;
 					//location.href = 'loading.html?'+character;
+					location.href = `${character}.html`;
 
 					return;
 				}

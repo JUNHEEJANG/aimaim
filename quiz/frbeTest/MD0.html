@@ -76,7 +76,7 @@
 									<a style="width: 50%; float:left; padding-right:5px;">
 										<p>최고의 궁합</p>
 										<div style="border: 1px solid #E5E5E5; border-radius: 0.5em;"> 
-											<img class="result-img" style="width: 95%; margin-bottom: 10px;" src="https://jerrymaster.speedgabia.com/frbeTest/be3.jpg"/>
+											<img class="result-img" style="width: 95%; margin-bottom: 10px;" src="https://jerrymaster.speedgabia.com/frbeTest/be1.jpg"/>
 										</div>
 									</a>
 									<a style="width: 50%; float:right; padding-left:5px">
@@ -128,6 +128,75 @@
 
 		<!-- Scripts -->
 		<script src="../../assets/js/jquery.min.js"></script>
+				<script>
+		//Kakao
+		Kakao.init('0c0ae33b27e5a49c48cb8d6e7eab4ed6');
+		Kakao.Link.createDefaultButton({
+			container: '#kakao-share',
+			objectType: 'feed',
+			content: {
+				title: '상대를 배려하는 소질을 타고난 균형형 스타일입니다.',
+				imageUrl: "https://jerrymaster.speedgabia.com/frbeTest/md.jpg",
+				//description: "",
+				link: {
+					mobileWebUrl: 'https://www.twoppl.com/quiz/frbetest/md0',
+					webUrl: 'https://www.twoppl.com/quiz/frbetest/md0',
+				},
+			},
+			buttons: [
+				{
+					title: '연애 유형 테스트 하기',
+					link: {
+						mobileWebUrl: "https://www.twoppl.com/quiz/frbetest/intro",
+						webUrl: "https://www.twoppl.com/quiz/frbetest/intro",
+					},
+				},
+			],
+			success: function(response) {
+				console.log(response);
+			},
+			fail: function(error) {
+				console.log(error);
+			}
+		});
+		function shareKatalk() {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'kakao'
+			});
+		}	
+
+		// Facebook
+		function snsFB(url) {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'facebook'
+			});
+			
+			var thisURL = window.location.href;
+			window.open('https://www.facebook.com/sharer/sharer.php?u='+thisURL,'facebook-share-dialog',"width=626, height=436")
+		}
+
+		// CopyURL
+		function copyURL() {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'url'
+			});
+
+			let dummy = document.createElement('input'),
+				text = window.location.href;
+
+			document.body.appendChild(dummy);
+			dummy.value = text;
+			dummy.select();
+			document.execCommand('copy');
+			document.body.removeChild(dummy);
+
+			alert("복사되었습니다.");
+		}
+			
+		</script>
 
 
 	</body>

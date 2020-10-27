@@ -113,6 +113,10 @@
     background-color: #FE2E64;
   }
 
+  .mbti-start .btn-green {
+    background-color: #2B5841;
+  }
+
   .mbti-start .btn-snack {
     background-color: #F7D358;
 	width: 200px;
@@ -124,6 +128,7 @@
     float: left;
 	margin-left: 13px;
   }
+
   
   .mbti-start .main-bg {
     margin-top: 15px;

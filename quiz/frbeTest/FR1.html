@@ -106,15 +106,14 @@
 							</div>
 
 							
-							<div class="footer-title" style="text-align: center">
-								<div class="again-text-btn"><a href="intro.html">테스트 다시하기</a></div>
+							<div class="mbti-start">
+								<a href="intro.html" style="padding-top: 70px"><div class="btn btn-green">테스트 다시하기</div></a>
 							</div>
 								
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 				
 		</div>		
 		
@@ -122,7 +121,76 @@
 
 		<!-- Scripts -->
 		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+		<script>
+		//Kakao
+		Kakao.init('0c0ae33b27e5a49c48cb8d6e7eab4ed6');
+		Kakao.Link.createDefaultButton({
+			container: '#kakao-share',
+			objectType: 'feed',
+			content: {
+				title: '[연애 유형 테스트] 나의 연애 스타일은 방목형일까 집착형일까?',
+				imageUrl: "https://jerrymaster.speedgabia.com/frbeTest/fr1.jpg",
+				//description: "",
+				link: {
+					mobileWebUrl: 'https://www.twoppl.com/quiz/frbetest/fr1',
+					webUrl: 'https://www.twoppl.com/quiz/frbetest/fr1',
+				},
+			},
+			buttons: [
+				{
+					title: '연애 유형 테스트 하기',
+					link: {
+						mobileWebUrl: "https://www.twoppl.com/quiz/frbetest/intro",
+						webUrl: "https://www.twoppl.com/quiz/frbetest/intro",
+					},
+				},
+			],
+			success: function(response) {
+				console.log(response);
+			},
+			fail: function(error) {
+				console.log(error);
+			}
+		});
+		function shareKatalk() {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'kakao'
+			});
+		}	
 
+		// Facebook
+		function snsFB(url) {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'facebook'
+			});
+			
+			var thisURL = window.location.href;
+			window.open('https://www.facebook.com/sharer/sharer.php?u='+thisURL,'facebook-share-dialog',"width=626, height=436")
+		}
+
+		// CopyURL
+		function copyURL() {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'url'
+			});
+
+			let dummy = document.createElement('input'),
+				text = window.location.href;
+
+			document.body.appendChild(dummy);
+			dummy.value = text;
+			dummy.select();
+			document.execCommand('copy');
+			document.body.removeChild(dummy);
+
+			alert("복사되었습니다.");
+		}
+			
+		</script>
 
 	</body>
 </html>

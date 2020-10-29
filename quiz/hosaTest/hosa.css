@@ -113,6 +113,10 @@
     background-color: #FE2E64;
   }
 
+  .mbti-start .btn-orange {
+    background-color: #F06F0A;
+  }
+
   .mbti-start .btn-snack {
     background-color: #F7D358;
 	width: 200px;
@@ -167,7 +171,7 @@
     width: 8.3%;
     height: inherit;
     border-radius: 5px;
-    background-color: #2B5841;
+    background-color: #F06F0A;
     transition: width 0.2s ease-out 0s;
   }
   

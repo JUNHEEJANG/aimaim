@@ -82,6 +82,30 @@
 				$('.mbti-container').fadeIn(600);
 				
 			</script>
+		
+			<script>
+			var preload = function(sources) {
+				var images = [];
+				var length = sources.length;
+				for(var i = 0;  i < length; i++) {
+				images[i] = new Image();
+				images[i].src = sources[i];
+				}
+			}
+
+           preload(['https://jerrymaster.speedgabia.com/hosaTest/Question/q1.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q2.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q3.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q4.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q5.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q6.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q7.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q8.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q9.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q10.png', 
+			]);
+			
+			</script>
 			
 			<script>
 				let progressBar = $(".progress-inner");

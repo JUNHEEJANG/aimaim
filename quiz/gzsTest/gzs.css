@@ -1,0 +1,554 @@
+@font-face { 
+	font-family: 'BMJUA'; 
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff')format('woff'); 
+	font-weight: normal; font-style: normal; 
+	
+	font-family: 'NanumSquare', sans-serif !important;
+	src: url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+}
+            
+  
+  html {
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (min-width: 500px) {
+    .mbti-start {
+      /*border: 3px solid #000 !important;*/
+      border-radius: 10px !important;
+    }
+  
+    .mbti-start-wrapper {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+  
+  body {
+    font-family: "BMJUA" !important;
+    -webkit-touch-callout: none;
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .mbti-start {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .mbti-start .mbti-logo {
+    margin-top: 30px;
+  }
+  
+  .mbti-start .start-title {
+    margin-top: 20px;
+    font-size: 45px;
+    color: #000;
+    line-height: 1.38;
+    text-align: center;
+  }
+  
+  .mbti-start .start-title red {
+    color: #ed2510;
+  }
+
+  .mbti-start .start-subtitle {
+    margin-top: 13px;
+    /*font-family: "Yeon Sung", cursive;*/
+    font-size: 18px;
+    margin-bottom: 0px;
+  }
+
+  .mbti-start .start-snacktitle {
+    font-size: 23px;
+	margin-top: 0px;
+    margin-bottom: 0px;
+	text-align: left;
+	font-family: 'nanumsquare';
+	font-weight : bold;
+  }
+
+  .mbti-start .start-snacksubtitle {
+    margin-top: 30px;
+    font-size: 15px;
+    margin-bottom: 20px;
+	font-family: 'nanumsquare';
+	font-weight : bold;
+  }
+  
+  .mbti-start .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 300px;
+    height: 55px;
+    border-radius: 25px;
+    background-color: #000;
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+  
+  .mbti-start .btn small {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  
+  .mbti-start .btn-red {
+    background-color: #FE2E64;
+  }
+
+  .mbti-start .btn-orange {
+    background-color: #F06F0A;
+  }
+
+  .mbti-start .btn-snack {
+    background-color: #F7D358;
+	width: 200px;
+  }
+
+  .mbti-start .btn-snacks {
+    background-color: #F7D358;
+	width: 150px;
+    float: left;
+	margin-left: 13px;
+  }
+  
+  .mbti-start .main-bg {
+    margin-top: 15px;
+  }
+  
+  .mbti-container {
+    display: flex;
+    margin: 0 auto;
+    padding: 30px;
+	padding-top: 5px;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .mbti-container .pagi {
+    width: 100%;
+    max-width: 314px;
+    margin-top: 50px;
+  }
+  
+  .mbti-container .page {
+    font-size: 16px;
+    color: #969696;
+    text-align: right;
+    font-weight: 500;
+  }
+  
+  .mbti-container .pb {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #eee;
+    border-radius: 7px;
+    height: 7px;
+    margin-top: 12px;
+  }
+  
+  .mbti-container .progress-inner {
+    width: 8.3%;
+    height: inherit;
+    border-radius: 5px;
+    background-color: #F06F0A;
+    transition: width 0.2s ease-out 0s;
+  }
+  
+  .mbti-container .mbti-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 73px;
+    height: 38px;
+    border-radius: 19px;
+    background-color: #ed2510;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .mbti-container .mbti-questionNo {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 33px;
+	color: #F06F0A;
+  }
+  
+  .mbti-container .mbti-question {
+	font-family: 'nanumsquare';
+	font-weight : bold;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-size: 24px;
+	text-align: center;
+	float: left;
+  }
+  .mbti-container .mbti-question2 {
+	font-family: 'nanumsquare';
+	font-weight : bold;
+    margin-top: 0px;
+    margin-bottom: 28px;
+    font-size: 24px;
+	text-align: center;
+	float: left;
+  }
+  
+  .mbti-container .mbti-answer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 314px;
+    padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+    background-color: #F7F5F5;
+    border-radius: 15px;
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 18px;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif !important;
+  }
+  
+  .bottom-logo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20px;
+  }
+  
+  .mbti-result-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 466px;
+  }
+  
+  .mbti-result-container .mbti-result img {
+    width: 82%;
+	display: block; 
+	margin: 0px auto;
+	margin-top : 25px;
+	margin-bottom : 25px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-subtitle {
+    margin-top: 36px;
+    font-size: 20px;
+    text-align: center;
+	color: #A4A4A4;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-title {
+    margin-top: 14px;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .mbti-result-container .mbti-result .mbti-result-detail-tag {
+    margin-top: 25px;
+    font-size: 15px;
+    padding: 0 30px;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    font-family: "Noto Sans KR", sans-serif !important;
+	font-weight: bold;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-detail {
+    margin-top: 5px;
+    font-size: 14px;
+	color: #6E6E6E;
+    padding: 0 30px;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    font-family: "Noto Sans KR", sans-serif !important;
+  }
+
+  .mbti-result-container .mbti-result .mbti-result-match {
+    margin-top: 50px;
+    font-size: 15px;
+	color: #6E6E6E;
+    padding: 0 30px;
+    line-height: 1.5;
+    letter-spacing: 0px;
+	text-align:center;
+    font-family: "Noto Sans KR", sans-serif !important;
+  }
+
+
+  .mbti-result-container .mbti-result .mbti-banner {
+    margin-top: 30px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-match-wrapper {
+    margin: 50px 20px 0 20px;
+    padding: 10px;
+    background-color: #E0D2ED;
+    border-radius: 19px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-match-wrapper .mbti-result-match {
+    border: 1px dashed #C199E0;
+    text-align: center;
+    border-radius: 13px;
+    padding: 20px 30px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-match-wrapper .mbti-result-match .mbti-result-match-title {
+    font-size: 17px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-match-wrapper .mbti-result-match .mbti-result-match-mbti {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-worst-match-wrapper {
+    margin: 12px 20px 0 20px;
+    padding: 10px;
+    background-color: #FAECE3;
+    border-radius: 19px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-worst-match-wrapper .mbti-result-worst-match {
+    border: 1px dashed #AD856B;
+    text-align: center;
+    border-radius: 13px;
+    padding: 20px 30px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-worst-match-wrapper .mbti-result-worst-match .mbti-result-match-title {
+    font-size: 17px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-worst-match-wrapper .mbti-result-worst-match .mbti-result-match-mbti {
+    margin-top: 10px;
+    font-size: 22px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-feature-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+    font-size: 17px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-features {
+    margin-top: 10px;
+    font-size: 13.5px;
+    letter-spacing: 0.5px;
+    font-family: "Noto Sans KR", sans-serif !important;
+    -webkit-padding-start: 50px;
+            padding-inline-start: 50px;
+    -webkit-padding-end: 30px;
+            padding-inline-end: 30px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-features li {
+    margin-bottom: 3px;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-features li:last-child {
+    margin-bottom: 0;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share-title {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 15px;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share {
+    display: inline-flex;
+    margin-top: 25px;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .sns-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 27px;
+    cursor: pointer;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .sns-logo img {
+    height: 21px;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .kakao {
+    background-color: #FAE300;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .link {
+    background-color: #2E2E2E;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .fb {
+    background-color: #3b5998;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .twitter {
+    background-color: #00acee;
+  }
+  
+  .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .sns-logo-desc {
+    font-family: "Noto Sans KR", cursive !important;
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 466px;
+    background-color: #1E1E1E;
+    text-align: center;
+    margin-top: 60px;
+    padding-bottom: 40px;
+  }
+  
+  .footer .footer-title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+    line-height: 1;
+	 
+  }
+
+  .footer-title .again-text-btn{
+    padding-top: 70px; 
+	color: #FE2E64; 
+	font-size: 21px
+  }
+  
+  .footer .footer-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 15px;
+    height: 48px;
+    border-radius: 24px;
+    width: 263px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif !important;
+  }
+  
+  .footer .red {
+    background-color: #ed2510;
+  }
+  
+  .footer .gray {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer .footer-logo {
+    margin-top: 30px;
+  }
+  
+  .footer .footer-logo .footer-desc {
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.1);
+    font-family: "Noto Sans KR", sans-serif !important;
+  }
+  
+  .mbti-promotion {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 440px;
+    cursor: pointer;
+  }
+  
+  .mbti-promotion .mbti-promotion-img {
+    width: 100%;
+    max-width: 440px;
+  }
+  
+  .footer-btns {
+    width: 100%;
+    max-width: 440px;
+    display: flex;
+    align-items: center;
+    height: 73px;
+  }
+  
+  .footer-btns .footer-btn {
+    font-family: "Noto Sans KR", sans-serif !important;
+    width: 50%;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #e4e4e4;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .footer-btns .footer-btn red {
+    color: #ed2510;
+  }
+  
+  .footer-btns .footer-btn:last-child {
+    border: none;
+  }
+  
+  .modal-content {
+    background-color: #fff !important;
+  }
+  
+  .modal-content pre {
+    padding: 10px;
+    white-space: pre-wrap;
+  }
+  
+  .modal-content pre img {
+    border: 1px solid #000;
+  }
+  

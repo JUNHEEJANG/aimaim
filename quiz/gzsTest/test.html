@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>개짜산 테스트 | 투쁠</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="title" content="개짜산 테스트 | 투쁠">
+		<meta name="subject" content="개짜산 테스트, 취향 메이트 찾기">
+		<meta name="keywords" content="개짜산, 개짜바, 개짬산, 개짬바, 고짜산, 고짜바, 고짬산, 고짬바">
+		<meta name="author" content="투쁠">
+		<meta name="description" content="개짜산 테스트를 나와 취향이 같은 친구를 찾아보세요! 친구들에게 공유는 필수">
+		
+		<!-- sns share img -->
+		<meta property="og:title" content="[개짜산 테스트] 취향 메이트 찾기" />
+		<meta property="og:url" content="https://www.twoppl.com/quiz/hosaTest/intro" />
+		<meta property="og:image" content="" />
+		
+		<!-- 파비콘 --> 
+		<link rel="shortcut icon" href="https://jerrymaster.speedgabia.com/favicon30.png" type="image/x-icon">
+		<link rel="icon" href="https://jerrymaster.speedgabia.com/favicon30.png" type="image/x-icon">
+		
+		
+		<!-- Twoppl Style -->		
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		
+		<!-- Styles -->
+		<link href="gzs.css" rel="stylesheet">		
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174229344-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-174229344-1');
+		</script>
+		
+		<style>
+			@media only screen and (min-width:840px){
+				.mbti-answer:hover {
+					background: #F06F0A; 
+					color: white;
+				}
+			}
+
+		</style>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+				<div class="mbti-container" style="text-align:center">
+					
+					<div class="mbti-questionNo">Q1.</div>
+					<div class="mbti-question2" style="width: 300px">개 vs 고양이</div>
+					
+					<div class="mbti-answer a1">개</div>
+					<div class="mbti-answer a2">고양이</div>
+
+					<div class="pagi">
+						<div class="page">
+							1/3
+						</div>		
+						<div class="pb">
+							<div class="progress-inner"></div>
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+				
+
+		<!-- Scripts -->
+			<script src="../../assets/js/jquery.min.js"></script>
+			<script>
+				$('.mbti-container').css('display', 'none');
+				$('.mbti-container').fadeIn(600);
+				
+			</script>
+		
+			<script>
+			var preload = function(sources) {
+				var images = [];
+				var length = sources.length;
+				for(var i = 0;  i < length; i++) {
+				images[i] = new Image();
+				images[i].src = sources[i];
+				}
+			}
+
+           preload(['https://jerrymaster.speedgabia.com/hosaTest/Question/q1.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q2.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q3.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q4.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q5.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q6.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q7.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q8.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q9.png', 
+					'https://jerrymaster.speedgabia.com/hosaTest/Question/q10.png', 
+			]);
+			
+			</script>
+			
+			<script>
+				let progressBar = $(".progress-inner");
+				progressBar.css("width", `${100/3}%`);
+
+				
+				let questions = [
+					
+					//Q1
+					{"q1": "개 vs 고양이",
+					 "a1": "개", "a2": "고양이",
+					 "a1_mbti": "D", "a2_mbti": "C"},
+					
+					//Q10
+					{"q1": "짜장면 vs 짬뽕",
+					 "a1": "짜장면", "a2": "짬뽕",
+					 "a1_mbti": "Z", "a2_mbti": "J"},
+					
+					//Q6	
+					{"q1": "산 vs 바다",
+					 "a1": "산", "a2": "바다", 
+					 "a1_mbti": "M", "a2_mbti": "S"}
+					
+				];
+
+				let result = {};
+				let questionProgress = 1;
+
+				function get_result(){
+							
+					let character;
+					function filterItems(arr) {
+							return Object.keys(arr).filter(el => arr[el] >= 1);
+					}
+					character = filterItems(result).join("");
+					console.log(character);
+					
+					/*
+					개짜산 : DZM	개짬산 : DJM
+					개짜바 : DZS	개짬바 : DJS
+					
+					고짜산 : CJM	고짬산 : CJM
+					고짜바 : CZS	고짬바 : CJS
+					*/
+					
+					// 최종 계산
+					//location.href = 'loading.html?'+character;
+					//location.href = `${character}.html`;
+
+					return;
+				}
+				
+				
+				function shape_progress( ){
+					//console.log(questionProgress);
+
+					questionProgress += 1;
+					if(questionProgress == 4){
+						get_result();
+						return;
+					}
+					
+					$('.mbti-answer').css('display', 'none');
+					$('.mbti-answer').fadeIn(400);
+					
+					q = questions[questionProgress-1];
+					progressBar.css("width", `${100/3*questionProgress}%`);
+					$(".page").text(`${questionProgress}/3`);
+
+					$(".mbti-questionNo").text(`Q${questionProgress}.`);
+					//$(".mbti-question").text(`${q["q1"]}`);
+					$(".mbti-question2").text(`${q["q1"]}`);
+					
+					$(".a1").text(`${q["a1"]}`);
+					$(".a2").text(`${q["a2"]}`);
+					
+				}
+				
+
+				$(".mbti-answer").on("click", function() {
+					let q = questions[questionProgress-1];
+						
+						if ($(this).hasClass("a1")) 
+						{
+							if (q["a1_mbti"] in result) { 
+								result[q["a1_mbti"]] += 1;
+							} else {
+								result[q["a1_mbti"]] = 1; 
+							}
+						} else { 
+							if (q["a2_mbti"] in result) { 
+								result[q["a2_mbti"]] += 1;
+							} else {
+								result[q["a2_mbti"]] = 1;
+							}
+						}	
+					
+						//console.log(result);
+						shape_progress( );						
+
+				});
+			</script>
+
+
+	</body>
+</html>

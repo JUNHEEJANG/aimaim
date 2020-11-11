@@ -199,37 +199,23 @@
 	font-weight : bold;
     margin-top: 0px;
     margin-bottom: 5px;
-    font-size: 24px;
+    font-size: 20px;
 	text-align: center;
 	float: left;
   }
   .mbti-container .mbti-question2 {
 	font-family: 'nanumsquare';
 	font-weight : bold;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 28px;
-    font-size: 24px;
+    font-size: 30px;
 	text-align: center;
 	float: left;
   }
   
-  .mbti-container .mbti-answer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 314px;
-    padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-    background-color: #F7F5F5;
-    border-radius: 15px;
-    color: #000000;
-    font-size: 18px;
-    margin-bottom: 18px;
-    cursor: pointer;
-    font-family: "Noto Sans KR", sans-serif !important;
+  .mbti-container .mbti-result-match .mbti-answer {
+	width: 47%; 
+	border-radius: 0.5em;
   }
   
   .bottom-logo {

@@ -13,19 +13,18 @@
 		
 		<!-- sns share img -->
 		<meta property="og:title" content="[개짜산 테스트] 취향 메이트 찾기" />
-		<meta property="og:url" content="https://www.twoppl.com/quiz/hosaTest/intro" />
+		<meta property="og:url" content="https://www.twoppl.com/quiz/gzsTest/intro" />
 		<meta property="og:image" content="" />
 		
 		<!-- 파비콘 --> 
 		<link rel="shortcut icon" href="https://jerrymaster.speedgabia.com/favicon30.png" type="image/x-icon">
 		<link rel="icon" href="https://jerrymaster.speedgabia.com/favicon30.png" type="image/x-icon">
 		
-		
 		<!-- Twoppl Style -->		
 		<link rel="stylesheet" href="../../assets/css/main.css" />
 		
 		<!-- Styles -->
-		<link href="gzs.css" rel="stylesheet">		
+		<link href="dzs.css" rel="stylesheet">		
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174229344-1"></script>
@@ -56,11 +55,19 @@
 				<div class="mbti-container" style="text-align:center">
 					
 					<div class="mbti-questionNo">Q1.</div>
+
+					<div id="progressBar">
+						<div></div>
+					</div>
+					<div class="mbti-question" style="width: 300px; float:left;"> 🕑</div>
 					<div class="mbti-question2" style="width: 300px">개 vs 고양이</div>
 					
-					<div class="mbti-answer a1">개</div>
-					<div class="mbti-answer a2">고양이</div>
-
+					<div class="mbti-result-match">
+						<img class="mbti-answer a1" style="float:left;" src="https://jerrymaster.speedgabia.com/dzsTest/dog.png"/>
+						<img class="mbti-answer a2" style="float:right;" src="https://jerrymaster.speedgabia.com/dzsTest/cat.png"/>
+					
+					</div>
+					
 					<div class="pagi">
 						<div class="page">
 							1/3
@@ -73,6 +80,44 @@
 				</div>
 				
 			</div>
+		
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function() {    
+		function progress(timeleft, timetotal, $element) {
+			var progressBarWidth = (timeleft / timetotal) * $element.width();
+			$element.find('div').animate({ width: progressBarWidth }, timeleft == timetotal ? 0 : 1000, 'linear').html(timeleft + " seconds to go");
+			if(timeleft > 0) {
+				setTimeout(function() {
+					progress(timeleft - 1, timetotal, $element);
+				}, 1000);
+			}
+		};
+		progress(20, 20, $('#progressBar'));
+		});
+		</script>
+
+		<style>
+		#progressBar {
+			width: 90%;
+			margin: 10px auto;
+			height: 22px;
+			background-color: #0A5F44;
+		}
+
+		#progressBar div {
+			height: 100%;
+			text-align: right;
+			padding: 0;
+			line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+			width: 0;
+			background-color: #CBEA00;
+			box-sizing: border-box;
+		}
+		</style>
+
+
 				
 
 		<!-- Scripts -->
@@ -93,16 +138,12 @@
 				}
 			}
 
-           preload(['https://jerrymaster.speedgabia.com/hosaTest/Question/q1.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q2.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q3.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q4.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q5.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q6.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q7.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q8.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q9.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q10.png', 
+           preload(['https://jerrymaster.speedgabia.com/dzsTest/dog.png', 
+					'https://jerrymaster.speedgabia.com/dzsTest/cat.png',
+					'https://jerrymaster.speedgabia.com/dzsTest/jajang.png', 
+					'https://jerrymaster.speedgabia.com/dzsTest/jambong.png', 
+					'https://jerrymaster.speedgabia.com/dzsTest/mountain.png', 
+					'https://jerrymaster.speedgabia.com/dzsTest/sea.png', 
 			]);
 			
 			</script>
@@ -111,22 +152,24 @@
 				let progressBar = $(".progress-inner");
 				progressBar.css("width", `${100/3}%`);
 
-				
 				let questions = [
 					
 					//Q1
 					{"q1": "개 vs 고양이",
-					 "a1": "개", "a2": "고양이",
+					 "a1": "https://jerrymaster.speedgabia.com/dzsTest/dog.png", 
+					 "a2": "https://jerrymaster.speedgabia.com/dzsTest/cat.png",
 					 "a1_mbti": "D", "a2_mbti": "C"},
 					
 					//Q10
 					{"q1": "짜장면 vs 짬뽕",
-					 "a1": "짜장면", "a2": "짬뽕",
+					 "a1": "https://jerrymaster.speedgabia.com/dzsTest/jajang.png", 
+					 "a2": "https://jerrymaster.speedgabia.com/dzsTest/jambong.png",
 					 "a1_mbti": "Z", "a2_mbti": "J"},
 					
 					//Q6	
 					{"q1": "산 vs 바다",
-					 "a1": "산", "a2": "바다", 
+					 "a1": "https://jerrymaster.speedgabia.com/dzsTest/mountain.png", 
+					 "a2": "https://jerrymaster.speedgabia.com/dzsTest/sea.png", 
 					 "a1_mbti": "M", "a2_mbti": "S"}
 					
 				];
@@ -146,7 +189,6 @@
 					/*
 					개짜산 : DZM	개짬산 : DJM
 					개짜바 : DZS	개짬바 : DJS
-					
 					고짜산 : CJM	고짬산 : CJM
 					고짜바 : CZS	고짬바 : CJS
 					*/
@@ -167,20 +209,19 @@
 						get_result();
 						return;
 					}
+					$('.mbti-question2').css('display', 'none').fadeIn(400);
+					$('.mbti-answer').css('display', 'none').fadeIn(400);
 					
-					$('.mbti-answer').css('display', 'none');
-					$('.mbti-answer').fadeIn(400);
 					
 					q = questions[questionProgress-1];
 					progressBar.css("width", `${100/3*questionProgress}%`);
 					$(".page").text(`${questionProgress}/3`);
 
 					$(".mbti-questionNo").text(`Q${questionProgress}.`);
-					//$(".mbti-question").text(`${q["q1"]}`);
 					$(".mbti-question2").text(`${q["q1"]}`);
 					
-					$(".a1").text(`${q["a1"]}`);
-					$(".a2").text(`${q["a2"]}`);
+					$(".a1").attr("src", `${q["a1"]}`);
+					$(".a2").attr("src", `${q["a2"]}`);
 					
 				}
 				

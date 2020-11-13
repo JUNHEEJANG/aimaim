@@ -24,7 +24,7 @@
 		<link rel="stylesheet" href="../../assets/css/main.css" />
 		
 		<!-- Styles -->
-		<link href="dzs.css" rel="stylesheet">		
+		<link href="dbs.css" rel="stylesheet">		
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174229344-1"></script>
@@ -59,7 +59,7 @@
 					<div id="progressBar">
 						<div></div>
 					</div>
-					<div class="mbti-question" style="width: 300px; float:left;"> 🕑</div>
+					
 					<div class="mbti-question2" style="width: 300px">개 vs 고양이</div>
 					
 					<div class="mbti-result-match">
@@ -81,97 +81,58 @@
 				
 			</div>
 		
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script>
-		$(document).ready(function() {    
-		function progress(timeleft, timetotal, $element) {
-			var progressBarWidth = (timeleft / timetotal) * $element.width();
-			$element.find('div').animate({ width: progressBarWidth }, timeleft == timetotal ? 0 : 1000, 'linear').html(timeleft + " seconds to go");
-			if(timeleft > 0) {
-				setTimeout(function() {
-					progress(timeleft - 1, timetotal, $element);
-				}, 1000);
-			}
-		};
-		progress(20, 20, $('#progressBar'));
-		});
-		</script>
-
-		<style>
-		#progressBar {
-			width: 90%;
-			margin: 10px auto;
-			height: 22px;
-			background-color: #0A5F44;
-		}
-
-		#progressBar div {
-			height: 100%;
-			text-align: right;
-			padding: 0;
-			line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-			width: 0;
-			background-color: #CBEA00;
-			box-sizing: border-box;
-		}
-		</style>
-
-
 				
 
 		<!-- Scripts -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 			<script src="../../assets/js/jquery.min.js"></script>
 			<script>
-				$('.mbti-container').css('display', 'none');
+				$('.mbti-container').css('display', 'none');``
 				$('.mbti-container').fadeIn(600);
-				
 			</script>
 		
+		
+			<!--img preload-->
 			<script>
-			var preload = function(sources) {
-				var images = [];
-				var length = sources.length;
-				for(var i = 0;  i < length; i++) {
-				images[i] = new Image();
-				images[i].src = sources[i];
+				var preload = function(sources) {
+					var images = [];
+					var length = sources.length;
+					for(var i = 0;  i < length; i++) {
+					images[i] = new Image();
+					images[i].src = sources[i];
+					}
 				}
-			}
-
-           preload(['https://jerrymaster.speedgabia.com/dzsTest/dog.png', 
-					'https://jerrymaster.speedgabia.com/dzsTest/cat.png',
-					'https://jerrymaster.speedgabia.com/dzsTest/jajang.png', 
-					'https://jerrymaster.speedgabia.com/dzsTest/jambong.png', 
-					'https://jerrymaster.speedgabia.com/dzsTest/mountain.png', 
-					'https://jerrymaster.speedgabia.com/dzsTest/sea.png', 
-			]);
+				preload(['https://jerrymaster.speedgabia.com/dzsTest/dog.png', 
+						'https://jerrymaster.speedgabia.com/dzsTest/cat.png',
+						'https://jerrymaster.speedgabia.com/dzsTest/jajang.png', 
+						'https://jerrymaster.speedgabia.com/dzsTest/jambong.png', 
+						'https://jerrymaster.speedgabia.com/dzsTest/mountain.png', 
+						'https://jerrymaster.speedgabia.com/dzsTest/sea.png', 
+				]);
 			
 			</script>
 			
 			<script>
+					
 				let progressBar = $(".progress-inner");
 				progressBar.css("width", `${100/3}%`);
 
-				let questions = [
-					
+				let questions = [			
 					//Q1
 					{"q1": "개 vs 고양이",
 					 "a1": "https://jerrymaster.speedgabia.com/dzsTest/dog.png", 
 					 "a2": "https://jerrymaster.speedgabia.com/dzsTest/cat.png",
 					 "a1_mbti": "D", "a2_mbti": "C"},
-					
-					//Q10
+					//Q2
 					{"q1": "짜장면 vs 짬뽕",
 					 "a1": "https://jerrymaster.speedgabia.com/dzsTest/jajang.png", 
 					 "a2": "https://jerrymaster.speedgabia.com/dzsTest/jambong.png",
-					 "a1_mbti": "Z", "a2_mbti": "J"},
-					
-					//Q6	
+					 "a1_mbti": "B", "a2_mbti": "R"},
+					//Q3	
 					{"q1": "산 vs 바다",
 					 "a1": "https://jerrymaster.speedgabia.com/dzsTest/mountain.png", 
 					 "a2": "https://jerrymaster.speedgabia.com/dzsTest/sea.png", 
-					 "a1_mbti": "M", "a2_mbti": "S"}
-					
+					 "a1_mbti": "M", "a2_mbti": "S"}		
 				];
 
 				let result = {};
@@ -186,24 +147,18 @@
 					character = filterItems(result).join("");
 					console.log(character);
 					
-					/*
-					개짜산 : DZM	개짬산 : DJM
-					개짜바 : DZS	개짬바 : DJS
-					고짜산 : CJM	고짬산 : CJM
-					고짜바 : CZS	고짬바 : CJS
-					*/
-					
+					/*개짜산 : DBM	개짬산 : DRM 
+					  고짜산 : CBM	고짬산 : CRM
+					  개짜바 : DBS	개짬바 : DRS 
+					  고짜바 : CBS	고짬바 : CRS*/
+
 					// 최종 계산
-					//location.href = 'loading.html?'+character;
-					//location.href = `${character}.html`;
+					location.href = 'loading.html?'+character;
 
 					return;
 				}
 				
-				
 				function shape_progress( ){
-					//console.log(questionProgress);
-
 					questionProgress += 1;
 					if(questionProgress == 4){
 						get_result();
@@ -212,20 +167,17 @@
 					$('.mbti-question2').css('display', 'none').fadeIn(400);
 					$('.mbti-answer').css('display', 'none').fadeIn(400);
 					
-					
 					q = questions[questionProgress-1];
 					progressBar.css("width", `${100/3*questionProgress}%`);
+					
 					$(".page").text(`${questionProgress}/3`);
-
 					$(".mbti-questionNo").text(`Q${questionProgress}.`);
 					$(".mbti-question2").text(`${q["q1"]}`);
-					
 					$(".a1").attr("src", `${q["a1"]}`);
-					$(".a2").attr("src", `${q["a2"]}`);
-					
+					$(".a2").attr("src", `${q["a2"]}`);	
+
 				}
 				
-
 				$(".mbti-answer").on("click", function() {
 					let q = questions[questionProgress-1];
 						
@@ -243,11 +195,48 @@
 								result[q["a2_mbti"]] = 1;
 							}
 						}	
-					
-						//console.log(result);
-						shape_progress( );						
+
+						shape_progress( );	
 
 				});
+				
+				
+				
+			</script>
+		
+			<script>
+				$(document).ready(function() {    
+				function progress(timeleft, timetotal, $element) {
+
+					var progressBarWidth = (timeleft / timetotal) * $element.width();
+
+					$element.find('div').animate(
+						{ width: progressBarWidth }, 
+						timeleft == timetotal ? 0 : 1000, 
+						'linear'
+
+					).html("🕑");
+
+					if(timeleft > 0) {
+						setTimeout(function() {
+							progress(timeleft - 1, timetotal, $element);
+						}, 1000);
+						
+						console.log(timeleft);
+					}else if(timeleft == 0){
+						
+						setTimeout(function() {
+							alert("잽싸게 선택해 주세요!");
+							location.href = 'test.html';
+						}, 1000);
+						
+					}
+					
+				};
+
+				progress(6, 6, $('#progressBar'));
+				});
+				
 			</script>
 
 

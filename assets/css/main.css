@@ -2332,6 +2332,7 @@ input, select, textarea {
 			margin-bottom : 20px;
 			width : 380px;
 			border-radius: 4.5px;
+			box-shadow: 5px 5px 6px lightgrey;
 		}
 
 			@media only screen and (max-width:400px){

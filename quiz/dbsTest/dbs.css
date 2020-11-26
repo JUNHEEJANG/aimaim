@@ -212,6 +212,7 @@
   .mbti-container .mbti-result-match .mbti-answer {
 	width: 47%; 
 	border-radius: 0.5em;
+	box-shadow: 4px 4px 5px lightgrey;
   }
   
   .bottom-logo {

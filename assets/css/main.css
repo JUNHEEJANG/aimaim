@@ -2331,6 +2331,7 @@ input, select, textarea {
 		.quiz-img {
 			margin-bottom : 20px;
 			width : 380px;
+			border-radius: 4.5px;
 		}
 
 			@media only screen and (max-width:400px){

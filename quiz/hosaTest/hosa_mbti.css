@@ -3,10 +3,8 @@
 	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff')format('woff'); 
 	font-weight: normal; font-style: normal; 
 	
-	font-family: 'ChosunGs';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'NanumSquare', sans-serif !important;
+	src: url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
 }
             
   
@@ -31,7 +29,7 @@
   }
   
   body {
-    font-family: "ChosunGs" !important;
+    font-family: "BMJUA" !important;
     -webkit-touch-callout: none;
 	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
     -webkit-user-select: none;
@@ -58,13 +56,11 @@
   }
   
   .mbti-start .start-title {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 45px;
     color: #000;
     line-height: 1.38;
     text-align: center;
-    font-family: 'ChosunGs';
-	font-weight : bold;
   }
   
   .mbti-start .start-title red {
@@ -72,10 +68,10 @@
   }
 
   .mbti-start .start-subtitle {
-    margin-top: 13px;
+    margin-top: 15px;
     /*font-family: "Yeon Sung", cursive;*/
     font-size: 18px;
-    margin-bottom: 0px;
+    margin-bottom: 15px;
   }
 
   .mbti-start .start-snacktitle {
@@ -83,7 +79,7 @@
 	margin-top: 0px;
     margin-bottom: 0px;
 	text-align: left;
-	font-family: 'ChosunGs';
+	font-family: 'nanumsquare';
 	font-weight : bold;
   }
 
@@ -91,7 +87,7 @@
     margin-top: 30px;
     font-size: 15px;
     margin-bottom: 20px;
-	font-family: 'ChosunGs';
+	font-family: 'nanumsquare';
 	font-weight : bold;
   }
   
@@ -117,8 +113,8 @@
     background-color: #FE2E64;
   }
 
-  .mbti-start .btn-orange {
-    background-color: #F06F0A;
+  .mbti-start .btn-green {
+    background-color: #2B5841;
   }
 
   .mbti-start .btn-snack {
@@ -175,7 +171,7 @@
     width: 8.3%;
     height: inherit;
     border-radius: 5px;
-    background-color: black;
+    background-color: #ed2510;
     transition: width 0.2s ease-out 0s;
   }
   
@@ -193,15 +189,13 @@
 
   .mbti-container .mbti-questionNo {
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 22px;
     font-size: 33px;
-	
-	font-family: 'ChosunGs';
-	
+	color: #FE2E64;
   }
   
   .mbti-container .mbti-question {
-	font-family: 'ChosunGs';
+	font-family: 'nanumsquare';
 	font-weight : bold;
     margin-top: 0px;
     margin-bottom: 5px;
@@ -210,7 +204,7 @@
 	float: left;
   }
   .mbti-container .mbti-question2 {
-	font-family: 'ChosunGs';
+	font-family: 'nanumsquare';
 	font-weight : bold;
     margin-top: 0px;
     margin-bottom: 28px;
@@ -232,11 +226,11 @@
     background-color: #F7F5F5;
     border-radius: 15px;
     color: #000000;
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 18px;
     cursor: pointer;
     font-family: "Noto Sans KR", sans-serif !important;
-	/*box-shadow: 2px 2px 3px lightgrey;*/
+	box-shadow: 2px 2px 3px lightgrey;
   }
   
   .bottom-logo {
@@ -256,13 +250,26 @@
   }
   
   .mbti-result-container .mbti-result img {
-    width: 82%;
+    width: 280px;
 	display: block; 
 	margin: 0px auto;
 	margin-top : 25px;
-	margin-bottom : 5px;
+	margin-bottom : 25px;
   }
   
+  .mbti-result-container .mbti-result .mbti-result-subtitle {
+    margin-top: 36px;
+    font-size: 20px;
+    text-align: center;
+	color: #A4A4A4;
+  }
+  
+  .mbti-result-container .mbti-result .mbti-result-title {
+    margin-top: 2px;
+    font-size: 35px;
+    text-align: center;
+	font-family: "ChosunGs", sans-serif !important;
+  }
 
   .mbti-result-container .mbti-result .mbti-result-detail-tag {
     margin-top: 25px;
@@ -272,7 +279,6 @@
     letter-spacing: 1px;
     font-family: "Noto Sans KR", sans-serif !important;
 	font-weight: bold;
-	color: black;
   }
   
   .mbti-result-container .mbti-result .mbti-result-detail {
@@ -283,18 +289,6 @@
     line-height: 1.5;
     letter-spacing: 0px;
     font-family: "Noto Sans KR", sans-serif !important;
-    font-weight: bold;
-  }
-
-  .mbti-result-container .mbti-result .mbti-result-match {
-    margin-top: 50px;
-    font-size: 15px;
-	color: #6E6E6E;
-    padding: 0 30px;
-    line-height: 1.5;
-    letter-spacing: 0px;
-	text-align:center;
-    font-family: "ChosunGs", sans-serif !important;
   }
 
 
@@ -361,7 +355,7 @@
     margin-top: 10px;
     font-size: 13.5px;
     letter-spacing: 0.5px;
-    font-family: "ChosunGs", sans-serif !important;
+    font-family: "Noto Sans KR", sans-serif !important;
     -webkit-padding-start: 50px;
             padding-inline-start: 50px;
     -webkit-padding-end: 30px;
@@ -380,7 +374,7 @@
     width: 100%;
     text-align: center;
     margin-top: 60px;
-    font-size: 15px;
+    font-size: 17px;
   }
   
   .mbti-result-container .mbti-result .sns-share {
@@ -430,7 +424,7 @@
   }
   
   .mbti-result-container .mbti-result .sns-share .sns-logo-wrapper .sns-logo-desc {
-    font-family: "ChosunGs", cursive !important;
+    font-family: "Noto Sans KR", cursive !important;
     margin-top: 10px;
     font-size: 15px;
   }
@@ -453,7 +447,6 @@
     font-size: 20px;
     color: #fff;
     line-height: 1;
-	 
   }
 
   .footer-title .again-text-btn{
@@ -473,7 +466,7 @@
     width: 263px;
     margin-bottom: 20px;
     cursor: pointer;
-    font-family: "ChosunGs", sans-serif !important;
+    font-family: "Noto Sans KR", sans-serif !important;
   }
   
   .footer .red {
@@ -492,7 +485,7 @@
     margin-top: 10px;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.1);
-    font-family: "ChosunGs", sans-serif !important;
+    font-family: "Noto Sans KR", sans-serif !important;
   }
   
   .mbti-promotion {
@@ -516,7 +509,7 @@
   }
   
   .footer-btns .footer-btn {
-    font-family: "ChosunGs", sans-serif !important;
+    font-family: "Noto Sans KR", sans-serif !important;
     width: 50%;
     height: 42px;
     display: flex;
@@ -548,42 +541,4 @@
   .modal-content pre img {
     border: 1px solid #000;
   }
-
-/* loading */
-.mbti-result-container .mbti-result .mbti-result-loading {
-    margin-top: 14px;
-    font-size: 20px;
-    text-align: center;
-	font-weight: bold;
-}
-
-.mbti-result-container .mbti-result .mbti-result-title {
-    margin-top: 14px;
-    font-size: 20px;
-    text-align: center;
-	font-weight: bold;
-}
-
-.mbti-result-container .mbti-result .mbti-result-subtitle {
-    margin-top: 36px;
-    font-size: 20px;
-    text-align: center;
-    color: #616161;
-}
-
-.mbti-result-container .mbti-result .mbti-result-title {
-    margin-top: 5px;
-    font-size: 43px;
-    text-align: center;
-	color: black;
-}
-
-
-.mbti-result-container .mbti-result .sns-share-title {
-    width: 100%;
-    text-align: center;
-    margin-top: 60px;
-    font-size: 20px;
-	color: #616161;
-}
   

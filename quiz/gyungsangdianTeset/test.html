@@ -52,15 +52,17 @@
 				<!-- Main -->
 				<div class="mbti-container" style="text-align:center">
 					
-					<div class="mbti-questionNo">문제 일.</div>
-					<img class="mbti-question2 result-img" style="width: 400px" src="https://jerrymaster.speedgabia.com/hosaTest/Question/q1.png"/>
+					<div class="mbti-questionNo">Q1.</div>
+					<img class="mbti-question2 result-img" style="width: 400px" src=""/>
 					
-					<div class="mbti-answer a1">왜 일을 넘기냐고 따진다</div>
-					<div class="mbti-answer a2">짜증나지만 그냥 해준다</div>
+					<div class="mbti-answer a1">그 애가 그 애니?</div>
+					<div class="mbti-answer a2">그 애가 '가' 씨니?</div>
+					<div class="mbti-answer a3">가서 가져갈래?</div>
+					<div class="mbti-answer a4">도저히 모르겠다...</div>
 
 					<div class="pagi">
 						<div class="page">
-							1/10
+							1/5
 						</div>		
 						<div class="pb">
 							<div class="progress-inner"></div>
@@ -75,8 +77,8 @@
 		<!-- Scripts -->
 			<script src="../../assets/js/jquery.min.js"></script>
 			<script>
-				$('.mbti-container').css('display', 'none');
-				$('.mbti-container').fadeIn(600);
+				//$('.mbti-container').css('display', 'none');
+				//$('.mbti-container').fadeIn(600);
 				
 			</script>
 		
@@ -90,98 +92,49 @@
 				}
 			}
 
-           preload(['https://jerrymaster.speedgabia.com/hosaTest/Question/q1.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q2.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q3.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q4.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q5.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q6.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q7.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q8.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q9.png', 
-					'https://jerrymaster.speedgabia.com/hosaTest/Question/q10.png', 
+           preload([
+			   
 			]);
 			
 			</script>
 			
 			<script>
 				let progressBar = $(".progress-inner");
-				progressBar.css("width", `${100/10}%`);
+				progressBar.css("width", `${100/5}%`);
 
 				
 				let questions = [
 					
 					//Q1
-					{"qn": "문제 일.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q1.png",
-					 //"q1": "회사 선배가 자기 일을", "q2": "스리슬쩍 넘긴다",
-					 "a1": "왜 일을 넘기냐고 따진다", "a2": "짜증나지만 그냥 해준다",
-					 "a1_mbti": "A", "a2_mbti": "K"},
+					{"qn": "Q1.",
+					 "q1": "",
+					 "a1": "그 애가 그 애니?", "a2": "그 애가 '가' 씨니?", "a3": "가서 가져갈래?", "a4": "도저히 모르겠다...", 
+					 "a1_mbti": "A", "a2_mbti": "N", "a3_mbti": "N", "a4_mbti": "N"},
 					
 					//Q2
-					{"qn": "문제 이.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q2.png",
-					 //"q1": "나는 외부 팀과 업무적", "q2": "협력을 활발히 하는 편?",
-					 "a1": "문제가 생기면 보통 스스로 해결 하려고하는 편", "a2": "외부 도움을 많이 요청하고 나도 많이 주는 편",
-					 "a1_mbti": "B", "a2_mbti": "W"},
+					{"qn": "Q2.",
+					 "q1": "",
+					 "a1": "가서 가져갈까?", "a2": "그 애가 '가' 씨니?", "a3": "그 애가 가져가서?", "a4": "그냥 찍을래...", 
+					 "a1_mbti": "N", "a2_mbti": "A", "a3_mbti": "N", "a4_mbti": "N"},
 					
 					//Q3
-					{"qn": "문제 삼.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q3.png",
-					 //"q1": "나는 신속하게", "q2": "일 처리를 하는편?",
-					 "a1": "다소 천천히 처리 하는 편", "a2": "가능한 신속하게 처리 하는 편", 
-					 "a1_mbti": "B", "a2_mbti": "W"},
+					{"qn": "Q3.",
+					 "q1": "",
+					 "a1": "거기 가서 가져가", "a2": "그 녀석이 그 애가 맞아", "a3": "'가' 씨가 가서", "a4": "이걸 알아들어...?", 
+					 "a1_mbti": "N", "a2_mbti": "N", "a3_mbti": "A", "a4_mbti": "N"},
 					
 					//Q4
-					{"qn": "문제 사.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q4.png",
-				 	 //"q1": "회사에서 잡담을 할 때", "q2": "애매하게 나를 돌려깐다",
-					 "a1" : " '하하호호~' 웃으면서 현재 상황을 넘긴다", "a2": " '뭐라고욧?' 지금한 말 다시 해보라고 대응한다",
-					 "a1_mbti": "K", "a2_mbti": "A"},
+					{"qn": "Q4.",
+					 "q1": "",
+					 "a1": "그 애가 가져 간 다음에", "a2": "그 애가 '가' 씨이니", "a3": "가서 가져가", "a4": "무슨말이야 도대체...", 
+					 "a1_mbti": "A", "a2_mbti": "N", "a3_mbti": "N", "a4_mbti": "N"},
 					
 					//Q5	
-					{"qn": "문제 오.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q5.png",
-					 //"q1": "후배에게 일을 시켰는데", "q2": "엉망으로 해왔다",
-					 "a1": "어떻게 해야할지 충고한다", "a2": "그냥 달라고하며 내가한다", 
-					 "a1_mbti": "A", "a2_mbti": "K"},
-					
-					//Q6
-					{"qn": "문제 육.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q6.png",
-					//"q1": "후배의 행동과 말투가", "q2": "영 싸가지가 없다", 
-					 "a1" : "커피를 한잔 사주며 타이른다", "a2": "잘못된 부분은 명확히 지적한다",
-					 "a1_mbti": "K", "a2_mbti": "A"},
-
-					//Q7
-					{"qn": "문제 칠.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q7.png",
-					//"q1": "나의 중간보고", "q2": "스타일은 어떤 편?",
-					 "a1": "거의 완성본 때 보고하는 편", "a2": "중간보고는 철저하게 하는 편", 
-					 "a1_mbti": "B", "a2_mbti": "W"},
-					
-					//Q8
-					{"qn": "문제 팔.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q8.png",
-					//"q1": "오탈자에 관해", "q2": "내가 생각하는 쪽은?",
-					 "a1": "오탈자는 하나 없어야 마음이 편안", "a2": "일의 효율을 위해 약간의 오탈자는 용납", 
-					 "a1_mbti": "W", "a2_mbti": "B"},
-					
-					//Q9
-					{"qn": "문제 구.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q9.png",
-					//"q1": "회의 중에 잡담으로", "q2": "회의 시간이 길어진다",
-					 "a1": "분위기에 맞추어 이야기를 이어간다", "a2": "얼른 끝내자는 무언의 눈치를 보낸다",
-					 "a1_mbti": "K", "a2_mbti": "A"},
-					
-					//Q10
-					{"qn": "문제 십.",
-					 "q1": "https://jerrymaster.speedgabia.com/hosaTest/Question/q10.png",
-					//"q1": "나는 사내 비공식 소식을", "q2": "빠르게 듣는 편인가? ",
-					 "a1": "내가 먼저 알아내고 다른사람에게 얘기하는 편", "a2": "내가 알 때쯤에는 다른사람도 이미 알고있는 편", 
-					 "a1_mbti": "W", "a2_mbti": "B"},
-
-					
+					{"qn": "Q5.",
+					 "q1": "",
+					 "a1": "가라! 그 애가, 갔기때문에!", "a2": "가라! 가서, 가져가렴!", "a3": "그 애! 그 애가, 그 애잖아! ", "a4": "하...ㅠ", 
+					 "a1_mbti": "N", "a2_mbti": "A", "a3_mbti": "N", "a4_mbti": "N"},
+						
 				];
 
 				let result = {};
@@ -218,7 +171,7 @@
 					//console.log(questionProgress);
 
 					questionProgress += 1;
-					if(questionProgress == 11){
+					if(questionProgress == 6){
 						get_result();
 						return;
 					}
@@ -227,13 +180,15 @@
 					//$('.mbti-answer').fadeIn(400);
 					
 					q = questions[questionProgress-1];
-					progressBar.css("width", `${100/10*questionProgress}%`);
-					$(".page").text(`${questionProgress}/10`);
+					progressBar.css("width", `${100/5*questionProgress}%`);
+					$(".page").text(`${questionProgress}/5`);
 
 					$(".mbti-questionNo").text(`${q["qn"]}`);
-					$(".mbti-question2").attr("src", `${q["q1"]}`);
+					//$(".mbti-question2").attr("src", `${q["q1"]}`);
 					$(".a1").text(`${q["a1"]}`);
 					$(".a2").text(`${q["a2"]}`);
+					$(".a3").text(`${q["a3"]}`);
+					$(".a4").text(`${q["a4"]}`);
 					
 				}
 				

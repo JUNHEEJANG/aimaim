@@ -53,7 +53,7 @@
 				<div class="mbti-container" style="text-align:center">
 					
 					<div class="mbti-questionNo">Q1.</div>
-					<img class="mbti-question2 result-img" style="width: 400px" src=""/>
+					<img class="mbti-question2 result-img" style="width: 400px" src="https://jerrymaster.speedgabia.com/gsdianTest/q1.png"/>
 					
 					<div class="mbti-answer a1">그 애가 그 애니?</div>
 					<div class="mbti-answer a2">그 애가 '가' 씨니?</div>
@@ -93,7 +93,11 @@
 			}
 
            preload([
-			   
+			   'https://jerrymaster.speedgabia.com/gsdianTest/q1.png',
+			   'https://jerrymaster.speedgabia.com/gsdianTest/q2.png',
+			   'https://jerrymaster.speedgabia.com/gsdianTest/q3.png',
+			   'https://jerrymaster.speedgabia.com/gsdianTest/q4.png',
+			   'https://jerrymaster.speedgabia.com/gsdianTest/q5.png',
 			]);
 			
 			</script>
@@ -107,31 +111,31 @@
 					
 					//Q1
 					{"qn": "Q1.",
-					 "q1": "",
+					 "q1": "https://jerrymaster.speedgabia.com/gsdianTest/q1.png",
 					 "a1": "그 애가 그 애니?", "a2": "그 애가 '가' 씨니?", "a3": "가서 가져갈래?", "a4": "도저히 모르겠다...", 
 					 "a1_mbti": "A", "a2_mbti": "N", "a3_mbti": "N", "a4_mbti": "N"},
 					
 					//Q2
 					{"qn": "Q2.",
-					 "q1": "",
+					 "q1": "https://jerrymaster.speedgabia.com/gsdianTest/q2.png",
 					 "a1": "가서 가져갈까?", "a2": "그 애가 '가' 씨니?", "a3": "그 애가 가져가서?", "a4": "그냥 찍을래...", 
 					 "a1_mbti": "N", "a2_mbti": "A", "a3_mbti": "N", "a4_mbti": "N"},
 					
 					//Q3
 					{"qn": "Q3.",
-					 "q1": "",
+					 "q1": "https://jerrymaster.speedgabia.com/gsdianTest/q3.png",
 					 "a1": "거기 가서 가져가", "a2": "그 녀석이 그 애가 맞아", "a3": "'가' 씨가 가서", "a4": "이걸 알아들어...?", 
 					 "a1_mbti": "N", "a2_mbti": "N", "a3_mbti": "A", "a4_mbti": "N"},
 					
 					//Q4
 					{"qn": "Q4.",
-					 "q1": "",
+					 "q1": "https://jerrymaster.speedgabia.com/gsdianTest/q4.png",
 					 "a1": "그 애가 가져 간 다음에", "a2": "그 애가 '가' 씨이니", "a3": "가서 가져가", "a4": "무슨말이야 도대체...", 
 					 "a1_mbti": "A", "a2_mbti": "N", "a3_mbti": "N", "a4_mbti": "N"},
 					
 					//Q5	
 					{"qn": "Q5.",
-					 "q1": "",
+					 "q1": "https://jerrymaster.speedgabia.com/gsdianTest/q5.png",
 					 "a1": "가라! 그 애가, 갔기때문에!", "a2": "가라! 가서, 가져가렴!", "a3": "그 애! 그 애가, 그 애잖아! ", "a4": "하...ㅠ", 
 					 "a1_mbti": "N", "a2_mbti": "A", "a3_mbti": "N", "a4_mbti": "N"},
 						
@@ -184,7 +188,7 @@
 					$(".page").text(`${questionProgress}/5`);
 
 					$(".mbti-questionNo").text(`${q["qn"]}`);
-					//$(".mbti-question2").attr("src", `${q["q1"]}`);
+					$(".mbti-question2").attr("src", `${q["q1"]}`);
 					$(".a1").text(`${q["a1"]}`);
 					$(".a2").text(`${q["a2"]}`);
 					$(".a3").text(`${q["a3"]}`);

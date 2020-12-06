@@ -172,7 +172,7 @@
     width: 8.3%;
     height: inherit;
     border-radius: 5px;
-    background-color: #ed2510;
+    background-color: #8A99FF;
     transition: width 0.2s ease-out 0s;
   }
   
@@ -192,7 +192,7 @@
     margin-top: 30px;
     margin-bottom: 22px;
     font-size: 33px;
-	color: #FE2E64;
+	color: RED;
   }
   
   .mbti-container .mbti-question {

@@ -1,1 +1,192 @@
-0
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>경상디언 테스트 | 투쁠</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="title" content="경상디언 테스트 | 투쁠">
+		<meta name="subject" content="나는 경상도 사투리를 얼마나 잘 알고 있을까?">
+		<meta name="keywords" content="경상디언 테스트, 찐 경상도인, 경상도 사투리, 사투리 테스트, 경상도 사투리 테스트?">
+		<meta name="author" content="투쁠">
+		<meta name="description" content="경상도 사투리로 찐 경상도인을 찾아라">
+		
+		<!-- sns share img -->
+		<meta property="og:title" content="[경상디언 테스트] 경상도 사투리로 알아보는 찐 경상디언 테스트" />
+		<meta property="og:url" content="https://www.twoppl.com/quiz/gyunsangdianTest/intro" />
+		<meta property="og:image" content="https://jerrymaster.speedgabia.com/gsdianTest/gsdianTest_main.png" />
+
+		<!-- 파비콘 --> 
+		<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
+
+		
+		<!-- Styles -->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link href="gsdian.css" rel="stylesheet">
+		<link href="../../assets/css/mbti.css" rel="stylesheet">
+	
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174229344-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'UA-174229344-1');
+		</script>
+		
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+				
+			<!-- Header -->
+			<header id="header" style="padding-top: 10px">
+				<div class="inner align-center" style="height: 50px">
+					<!-- Logo -->
+					<a href="https://www.twoppl.com" class="logo">
+						<span><img src="https://jerrymaster.speedgabia.com/logo_eng.png" alt="" style="width: 100px"/></span>
+					</a>
+				</div>
+			</header>
+				
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">				
+					<div style="display: flex; justify-content: center">
+						<div class="mbti-result-container">
+							
+							<div class="mbti-result">
+								
+								<!-- 문제 결과 -->
+								<div class="mbti-result-subtitle">당신이 맞춘 정답은</div>
+								<div class="mbti-result-title" style="color : red;">0개</div>
+								
+								
+								
+								<div class="mbti-result-detail-tag">혹시 외국인이시간요?</div>	
+								<div class="mbti-result-detail">경상도 사투리를 한 번도 들어보신적 없으시군요? 0개 나오기 쉽지 않은데.. 표준어 밖에 모르시거나 외국인일 수도 있겠네요. 경상도 사투리에도 관심을 가져봅시다  </div>
+								
+								<div class="mbti-result-detail-tag" style="border: 1px solid #E5E5E5; border-radius: 0.5em; box-shadow: 2px 2px 3px lightgrey;">당신이 사는 곳은 아마도.. 서울?
+								
+								<img class="result-img" src="https://jerrymaster.speedgabia.com/gsdianTest/4.jpg"/>
+								</div>	
+							
+								
+																
+								<!-- 결과 공유 -->
+								<a>&nbsp</a>
+								<div class="sns-share-title">▼ 결과 공유하기 ▼</div>
+								<div style="text-align: center">
+									<div class="sns-share">
+										<a href="javascript:;" id="kakao-share" onclick="shareKatalk();">
+											<div class="sns-logo-wrapper">
+												<div class="sns-logo kakao"><img src="https://78gak.com/images/kakaotalk_logo.svg" /></div>
+											</div>
+										</a>
+										<a id="facebook-share" href="#" onclick="snsFB('https://www.twoppl.com');return false;" rel="nofollow" target="_blank">
+											<div class="sns-logo-wrapper">
+												<div class="sns-logo fb"><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/pXqmY8Ggh_m.png" style="width: 25px; height: 25px" /></div>
+											</div>
+										</a>
+										<div class="sns-logo-wrapper" onclick="copyURL();">
+											<div class="sns-logo link"><img src="https://78gak.com/images/copylink.svg" /></div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+
+							<div class="mbti-start">
+								<a href="intro.html" style="padding-top: 70px"><div class="btn btn-black">테스트 다시하기</div></a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+				
+		
+
+
+		<!-- Scripts -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+		<script>
+		//Kakao
+		Kakao.init('0c0ae33b27e5a49c48cb8d6e7eab4ed6');
+		Kakao.Link.createDefaultButton({
+			container: '#kakao-share',
+			objectType: 'feed',
+			content: {
+				title: '[찐 경상디언 테스트] 동료 직원들과 함께하는 호사분면 테스트',
+				imageUrl: "https://jerrymaster.speedgabia.com/gsdianTest/gsdianTest_main.png",
+				//description: "",
+				link: {
+					mobileWebUrl: 'https://www.twoppl.com/quiz/gyungsangdiantest/0',
+					webUrl: 'https://www.twoppl.com/quiz/gyungsangdiantest/0',
+				},
+			},
+			buttons: [
+				{
+					title: '경상디언 테스트 하기',
+					link: {
+						mobileWebUrl: "https://www.twoppl.com/quiz/gyungsangdiantest/intro",
+						webUrl: "https://www.twoppl.com/quiz/gyungsangdiantest/intro",
+					},
+				},
+			],
+			success: function(response) {
+				console.log(response);
+			},
+			fail: function(error) {
+				console.log(error);
+			}
+		});
+		function shareKatalk() {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'kakao'
+			});
+		}	
+
+		// Facebook
+		function snsFB(url) {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'facebook'
+			});
+			
+			var thisURL = window.location.href;
+			window.open('https://www.facebook.com/sharer/sharer.php?u='+thisURL,'facebook-share-dialog',"width=626, height=436")
+		}
+
+		// CopyURL
+		function copyURL() {
+			gtag('event', 'click', {
+				'event_category' : 'share',
+				'event_label' : 'url'
+			});
+
+			let dummy = document.createElement('input'),
+				text = window.location.href;
+
+			document.body.appendChild(dummy);
+			dummy.value = text;
+			dummy.select();
+			document.execCommand('copy');
+			document.body.removeChild(dummy);
+
+			alert("복사되었습니다.");
+		}
+			
+		</script>
+
+
+	</body>
+</html>

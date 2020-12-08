@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>헬창 유형 테스트 | 투쁠</title>
+		<title>AI 헬창 테스트 | 투쁠</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<meta name="title" content="헬창 유형 테스트 | 투쁠">
@@ -12,8 +12,8 @@
 		<meta name="description" content="인공지능 몸 테스트를 통해 나의 헬스 캐릭터를 알아보세요!">
 		
 		<!-- sns share img -->
-		<meta property="og:title" content="" />
-		<meta property="og:url" content="" />
+		<meta property="og:title" content="AI 헬창 테스트, AI로 보는 내 모습" />
+		<meta property="og:url" content="https://www.twoppl.com/" />
 		<meta property="og:image" content="" />
 
 		<!-- 파비콘 --> 
@@ -21,127 +21,151 @@
 		<link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
 		
 		<!-- Styles -->
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link href="aihealth.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-		<link href="ai-style.css" rel="stylesheet">
 		
-
+		<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-174229344-1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
+
 		  gtag('config', 'UA-174229344-1');
 		</script>
 
+
 	</head>
-	
 	<body class="is-preload">
 		
-		<!-- 헤더 -->
-		<div id="wrapper">
-			<header id="header" style="padding-top: 10px">
-				<div class="title">
-					<a href="" class="logo">
-						<span><img src="../../images/logo_eng.png" alt="" style="width: 80px"/></span>
-					</a>
-				</div>
-			</header>
-		</div>
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-		
-		
-		<!-- 메인 -->
-		<section class="section">
-			<h1 class="title"># 헬창 테스트</h1>
-			<h2 class="subtitle"> 몸 사진으로 보는 인공지능 헬창 테스트</h2>
-		</section>
-
-		
-		
-		<!-- 제목 및 토글 -->
-		<h3 class="pb-2 d-flex justify-content-center" style="margin-top: 25px;">성별을 선택하세요</h3>
-		<section class="d-flex justify-content-center">
-			<p class="d-flex align-items-center pr-3">남자</p> 
-			<div>
-				<input type="checkbox" id="gender">
-				<label for="gender"> <span class="knob"><i></i></span> </label>
-			</div>
-		   <p class="d-flex align-items-center pl-3">여자</p>
-		</section>
-		
-		
-		<!-- 사진 업로드 및 결과 -->
-		<div class="mt-3 container file-upload" style=max-width: 570px > 
-			
-			
-			
-			<!-- 사진 업로드 -->
-			<div class="image-upload-wrap">
-				<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-				<div class="drag-text">
-					<img src="img/upload.svg" class="mt-5 pt-5 upload" alt="upload-image">
-					<h2 class="mb-5 pb-5 pt-4  upload-text">사진을 올려놓거나 <br> 눌러서 업로드</h2>
-					<h5>전신 사진을 올리면 <br> 더 정확하게 측정 됩니다. <br>(사진은 저장되지 않아요!)</h5>
-				</div>
-			</div>
-
-			<!-- 사진 분석 -->
-			<div class="file-upload-content">
-				<img class="file-upload-image" id="body-image" src="#" alt="your image" />
-
-				<!-- 로딩 화면 -->
-				<div id="loading" class="animated bounce" style="font-size: 1.4em">
-					<div class="spinner-border" role="status">
-						<span class="sr-only">Loading...</span>
-					</div>
-					<p class="text-center">AI가 당신의 체형을 분석중입니다.</p>
-				</div>
-
-				<p class="result-message"></p>
-
-				
-				
-				<!-- 결과 화면 -->
-				<div id="label-container" class="d-flex flex-column justify-content-around"></div>
-				
-				
-				
-				<!-- 공유 버튼 -->
-				<div id="label-container" style="clear: both; margin-top:30px; font-size: 1.6em">
-					<span>▼ 테스트 결과를 공유해 보세요! ▼</span>
-				</div>
-				<div class="mbti-result-container">
-					<div class="mbti-result">
-						<div class="sns-share">
-						<a href="javascript:;" id="kakao-share" onclick="shareKatalk();">
-							<div class="sns-logo-wrapper">
-								<div class="sns-logo kakao"><img src="https://78gak.com/images/kakaotalk_logo.svg" /></div>
-							</div>
-						</a>
-						<a id="facebook-share" href="#" onclick="snsFB('https://www.twoppl.com');return false;" rel="nofollow" target="_blank">
-							<div class="sns-logo-wrapper">
-								<div class="sns-logo fb"><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/pXqmY8Ggh_m.png" style="width: 25px; height: 25px" /></div>
-							</div>
-						</a>
-						<div class="sns-logo-wrapper" onclick="copyURL();">
-							<div class="sns-logo link"><img src="https://78gak.com/images/copylink.svg" /></div>
+				<!-- Header -->
+				<header id="header" style="padding-top: 10px">
+					<div class="inner align-center" style="height: 70px">
+						<!-- Logo -->
+							<a href="https://www.twoppl.com" class="logo">
+								<span><img src="https://jerrymaster.speedgabia.com/logo_eng.png" alt="" style="width: 100px"/></span>
+							</a>
 						</div>
-						</div>
-					</div>
-				</div>
-				
+				</header>
 
-				<!--재시도 버튼 -->
-				<div class="pt-3 image-title-wrap" style="margin-top:30px;">
-					<button type="button p-2" class="try-again-btn" onclick="gaReload()">
-						<span class="try-again-text">다른 사진으로 재시도</span>
-					</button>
-				</div>
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+																				
+							<div class="mbti-start-wrapper">
+								
+								<div class="mbti-start">
+									<div class="start-title"># 헬창 테스트</div>
+									<div class="start-subtitle">몸 사진으로 보는 <a style="color:#fb7d79">인공지능</a> 헬창 테스트</div>
+									
+									
+									<!-- 성별선택 -->
+									<div class="start-subtitle">성별을 선택하세요
+										<section class="">
+											<p class="">남자</p> 
+											<div>
+												<input type="checkbox" id="gender">
+												<label for="gender"> <span class="knob"><i></i></span> </label>
+											</div>
+										   <p class="">여자</p>
+										</section>			
+									</div> 
+									<!-- end of 성별선택 -->
+									
+									
+									<!-- 사진 업로드 -->
+									<div class="start-subtitle file-upload" style="width:330px">
+										
+										<!-- 사진 업로드 -->
+										<div class="start-subtitle image-upload-wrap">
+											<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+											
+												
+												<img src="img/upload.svg" class="start-subtitle " alt="upload-image" style="width:60px">
+												<div class="upload-text">
+													사진을 올려놓거나 <br> 눌러서 업로드<br><br>
+													전신 사진을 올리면 <br> 더 정확하게 측정 됩니다. <br> (사진은 저장되지 않아요!)
+												</div>
+												
+											
+										</div>
 
+										<!-- 사진 분석 -->
+										<div class="start-subtitle file-upload-content">
+											<img class="file-upload-image" id="body-image" src="#" alt="your image" />
+
+											<!-- 로딩 화면 -->
+											<div id="loading" class="animated bounce" style="font-size: 1.4em">
+												<div class="spinner-border" role="status">
+													<span class="sr-only">Loading...</span>
+												</div>
+												<p class="text-center">AI가 당신의 체형을 분석중입니다.</p>
+											</div>
+
+											<p class="result-message"></p>
+
+										</div>
+										<!-- end of 사진업로드 -->
+									
+									</div> 
+									<!-- end of 사진 업로드 -->
+									
+									<!-- 결과 화면 -->
+									<div class="start-subtitle" id="label-container" style="width:330px">
+									</div>
+									<!-- end of 결과 화면 -->
+					
+								</div>
+								
+							</div>
+
+							<div style="display: flex; justify-content: center">
+								
+								<div class="mbti-result-container">
+									<div class="mbti-result">
+
+										<div class="sns-share-title">▼ 결과 공유하기 ▼</div>
+										<div style="text-align: center">
+											<div class="sns-share">
+												<a href="javascript:;" id="kakao-share" onclick="shareKatalk();">
+													<div class="sns-logo-wrapper">
+														<div class="sns-logo kakao"><img src="https://78gak.com/images/kakaotalk_logo.svg" /></div>
+													</div>
+												</a>
+												<a id="facebook-share" href="#" onclick="snsFB('https://www.twoppl.com');return false;" rel="nofollow" target="_blank">
+													<div class="sns-logo-wrapper">
+														<div class="sns-logo fb"><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/pXqmY8Ggh_m.png" style="width: 25px; height: 25px" /></div>
+													</div>
+												</a>
+												<div class="sns-logo-wrapper" onclick="copyURL();">
+													<div class="sns-logo link"><img src="https://78gak.com/images/copylink.svg" /></div>
+												</div>
+											</div>
+										</div>
+
+
+										<!--재시도 버튼 -->
+										<div class="mbti-start">
+											<a onclick="Reload()"><div class="btn btn-red" style="margin-top: 30px">다른 사진으로 재시도</div></a>
+										</div>
+
+									</div>
+								</div>
+								<!-- end of 공유 버튼 -->
+								
+							</div>
+								
+						</div> <!--end of inner-->
+					</div> <!--end of main-->
 			</div>
-		</div> 
-			
+				
+		<!-- Scripts -->
 		
 		<!-- jquery 및 텐서플로우 라이브러리 호출-->
 		<script src="../../assets/js/jquery.min.js"></script>
@@ -151,7 +175,7 @@
 		
 		<!-- 재시도 버튼 -->
 		<script>
-			function gaReload() {
+			function Reload() {
 				gtag('event', '다른 사진으로 재시도', {
 					'event_category': '다른 사진으로 재시도'
 				});
@@ -163,6 +187,7 @@
 		<script>
 			function readURL(input) {
 				console.log("업로드 된 이미지 가져오기");
+				
 				if (input.files && input.files[0]) {
 					var reader = new FileReader();
 
@@ -505,7 +530,6 @@
     }
 			
 		</script>
-	
 
 	</body>
 </html>

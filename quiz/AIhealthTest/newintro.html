@@ -21,9 +21,9 @@
 		<link rel="icon" href="../../images/favicon.ico" type="image/x-icon">
 		
 		<!-- Styles -->
-		<link rel="stylesheet" href="../../assets/css/main.css" />
+		<link rel="stylesheet" href="aimain.css">
 		<link href="aihealth.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"-->
 		
 		<link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
 		
@@ -61,20 +61,16 @@
 							<div class="mbti-start-wrapper">
 								
 								<div class="mbti-start">
-									<div class="start-title"># 헬창 테스트</div>
+									<div class="start-title">AI 헬창 테스트</div>
 									<div class="start-subtitle">몸 사진으로 보는 <a style="color:#fb7d79">인공지능</a> 헬창 테스트</div>
 									
 									
 									<!-- 성별선택 -->
-									<div class="start-subtitle">성별을 선택하세요
-										<section class="">
-											<p class="">남자</p> 
-											<div>
-												<input type="checkbox" id="gender">
-												<label for="gender"> <span class="knob"><i></i></span> </label>
-											</div>
-										   <p class="">여자</p>
-										</section>			
+									<div class="start-subtitle">성별을 선택하세요</div>
+									<div style="display: flex;">
+										<p>남자</p> 
+											<input type="checkbox" id="gender" style="margin-left:10px; margin-right:10px">
+									    <p>여자</p>
 									</div> 
 									<!-- end of 성별선택 -->
 									
@@ -86,8 +82,7 @@
 										<div class="start-subtitle image-upload-wrap">
 											<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
 											
-												
-												<img src="img/upload.svg" class="start-subtitle " alt="upload-image" style="width:60px">
+												<img src="upload.svg" class="start-subtitle" alt="upload-image" style="width:60px">
 												<div class="upload-text">
 													사진을 올려놓거나 <br> 눌러서 업로드<br><br>
 													전신 사진을 올리면 <br> 더 정확하게 측정 됩니다. <br> (사진은 저장되지 않아요!)
@@ -98,28 +93,30 @@
 
 										<!-- 사진 분석 -->
 										<div class="start-subtitle file-upload-content">
-											<img class="file-upload-image" id="body-image" src="#" alt="your image" />
+											<img class="file-upload-image" id="body-image" src="#" alt="your image" style="width:258px"/>
 
 											<!-- 로딩 화면 -->
-											<div id="loading" class="animated bounce" style="font-size: 1.4em">
-												<div class="spinner-border" role="status">
-													<span class="sr-only">Loading...</span>
+											<div id="loading" class="animated bounce" >
+												<div class="spinner-border" role="status" style="margin-top:20px">
+													<span class="start-subtitle sr-only">Loading...</span>
 												</div>
-												<p class="text-center">AI가 당신의 체형을 분석중입니다.</p>
+												<p class="start-subtitle">인공지능이 체형을 분석중입니다.</p>
 											</div>
 
-											<p class="result-message"></p>
+											<p class="start-subtitle result-message"></p>
 
 										</div>
 										<!-- end of 사진업로드 -->
+										
+										<!-- 결과 화면 -->
+										<div class="start-subtitle" id="final-result-container" style="width:330px">
+										</div>
+										<!-- end of 결과 화면 -->
 									
 									</div> 
 									<!-- end of 사진 업로드 -->
 									
-									<!-- 결과 화면 -->
-									<div class="start-subtitle" id="label-container" style="width:330px">
-									</div>
-									<!-- end of 결과 화면 -->
+
 					
 								</div>
 								
@@ -130,7 +127,7 @@
 								<div class="mbti-result-container">
 									<div class="mbti-result">
 
-										<div class="sns-share-title">▼ 결과 공유하기 ▼</div>
+										<div class="sns-share-title">▼ 공유하기 ▼</div>
 										<div style="text-align: center">
 											<div class="sns-share">
 												<a href="javascript:;" id="kakao-share" onclick="shareKatalk();">
@@ -256,7 +253,7 @@
 				model = await tmImage.load(modelURL, metadataURL);
 				maxPredictions = model.getTotalClasses();
 
-				labelContainer = document.getElementById("label-container");
+				labelContainer = document.getElementById("final-result-container");
 				for (let i = 0; i < maxPredictions; i++) {
 					/*5번 div를 만들어서 d-flex 라는 클래스를 추가, 그리고 element라는 차일드 클래스 추가*/
 					var element = document.createElement("div")
@@ -371,7 +368,7 @@
 
 				//결과 내용 출력 부분
 				var title = "<div class='" + prediction[0].className + "-healchang-title'>" + resultTitle + "</div>"
-				var explain = "<div class='healchang-explain pt-2'>" + resultExplain + "</div>"
+				var explain = "<div class='healchang-explain'>" + resultExplain + "</div>"
 				var celeb = "<div class='" + prediction[0].className + "-healchang-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
 
 				$('.result-message').html(title + explain + celeb);

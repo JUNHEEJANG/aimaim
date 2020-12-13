@@ -151,12 +151,20 @@
 					
 					if(result['N'] == 5){
 						answer = 0;	
+						gtag('event', '정답 : 0개', {'event_category': '찐 경상디언 테스트'});
 					}else{
 						answer = result['A'];
+						if	   (result['A'] == 5){gtag('event', '정답 : 5개', {'event_category': '찐 경상디언 테스트'});}
+						else if(result['N'] == 4){gtag('event', '정답 : 4개', {'event_category': '찐 경상디언 테스트'});}
+						else if(result['N'] == 3){gtag('event', '정답 : 3개', {'event_category': '찐 경상디언 테스트'});}
+						else if(result['N'] == 2){gtag('event', '정답 : 2개', {'event_category': '찐 경상디언 테스트'});}
+						else if(result['N'] == 1){gtag('event', '정답 : 1개', {'event_category': '찐 경상디언 테스트'});}	
 					}
 					
-					console.log(answer);
 					
+					
+					
+					//console.log(answer);
 					// 최종 계산
 					location.href = 'loading.html?'+answer;
 

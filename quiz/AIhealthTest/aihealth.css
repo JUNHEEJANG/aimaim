@@ -38,7 +38,7 @@ input {
   position: relative;
   width: 60px;
   height: 30px;
-  background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+  background-image: url(https://jerrymaster.speedgabia.com/aihealthTest/img_man.png);
   background-size: cover;
   border-radius: 50px;
   outline: none;
@@ -56,11 +56,11 @@ input:before {
   background-color: navy;
   border-radius: 50px;
   transition: all .9s;
-  background-color: #F7CA33;
+  background-color: #8aa7ff;
 }
 
 input:checked {
-  background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+  background-image: url(https://jerrymaster.speedgabia.com/aihealthTest/img_woman.png);
   transition: background-image .90s;
 
 }
@@ -68,7 +68,7 @@ input:checked {
 input:checked:before {
   transform: translate(100%);
   transition: all .9s;
-  background-color: #ECF0F3;
+  background-color: #fe9eff;
 }
 
 
@@ -149,7 +149,7 @@ input:checked:before {
   }
   
   .mbti-start .btn-red {
-    background-color: #FE2E64;
+    background-color: #fb7d79;
   }
 
   .mbti-start .btn-green {
@@ -592,6 +592,9 @@ input:checked:before {
 }
 
 
+.result-flex{
+	display: flex;
+}
 
 
 /* 결과 CSS 부분 */
@@ -609,9 +612,9 @@ input:checked:before {
 }
 .m-pro-healchang-celeb {
     color: #35284a;
-    font-size: 15px;
-	padding-left: 18px;
-    padding-right: 18px;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 
@@ -622,7 +625,9 @@ input:checked:before {
 }
 .m-hc-healchang-celeb {
     color: #816f90;
-    font-size: 1.2rem;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 .m-hl-healchang-title {
@@ -631,7 +636,9 @@ input:checked:before {
 }
 .m-hl-healchang-celeb {
     color: #fb7d79;
-    font-size: 1.2rem;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 .m-mc-healchang-title {
@@ -640,7 +647,9 @@ input:checked:before {
 }
 .m-mc-healchang-celeb {
     color: #fb9d7e;
-    font-size: 1.2rem;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 .m-ow-healchang-title {
@@ -649,7 +658,9 @@ input:checked:before {
 }
 .m-ow-healchang-celeb {
     color: #f8cd9e;
-    font-size: 1.2rem;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 .w-pro-healchang-title {
@@ -658,7 +669,9 @@ input:checked:before {
 }
 .w-pro-healchang-celeb {
     color: #32cedb;
-    font-size: 1.2rem;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 .w-hc-healchang-title {
@@ -667,7 +680,9 @@ input:checked:before {
 }
 .w-hc-healchang-celeb {
     color: #a7da85;
-    font-size: 1.2rem;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 .w-hl-healchang-title {
@@ -676,7 +691,9 @@ input:checked:before {
 }
 .w-hl-healchang-celeb {
     color: #f3a986;
-    font-size: 1.2rem;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 .w-sk-healchang-title {
@@ -685,7 +702,9 @@ input:checked:before {
 }
 .w-sk-healchang-celeb {
     color: #f395c0;
-    font-size: 1.2rem;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 .w-ow-healchang-title {
@@ -694,12 +713,13 @@ input:checked:before {
 }
 .w-ow-healchang-celeb {
     color: #6edab3;
-    font-size: 1.2rem;
+    font-size: 14px;
+	padding-left: 30px;
+    padding-right: 30px;
 }
 
 /* 바 부분 디자인 */
 .m-pro-box {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -708,7 +728,6 @@ input:checked:before {
   background-color: rgb(215, 212, 219);
 }
 .m-pro-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -717,7 +736,6 @@ input:checked:before {
 }
 
 .m-hc-box {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -726,7 +744,6 @@ input:checked:before {
   background-color: rgb(230, 226, 233);
 }
 .m-hc-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -745,7 +762,6 @@ input:checked:before {
 }
 
 .m-hl-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -763,7 +779,6 @@ input:checked:before {
   background-color: rgb(254, 235, 229);
 }
 .m-mc-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -780,7 +795,6 @@ input:checked:before {
   background-color: rgb(254, 245, 236);
 }
 .m-ow-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -797,7 +811,6 @@ input:checked:before {
   background-color: rgb(214, 245, 248);
 }
 .w-pro-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -814,7 +827,6 @@ input:checked:before {
   background-color: rgb(237, 248, 231);
 }
 .w-hc-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -832,7 +844,6 @@ input:checked:before {
 }
 
 .w-hl-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -849,7 +860,6 @@ input:checked:before {
   background-color: rgb(253, 234, 242);
 }
 .w-sk-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;
@@ -866,7 +876,6 @@ input:checked:before {
   background-color: rgb(226, 248, 240);
 }
 .w-ow-bar {
-  position: absolute;
   top: 0;
   left: 0;
   height: 2rem;

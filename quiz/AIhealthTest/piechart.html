@@ -1,0 +1,152 @@
+<style>
+/**
+1. The `reverse` animation direction plays the animation backwards which makes it start at the stroke offset 100 which means displaying no stroke at all and animating it to the value defined in the SVG via the inline `stroke-dashoffset` attribute.
+2. Rotate by -90 degree to make the starting point of the stroke the top of the circle.
+3. Using CSS transforms on SVG elements is not supported by Internet Explorer and Edge, use the transform attribute directly on the SVG element as a workaround
+ */
+.circle-chart {
+  text-align: center;
+}
+.circle-chart__label {
+  display: block;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  font-weight: bold;
+}
+.circle-chart__circle {
+  animation: circle-chart-fill 2s reverse; /* 1 */ 
+  transform: rotate(-90deg); /* 2, 3 */
+  transform-origin: center; /* 4 */
+}
+
+.circle-chart__circle--negative {
+  transform: rotate(-90deg) scale(1,-1); /* 1, 2, 3 */
+}
+
+.circle-chart__info {
+  animation: circle-chart-appear 2s forwards;
+  opacity: 0;
+  transform: translateY(0.3em);
+}
+
+@keyframes circle-chart-fill {
+  to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+</style>
+<style>
+.counterWrapper {
+	width: 100%;
+	max-width: 300px;
+	display: flex;
+	margin: 0 auto;
+	flex-direction: column;
+	box-sizing: border-box;
+	position: relative;
+	height: 300px;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.counter {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 80px;
+	position: absolute;
+	letter-spacing: -5px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.counter::after {
+	content: "%";
+	font-size: 50px;
+}
+
+.svgBorder {
+	width: 90%;
+	border: 2px solid #efefef;
+	position: relative;
+	display: block;
+}
+
+
+#circleChartBG, #circleChart {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-90deg);
+	box-sizing: border-box;
+}
+
+ #circleChart {
+ 	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	animation-name: circleChartFill;
+	animation-duration: 2.05s;
+	animation-fill-mode: both;
+	animation-timing-function: ease-in-out;
+ }
+
+
+#blockOne {
+	margin: 0 auto;
+	width: 50%;
+	height: 50%;
+}
+
+
+@keyframes circleChartFill {
+  to { 	stroke-dashoffset: 437; }
+}
+
+</style>
+
+
+<section class="circle-chart">
+  <label class="circle-chart__label">Chart label</label>
+  <svg viewbox="0 0 35.83098862 35.83098862" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+<circle class="circle-chart__background" stroke="#efefef" stroke-width="4" fill="none" cx="17.91549431" cy="17.91549431" r="15.91549431" />
+      <circle class="circle-chart__circle" stroke="#00acc1" stroke-width="4" stroke-dasharray="50,100" stroke-linecap="none" fill="none" cx="17.91549431" cy="17.91549431" r="15.91549431" />
+      <g class="circle-chart__info">
+        <text class="circle-chart__percent" x="18" y="16.5" alignment-baseline="central" text-anchor="middle" font-size="11">80%</text>
+        <!--text class="circle-chart__subline" x="16.91549431" y="21.5" alignment-baseline="central" text-anchor="middle" font-size="2">확률로</text-->
+      </g>
+    </svg>
+</section>
+
+
+
+<div class="counterWrapper">
+  <svg id="circleChartBG" height="300" width="300">
+    <circle cx="150" cy="150" r="90" stroke="#BFC9CA" stroke-width="3" fill="none" stroke-linecap="round" />
+  </svg>
+  <svg id="circleChart" height="300" width="300">
+    <circle cx="150" cy="150" r="90" stroke="#688087" stroke-width="3" fill="none" stroke-linecap="round" />
+  </svg>
+  <h1 class="counter">0</h1>
+</div>
+
+<script>
+  var cont = 0;
+  total = 83;
+  function contar() {
+    if (cont < total) {
+      cont += 1;
+      //console.log(cont);
+      document.querySelector('.counter').textContent = cont;
+    }
+  };
+setInterval(contar, 15);
+</script>
